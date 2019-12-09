@@ -11,8 +11,9 @@ with req.urlopen(request) as response:
 import bs4
 root=bs4.BeautifulSoup(data , "html.parser")
 titles = root.find_all("div" , class_= "box_0 clearfix")
-# for title in titles:
-#     if titles.h2 != None:
-#         print(titles.h2.string)
+
+for title in titles:
+    if title.h2 != None:
+        print(title.h2.string)
 
 
