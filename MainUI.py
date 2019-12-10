@@ -2,24 +2,89 @@
 
 # Form implementation generated from reading ui file 'MainUI.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
 
 
-import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindows")
+        MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        self.product_status = QtWidgets.QDockWidget(self.centralwidget)
+        self.product_status.setGeometry(QtCore.QRect(400, 0, 401, 281))
+        self.product_status.setObjectName("product_status")
+        self.dockWidgetContents_2 = QtWidgets.QWidget()
+        self.dockWidgetContents_2.setObjectName("dockWidgetContents_2")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.dockWidgetContents_2)
+        self.lineEdit_2.setGeometry(QtCore.QRect(40, 20, 131, 31))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.product_status.setWidget(self.dockWidgetContents_2)
+        self.Kbar_area = QtWidgets.QDockWidget(self.centralwidget)
+        self.Kbar_area.setGeometry(QtCore.QRect(10, 280, 401, 241))
+        self.Kbar_area.setObjectName("Kbar_area")
+        self.dockWidgetContents_3 = QtWidgets.QWidget()
+        self.dockWidgetContents_3.setObjectName("dockWidgetContents_3")
+        self.lineEdit = QtWidgets.QLineEdit(self.dockWidgetContents_3)
+        self.lineEdit.setGeometry(QtCore.QRect(60, 50, 131, 31))
+        self.lineEdit.setObjectName("lineEdit")
+        self.Kbar_area.setWidget(self.dockWidgetContents_3)
+        self.widget = QtWidgets.QWidget(self.centralwidget)
+        self.widget.setGeometry(QtCore.QRect(399, 279, 411, 251))
+        self.widget.setObjectName("widget")
+        self.listWidget = QtWidgets.QListWidget(self.widget)
+        self.listWidget.setGeometry(QtCore.QRect(0, 0, 401, 251))
+        self.listWidget.setObjectName("listWidget")
+        self.widget_2 = QtWidgets.QWidget(self.centralwidget)
+        self.widget_2.setGeometry(QtCore.QRect(0, 530, 801, 31))
+        self.widget_2.setObjectName("widget_2")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.widget_2)
+        self.lineEdit_3.setGeometry(QtCore.QRect(580, 10, 211, 16))
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.Products_area = QtWidgets.QDockWidget(self.centralwidget)
+        self.Products_area.setGeometry(QtCore.QRect(0, 0, 401, 281))
+        self.Products_area.setAutoFillBackground(False)
+        self.Products_area.setFloating(False)
+        self.Products_area.setObjectName("Products_area")
+        self.dockWidgetContents = QtWidgets.QWidget()
+        self.dockWidgetContents.setObjectName("dockWidgetContents")
+        self.comboBox = QtWidgets.QComboBox(self.dockWidgetContents)
+        self.comboBox.setGeometry(QtCore.QRect(0, 0, 69, 22))
+        self.comboBox.setEditable(False)
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox_2 = QtWidgets.QComboBox(self.dockWidgetContents)
+        self.comboBox_2.setGeometry(QtCore.QRect(80, 0, 69, 22))
+        self.comboBox_2.setObjectName("comboBox_2")
+        self.comboBox_2.addItem("")
+        self.comboBox_3 = QtWidgets.QComboBox(self.dockWidgetContents)
+        self.comboBox_3.setGeometry(QtCore.QRect(160, 0, 69, 22))
+        self.comboBox_3.setObjectName("comboBox_3")
+        self.comboBox_4 = QtWidgets.QComboBox(self.dockWidgetContents)
+        self.comboBox_4.setGeometry(QtCore.QRect(240, 0, 69, 22))
+        self.comboBox_4.setObjectName("comboBox_4")
+        self.pushButton = QtWidgets.QPushButton(self.dockWidgetContents)
+        self.pushButton.setGeometry(QtCore.QRect(320, 0, 75, 23))
+        self.pushButton.setAutoDefault(False)
+        self.pushButton.setDefault(True)
+        self.pushButton.setFlat(False)
+        self.pushButton.setObjectName("pushButton")
+        self.tableWidget = QtWidgets.QTableWidget(self.dockWidgetContents)
+        self.tableWidget.setGeometry(QtCore.QRect(0, 30, 401, 231))
+        self.tableWidget.setShowGrid(True)
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(0)
+        self.tableWidget.setRowCount(0)
+        self.tableWidget.horizontalHeader().setStretchLastSection(False)
+        self.Products_area.setWidget(self.dockWidgetContents)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
         self.menubar.setObjectName("menubar")
         self.menu = QtWidgets.QMenu(self.menubar)
         self.menu.setObjectName("menu")
@@ -56,6 +121,13 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.lineEdit_2.setText(_translate("MainWindow", "走勢圖..."))
+        self.lineEdit.setText(_translate("MainWindow", "K棒圖"))
+        self.lineEdit_3.setText(_translate("MainWindow", "放時間之類的..."))
+        self.comboBox.setCurrentText(_translate("MainWindow", "商品..."))
+        self.comboBox.setItemText(0, _translate("MainWindow", "商品..."))
+        self.comboBox_2.setItemText(0, _translate("MainWindow", "演算法..."))
+        self.pushButton.setText(_translate("MainWindow", "送出"))
         self.menu.setTitle(_translate("MainWindow", "歷史回測"))
         self.menu_2.setTitle(_translate("MainWindow", "交易策略模組"))
         self.menu_3.setTitle(_translate("MainWindow", "策略管理模組"))
@@ -64,18 +136,3 @@ class Ui_MainWindow(object):
         self.menu_6.setTitle(_translate("MainWindow", "下單機"))
         self.actionLSTM.setText(_translate("MainWindow", "LSTM"))
         self.actionrm_6hk4gj4.setText(_translate("MainWindow", "決策樹"))
-        
-class Mainwin(QtWidgets.QMainWindow):
-    def __init__(self):
-        super(Mainwin, self).__init__()
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)
-        
-if __name__ == '__main__':  
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Mainwin()
-    ui.show()
-    sys.exit(app.exec_())
-
-
