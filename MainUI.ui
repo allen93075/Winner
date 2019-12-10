@@ -42,7 +42,7 @@
    <widget class="QDockWidget" name="Kbar_area">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>280</y>
       <width>401</width>
       <height>241</height>
