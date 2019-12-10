@@ -136,3 +136,16 @@ class Ui_MainWindow(object):
         self.menu_6.setTitle(_translate("MainWindow", "下單機"))
         self.actionLSTM.setText(_translate("MainWindow", "LSTM"))
         self.actionrm_6hk4gj4.setText(_translate("MainWindow", "決策樹"))
+
+class Mainwin(QtWidgets.QMainWindow):
+        def __init__(self):
+            super(Mainwin, self).__init__()
+            self.ui = Ui_MainWindow()
+            self.ui.setupUi(self)
+
+if __name__ == '__main__':
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Mainwin()
+    ui.show()
+    sys.exit(app.exec_())
