@@ -14,6 +14,10 @@ import graphviz
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
 from talib import abstract
+# 要計算混淆矩陣的話，要從 metrics 裡匯入 confusion_matrix
+from sklearn.metrics import confusion_matrix
+# 要計算 AUC 的話，要從 metrics 裡匯入 roc_curve 以及 auc
+from sklearn.metrics import roc_curve, auc
 
 #start = dt.datetime(2019, 10, 5, 3, 40, 0)
 #end = dt.datetime(2019, 10, 5, 5, 0, 0)
@@ -59,7 +63,7 @@ model = DecisionTreeClassifier(max_depth = 7)
 model.fit(train_X, train_y)
 
 # 讓 A.I. 測驗，prediction 存放了 A.I. 根據測試集做出的預測
-prediciton = model.predict(test_X)
+prediction = model.predict(test_X)
 
 dot_data = export_graphviz(model, out_file = None,
                            feature_names = train_X.columns,
@@ -69,3 +73,17 @@ dot_data = export_graphviz(model, out_file = None,
 graph = graphviz.Source(dot_data)
 graph.render("dt_test", view = True)
 
+
+# 混淆矩陣
+print(confusion_matrix(test_y, prediction))
+print('========')
+
+# 準確率
+print(model.score(test_X, test_y))
+print('========')
+
+# 計算 ROC 曲線
+false_positive_rate, true_positive_rate, thresholds = roc_curve(test_y, prediction)
+
+# 計算 AUC 面積
+print(auc(false_positive_rate, true_positive_rate))
