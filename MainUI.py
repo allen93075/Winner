@@ -2,14 +2,13 @@
 
 # Form implementation generated from reading ui file 'MainUI.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.0
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 import sys
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from webcrawler import webcrawler
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -23,14 +22,14 @@ class Ui_MainWindow(object):
         self.Kbar_area.setObjectName("Kbar_area")
         self.dockWidgetContents_3 = QtWidgets.QWidget()
         self.dockWidgetContents_3.setObjectName("dockWidgetContents_3")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.dockWidgetContents_3)
-        self.verticalLayout.setObjectName("verticalLayout")
+        self.gridLayout_5 = QtWidgets.QGridLayout(self.dockWidgetContents_3)
+        self.gridLayout_5.setObjectName("gridLayout_5")
         self.lineEdit = QtWidgets.QLineEdit(self.dockWidgetContents_3)
         self.lineEdit.setObjectName("lineEdit")
-        self.verticalLayout.addWidget(self.lineEdit)
+        self.gridLayout_5.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.listView = QtWidgets.QListView(self.dockWidgetContents_3)
         self.listView.setObjectName("listView")
-        self.verticalLayout.addWidget(self.listView)
+        self.gridLayout_5.addWidget(self.listView, 1, 0, 1, 1)
         self.Kbar_area.setWidget(self.dockWidgetContents_3)
         self.gridLayout.addWidget(self.Kbar_area, 2, 0, 1, 2)
         self.Products_area = QtWidgets.QDockWidget(self.centralwidget)
@@ -39,8 +38,8 @@ class Ui_MainWindow(object):
         self.Products_area.setObjectName("Products_area")
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.dockWidgetContents)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.dockWidgetContents)
+        self.gridLayout_3.setObjectName("gridLayout_3")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.product = QtWidgets.QComboBox(self.dockWidgetContents)
@@ -64,35 +63,35 @@ class Ui_MainWindow(object):
         self.pushButton_sentout.setFlat(False)
         self.pushButton_sentout.setObjectName("pushButton_sentout")
         self.horizontalLayout.addWidget(self.pushButton_sentout)
-        self.verticalLayout_3.addLayout(self.horizontalLayout)
+        self.gridLayout_3.addLayout(self.horizontalLayout, 0, 0, 1, 1)
         self.tableWidget = QtWidgets.QTableWidget(self.dockWidgetContents)
         self.tableWidget.setShowGrid(True)
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
         self.tableWidget.horizontalHeader().setStretchLastSection(False)
-        self.verticalLayout_3.addWidget(self.tableWidget)
+        self.gridLayout_3.addWidget(self.tableWidget, 1, 0, 1, 1)
         self.Products_area.setWidget(self.dockWidgetContents)
         self.gridLayout.addWidget(self.Products_area, 0, 0, 1, 1)
         self.product_status = QtWidgets.QDockWidget(self.centralwidget)
         self.product_status.setObjectName("product_status")
         self.dockWidgetContents_2 = QtWidgets.QWidget()
         self.dockWidgetContents_2.setObjectName("dockWidgetContents_2")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.dockWidgetContents_2)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.dockWidgetContents_2)
+        self.gridLayout_4.setObjectName("gridLayout_4")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.dockWidgetContents_2)
         self.lineEdit_2.setObjectName("lineEdit_2")
-        self.verticalLayout_2.addWidget(self.lineEdit_2)
+        self.gridLayout_4.addWidget(self.lineEdit_2, 0, 0, 1, 1)
         self.listView_2 = QtWidgets.QListView(self.dockWidgetContents_2)
         self.listView_2.setObjectName("listView_2")
-        self.verticalLayout_2.addWidget(self.listView_2)
+        self.gridLayout_4.addWidget(self.listView_2, 1, 0, 1, 1)
         self.product_status.setWidget(self.dockWidgetContents_2)
         self.gridLayout.addWidget(self.product_status, 0, 2, 1, 1)
         self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 465, 368))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 406, 362))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -130,7 +129,8 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.scrollArea, 2, 2, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 964, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 964, 22))
+        self.menubar.setNativeMenuBar(False)
         self.menubar.setObjectName("menubar")
         self.menu = QtWidgets.QMenu(self.menubar)
         self.menu.setObjectName("menu")
@@ -190,7 +190,6 @@ class Ui_MainWindow(object):
         self.menu_6.setTitle(_translate("MainWindow", "下單機"))
         self.actionLSTM.setText(_translate("MainWindow", "LSTM"))
         self.actionrm_6hk4gj4.setText(_translate("MainWindow", "決策樹"))
-
 
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self):

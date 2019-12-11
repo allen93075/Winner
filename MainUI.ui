@@ -18,15 +18,15 @@
     <item row="2" column="0" colspan="2">
      <widget class="QDockWidget" name="Kbar_area">
       <widget class="QWidget" name="dockWidgetContents_3">
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
          <widget class="QLineEdit" name="lineEdit">
           <property name="text">
            <string>K棒圖</string>
           </property>
          </widget>
         </item>
-        <item>
+        <item row="1" column="0">
          <widget class="QListView" name="listView"/>
         </item>
        </layout>
@@ -42,8 +42,8 @@
        <bool>false</bool>
       </property>
       <widget class="QWidget" name="dockWidgetContents">
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QComboBox" name="product">
@@ -93,7 +93,7 @@
           </item>
          </layout>
         </item>
-        <item>
+        <item row="1" column="0">
          <widget class="QTableWidget" name="tableWidget">
           <property name="showGrid">
            <bool>true</bool>
@@ -110,15 +110,15 @@
     <item row="0" column="2">
      <widget class="QDockWidget" name="product_status">
       <widget class="QWidget" name="dockWidgetContents_2">
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
          <widget class="QLineEdit" name="lineEdit_2">
           <property name="text">
            <string>走勢圖...</string>
           </property>
          </widget>
         </item>
-        <item>
+        <item row="1" column="0">
          <widget class="QListView" name="listView_2"/>
         </item>
        </layout>
@@ -135,8 +135,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>465</width>
-         <height>368</height>
+         <width>406</width>
+         <height>362</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
@@ -222,8 +222,11 @@
      <x>0</x>
      <y>0</y>
      <width>964</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
