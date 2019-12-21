@@ -8,7 +8,7 @@
 import sys
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from webcrawler import webcrawler
+from webcrawler import webcrawler,link
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -263,13 +263,27 @@ class Mainwin(QtWidgets.QMainWindow):
         super(Mainwin, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.link1.setOpenExternalLinks(True)
+        self.ui.link2.setOpenExternalLinks(True)
+        self.ui.link3.setOpenExternalLinks(True)
+        self.ui.link4.setOpenExternalLinks(True)
+        self.ui.link5.setOpenExternalLinks(True)
 
-    def web(self,b = []):
-        self.ui.title1.setText(b[0])
-        self.ui.title2.setText(b[1])
-        self.ui.title3.setText(b[2])
-        self.ui.title4.setText(b[3])
-        self.ui.title5.setText(b[4])
+
+
+    def web(self,a=[]):
+        self.ui.title1.setText(a[0])
+        self.ui.title2.setText(a[1])
+        self.ui.title3.setText(a[2])
+        self.ui.title4.setText(a[3])
+        self.ui.title5.setText(a[4])
+
+    def link(self,b=[]):
+        self.ui.link1.setText(("<a href=\""+ b[0] +"\">"+b[0]))
+        self.ui.link2.setText(("<a href=\"" + b[1] + "\">"+b[1]))
+        self.ui.link3.setText(("<a href=\"" + b[2] + "\">"+b[2]))
+        self.ui.link4.setText(("<a href=\"" + b[3] + "\">"+b[3]))
+        self.ui.link5.setText(("<a href=\"" + b[4] + "\">"+b[4]))
 
 
 if __name__ == '__main__':
@@ -277,5 +291,6 @@ if __name__ == '__main__':
     MainWindow = QtWidgets.QMainWindow()
     ui = Mainwin()
     ui.web(webcrawler())
+    ui.link(link())
     ui.show()
     sys.exit(app.exec_())
