@@ -213,15 +213,15 @@
        <widget class="QDockWidget" name="Kbar_area">
         <widget class="QWidget" name="dockWidgetContents_3">
          <layout class="QGridLayout" name="gridLayout_5">
-          <item row="1" column="0">
-           <widget class="QColumnView" name="columnView"/>
-          </item>
           <item row="0" column="0">
            <widget class="QLineEdit" name="lineEdit">
             <property name="text">
              <string>K棒圖</string>
             </property>
            </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QGraphicsView" name="graphicsView"/>
           </item>
          </layout>
         </widget>
@@ -236,7 +236,7 @@
            <x>0</x>
            <y>0</y>
            <width>329</width>
-           <height>357</height>
+           <height>354</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_2">

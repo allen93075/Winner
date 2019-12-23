@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MainUI(donotpush).ui'
+# Form implementation generated from reading ui file 'MainUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.13.2
 #
@@ -128,18 +128,18 @@ class Ui_MainWindow(object):
         self.dockWidgetContents_3.setObjectName("dockWidgetContents_3")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.dockWidgetContents_3)
         self.gridLayout_5.setObjectName("gridLayout_5")
-        self.columnView = QtWidgets.QColumnView(self.dockWidgetContents_3)
-        self.columnView.setObjectName("columnView")
-        self.gridLayout_5.addWidget(self.columnView, 1, 0, 1, 1)
         self.lineEdit = QtWidgets.QLineEdit(self.dockWidgetContents_3)
         self.lineEdit.setObjectName("lineEdit")
         self.gridLayout_5.addWidget(self.lineEdit, 0, 0, 1, 1)
+        self.graphicsView = QtWidgets.QGraphicsView(self.dockWidgetContents_3)
+        self.graphicsView.setObjectName("graphicsView")
+        self.gridLayout_5.addWidget(self.graphicsView, 1, 0, 1, 1)
         self.Kbar_area.setWidget(self.dockWidgetContents_3)
         self.scrollArea = QtWidgets.QScrollArea(self.splitter_2)
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 329, 357))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 329, 354))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -240,7 +240,7 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setText(_translate("MainWindow", "走勢圖..."))
         self.lineEdit.setText(_translate("MainWindow", "K棒圖"))
         self.title5.setText(_translate("MainWindow", "TextLabel"))
-        self.title1.setText(_translate("MainWindow", "OAO"))
+        self.title1.setText(_translate("MainWindow", "TextLabel"))
         self.title2.setText(_translate("MainWindow", "TextLabel"))
         self.title4.setText(_translate("MainWindow", "TextLabel"))
         self.title3.setText(_translate("MainWindow", "TextLabel"))
