@@ -128,8 +128,8 @@ class Ui_MainWindow(object):
         self.dockWidgetContents_3.setObjectName("dockWidgetContents_3")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.dockWidgetContents_3)
         self.gridLayout_5.setObjectName("gridLayout_5")
-        self.columnView = QtWidgets.QColumnView(self.dockWidgetContents_3)
-        self.columnView.setObjectName("columnView")
+        self.columnView = QtWidgets.QLabel(self.dockWidgetContents_3)
+        self.columnView.setObjectName("K_Line")
         self.gridLayout_5.addWidget(self.columnView, 1, 0, 1, 1)
         self.lineEdit = QtWidgets.QLineEdit(self.dockWidgetContents_3)
         self.lineEdit.setObjectName("lineEdit")
@@ -257,6 +257,7 @@ class Ui_MainWindow(object):
         self.menu_6.setTitle(_translate("MainWindow", "下單機"))
         self.actionLSTM.setText(_translate("MainWindow", "LSTM"))
         self.actionrm_6hk4gj4.setText(_translate("MainWindow", "決策樹"))
+
 
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self):
