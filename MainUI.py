@@ -9,7 +9,8 @@ import sys
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from webcrawler import webcrawler,link
-
+from candlestick_test import candlestick
+import pyqtgraph
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -178,6 +179,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 964, 22))
+        self.menubar.setDefaultUp(True)
         self.menubar.setNativeMenuBar(False)
         self.menubar.setObjectName("menubar")
         self.menu = QtWidgets.QMenu(self.menubar)
@@ -285,6 +287,8 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.link4.setText(("<a href=\"" + b[3] + "\">"+b[3]))
         self.ui.link5.setText(("<a href=\"" + b[4] + "\">"+b[4]))
 
+    def candlestickplot(self, cd):
+        self.ui.graphicsView.show()
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
@@ -292,5 +296,6 @@ if __name__ == '__main__':
     ui = Mainwin()
     ui.web(webcrawler())
     ui.link(link())
+    ui.candlestickplot(candlestick())
     ui.show()
     sys.exit(app.exec_())
