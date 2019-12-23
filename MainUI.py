@@ -6,9 +6,10 @@
 #
 # WARNING! All changes made in this file will be lost!
 import sys
-
+import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from webcrawler import webcrawler,link
+from LoadNow import xls
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -36,7 +37,7 @@ class Ui_MainWindow(object):
         self.tableWidget.setShowGrid(True)
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(7)
-        self.tableWidget.setRowCount(0)
+        self.tableWidget.setRowCount(56)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
@@ -285,6 +286,44 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.link4.setText(("<a href=\"" + b[3] + "\">"+b[3]))
         self.ui.link5.setText(("<a href=\"" + b[4] + "\">"+b[4]))
 
+    def xls(self,c=[],b=[]):
+        for i in range(56):
+            #呼叫LoadNow的14列時間塞進xls的第一列setItem(i, 0)
+            if pd.notna(c[14][i+1]):
+                self.ui.tableWidget.setItem(i, 0, QtWidgets.QTableWidgetItem(c[14][i+1]))
+            else:
+                self.ui.tableWidget.setItem(i, 0, QtWidgets.QTableWidgetItem('--'))
+            # 呼叫LoadNow的0列商品塞進xls的第二列setItem(i, 1)...後面接省略
+            if pd.notna(c[0][i+1]):
+                self.ui.tableWidget.setItem(i, 1, QtWidgets.QTableWidgetItem(c[0][i+1]))
+            else:
+                self.ui.tableWidget.setItem(i, 1, QtWidgets.QTableWidgetItem('--'))
+            #10開盤
+            if pd.notna(c[11][i+1]):
+                self.ui.tableWidget.setItem(i, 2, QtWidgets.QTableWidgetItem(c[11][i+1]))
+            else:
+                self.ui.tableWidget.setItem(i, 2, QtWidgets.QTableWidgetItem('--'))
+            #11高點
+            if pd.notna(c[12][i+1]):
+                self.ui.tableWidget.setItem(i, 3, QtWidgets.QTableWidgetItem(c[12][i+1]))
+            else:
+                self.ui.tableWidget.setItem(i, 3, QtWidgets.QTableWidgetItem('--'))
+            #12低點
+            if pd.notna(c[12][i+1]):
+                self.ui.tableWidget.setItem(i, 4, QtWidgets.QTableWidgetItem(c[12][i+1]))
+            else:
+                self.ui.tableWidget.setItem(i, 4, QtWidgets.QTableWidgetItem('--'))
+            #6收盤
+            if pd.notna(c[6][i+1]):
+                self.ui.tableWidget.setItem(i, 5, QtWidgets.QTableWidgetItem(c[6][i+1]))
+            else:
+                self.ui.tableWidget.setItem(i, 5, QtWidgets.QTableWidgetItem('--'))
+            #9成交量
+            if pd.notna(c[9][i+1]):
+                self.ui.tableWidget.setItem(i, 6, QtWidgets.QTableWidgetItem(c[9][i+1]))
+            else:
+                self.ui.tableWidget.setItem(i, 6, QtWidgets.QTableWidgetItem('--'))
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
@@ -292,5 +331,6 @@ if __name__ == '__main__':
     ui = Mainwin()
     ui.web(webcrawler())
     ui.link(link())
+    ui.xls(xls())
     ui.show()
     sys.exit(app.exec_())
