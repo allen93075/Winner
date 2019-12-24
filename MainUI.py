@@ -8,6 +8,7 @@
 import sys
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler,link
 from candlestick_test import candlestick
 import pyqtgraph
@@ -132,9 +133,9 @@ class Ui_MainWindow(object):
         self.lineEdit = QtWidgets.QLineEdit(self.dockWidgetContents_3)
         self.lineEdit.setObjectName("lineEdit")
         self.gridLayout_5.addWidget(self.lineEdit, 0, 0, 1, 1)
-        self.graphicsView = QtWidgets.QGraphicsView(self.dockWidgetContents_3)
-        self.graphicsView.setObjectName("graphicsView")
-        self.gridLayout_5.addWidget(self.graphicsView, 1, 0, 1, 1)
+        self.label = QtWidgets.QLabel(self.dockWidgetContents_3)
+        self.label.setObjectName("candlestickpic")
+        self.gridLayout_5.addWidget(self.label, 1, 0, 1, 1)
         self.Kbar_area.setWidget(self.dockWidgetContents_3)
         self.scrollArea = QtWidgets.QScrollArea(self.splitter_2)
         self.scrollArea.setWidgetResizable(True)
@@ -241,6 +242,7 @@ class Ui_MainWindow(object):
         self.pushButton_sentout.setText(_translate("MainWindow", "送出"))
         self.lineEdit_2.setText(_translate("MainWindow", "走勢圖..."))
         self.lineEdit.setText(_translate("MainWindow", "K棒圖"))
+        self.label.setText(_translate("MainWindow", "TextLabel"))
         self.title5.setText(_translate("MainWindow", "TextLabel"))
         self.title1.setText(_translate("MainWindow", "TextLabel"))
         self.title2.setText(_translate("MainWindow", "TextLabel"))
@@ -287,8 +289,10 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.link4.setText(("<a href=\"" + b[3] + "\">"+b[3]))
         self.ui.link5.setText(("<a href=\"" + b[4] + "\">"+b[4]))
 
-    def candlestickplot(self, cd):
-        self.ui.graphicsView.show()
+    def candlestickplot(self,c=[]):
+        # self.ui.label.picture('mpl_finance_TXF.png')
+        self.im = QPixmap(c)
+        self.ui.label.setPixmap(self.im)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
