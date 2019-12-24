@@ -296,6 +296,7 @@ class Mainwin(QtWidgets.QMainWindow):
         # self.ui.label.picture('mpl_finance_TXF.png')
         self.im = QPixmap(c)
         self.ui.label.setPixmap(self.im)
+        # self.ui.label.resize(200, 200)
 
     def xls(self,c=[]):
         c.columns = c.iloc[0]
