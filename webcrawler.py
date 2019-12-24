@@ -47,9 +47,6 @@ def link():
     return b
 
 
-link()
-
-
 
 
 

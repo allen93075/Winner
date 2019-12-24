@@ -6,7 +6,6 @@ def xls():
     url = 'https://info512.taifex.com.tw/Future/FusaQuote_Norl.aspx'
     #HTML的table>>[]
     out = pd.read_html(url, encoding='utf-8')[10]
-    print()
     #out.drop=刪除不要的col
     out = out.drop(range(2, 6), 1)
     out = out.drop(range(7, 9), 1)
@@ -14,4 +13,3 @@ def xls():
 
     return out
 
-xls()

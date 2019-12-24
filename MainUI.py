@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MainUI.ui'
+# Form implementation generated from reading ui file 'MainUI(donotpush).ui'
 #
 # Created by: PyQt5 UI code generator 5.13.2
 #
@@ -10,6 +10,7 @@ import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from webcrawler import webcrawler,link
 from LoadNow import xls
+import strategic_management
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -37,7 +38,6 @@ class Ui_MainWindow(object):
         self.tableWidget.setShowGrid(True)
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(7)
-        self.tableWidget.setRowCount(56)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
@@ -129,18 +129,18 @@ class Ui_MainWindow(object):
         self.dockWidgetContents_3.setObjectName("dockWidgetContents_3")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.dockWidgetContents_3)
         self.gridLayout_5.setObjectName("gridLayout_5")
+        self.columnView = QtWidgets.QColumnView(self.dockWidgetContents_3)
+        self.columnView.setObjectName("columnView")
+        self.gridLayout_5.addWidget(self.columnView, 1, 0, 1, 1)
         self.lineEdit = QtWidgets.QLineEdit(self.dockWidgetContents_3)
         self.lineEdit.setObjectName("lineEdit")
         self.gridLayout_5.addWidget(self.lineEdit, 0, 0, 1, 1)
-        self.graphicsView = QtWidgets.QGraphicsView(self.dockWidgetContents_3)
-        self.graphicsView.setObjectName("graphicsView")
-        self.gridLayout_5.addWidget(self.graphicsView, 1, 0, 1, 1)
         self.Kbar_area.setWidget(self.dockWidgetContents_3)
         self.scrollArea = QtWidgets.QScrollArea(self.splitter_2)
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 329, 354))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 329, 357))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -241,7 +241,7 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setText(_translate("MainWindow", "走勢圖..."))
         self.lineEdit.setText(_translate("MainWindow", "K棒圖"))
         self.title5.setText(_translate("MainWindow", "TextLabel"))
-        self.title1.setText(_translate("MainWindow", "TextLabel"))
+        self.title1.setText(_translate("MainWindow", "OAO"))
         self.title2.setText(_translate("MainWindow", "TextLabel"))
         self.title4.setText(_translate("MainWindow", "TextLabel"))
         self.title3.setText(_translate("MainWindow", "TextLabel"))
@@ -264,6 +264,7 @@ class Mainwin(QtWidgets.QMainWindow):
         super(Mainwin, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.actionrm_6hk4gj4.triggered.connect(self.des)
         self.ui.link1.setOpenExternalLinks(True)
         self.ui.link2.setOpenExternalLinks(True)
         self.ui.link3.setOpenExternalLinks(True)
@@ -286,43 +287,21 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.link4.setText(("<a href=\"" + b[3] + "\">"+b[3]))
         self.ui.link5.setText(("<a href=\"" + b[4] + "\">"+b[4]))
 
-    def xls(self,c=[],b=[]):
-        for i in range(56):
-            #呼叫LoadNow的14列時間塞進xls的第一列setItem(i, 0)
-            if pd.notna(c[14][i+1]):
-                self.ui.tableWidget.setItem(i, 0, QtWidgets.QTableWidgetItem(c[14][i+1]))
-            else:
-                self.ui.tableWidget.setItem(i, 0, QtWidgets.QTableWidgetItem('--'))
-            # 呼叫LoadNow的0列商品塞進xls的第二列setItem(i, 1)...後面接省略
-            if pd.notna(c[0][i+1]):
-                self.ui.tableWidget.setItem(i, 1, QtWidgets.QTableWidgetItem(c[0][i+1]))
-            else:
-                self.ui.tableWidget.setItem(i, 1, QtWidgets.QTableWidgetItem('--'))
-            #10開盤
-            if pd.notna(c[11][i+1]):
-                self.ui.tableWidget.setItem(i, 2, QtWidgets.QTableWidgetItem(c[11][i+1]))
-            else:
-                self.ui.tableWidget.setItem(i, 2, QtWidgets.QTableWidgetItem('--'))
-            #11高點
-            if pd.notna(c[12][i+1]):
-                self.ui.tableWidget.setItem(i, 3, QtWidgets.QTableWidgetItem(c[12][i+1]))
-            else:
-                self.ui.tableWidget.setItem(i, 3, QtWidgets.QTableWidgetItem('--'))
-            #12低點
-            if pd.notna(c[12][i+1]):
-                self.ui.tableWidget.setItem(i, 4, QtWidgets.QTableWidgetItem(c[12][i+1]))
-            else:
-                self.ui.tableWidget.setItem(i, 4, QtWidgets.QTableWidgetItem('--'))
-            #6收盤
-            if pd.notna(c[6][i+1]):
-                self.ui.tableWidget.setItem(i, 5, QtWidgets.QTableWidgetItem(c[6][i+1]))
-            else:
-                self.ui.tableWidget.setItem(i, 5, QtWidgets.QTableWidgetItem('--'))
-            #9成交量
-            if pd.notna(c[9][i+1]):
-                self.ui.tableWidget.setItem(i, 6, QtWidgets.QTableWidgetItem(c[9][i+1]))
-            else:
-                self.ui.tableWidget.setItem(i, 6, QtWidgets.QTableWidgetItem('--'))
+    def xls(self,c=[]):
+        c.columns = c.iloc[0]
+        row_size = c.shape[0] - 1
+        self.ui.tableWidget.setRowCount(row_size)
+        index = ["時間", "商品", "開盤", "最高", "最低", "成交價", "成交量"]
+        for i in range(len(index)):
+            for j in range(row_size):
+                if pd.notna(c[index[i]][j+1]):
+                    self.ui.tableWidget.setItem(j, i, QtWidgets.QTableWidgetItem(c[index[i]][j+1]))
+                else:
+                    self.ui.tableWidget.setItem(j, i, QtWidgets.QTableWidgetItem('--'))
+
+    def des(self):
+        self.a = strategic_management.Mainwin()
+        self.a.show()
 
 
 if __name__ == '__main__':
