@@ -6,12 +6,15 @@
 #
 # WARNING! All changes made in this file will be lost!
 import sys
-
+import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler,link
 from candlestick_test import candlestick
 import pyqtgraph
+from LoadNow import xls
+import strategic_management
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -38,7 +41,6 @@ class Ui_MainWindow(object):
         self.tableWidget.setShowGrid(True)
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(7)
-        self.tableWidget.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
@@ -141,7 +143,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 329, 354))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 329, 357))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -267,6 +269,7 @@ class Mainwin(QtWidgets.QMainWindow):
         super(Mainwin, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.actionrm_6hk4gj4.triggered.connect(self.des)
         self.ui.link1.setOpenExternalLinks(True)
         self.ui.link2.setOpenExternalLinks(True)
         self.ui.link3.setOpenExternalLinks(True)
@@ -294,6 +297,23 @@ class Mainwin(QtWidgets.QMainWindow):
         self.im = QPixmap(c)
         self.ui.label.setPixmap(self.im)
 
+    def xls(self,c=[]):
+        c.columns = c.iloc[0]
+        row_size = c.shape[0] - 1
+        self.ui.tableWidget.setRowCount(row_size)
+        index = ["時間", "商品", "開盤", "最高", "最低", "成交價", "成交量"]
+        for i in range(len(index)):
+            for j in range(row_size):
+                if pd.notna(c[index[i]][j+1]):
+                    self.ui.tableWidget.setItem(j, i, QtWidgets.QTableWidgetItem(c[index[i]][j+1]))
+                else:
+                    self.ui.tableWidget.setItem(j, i, QtWidgets.QTableWidgetItem('--'))
+
+    def des(self):
+        self.a = strategic_management.Mainwin()
+        self.a.show()
+
+
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
@@ -301,5 +321,6 @@ if __name__ == '__main__':
     ui.web(webcrawler())
     ui.link(link())
     ui.candlestickplot(candlestick())
+    ui.xls(xls())
     ui.show()
     sys.exit(app.exec_())
