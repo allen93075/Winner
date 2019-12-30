@@ -189,22 +189,6 @@
          </layout>
         </widget>
        </widget>
-       <widget class="QDockWidget" name="product_status">
-        <widget class="QWidget" name="dockWidgetContents_2">
-         <layout class="QGridLayout" name="gridLayout_4">
-          <item row="0" column="0">
-           <widget class="QLineEdit" name="lineEdit_2">
-            <property name="text">
-             <string>走勢圖...</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QListView" name="listView_2"/>
-          </item>
-         </layout>
-        </widget>
-       </widget>
       </widget>
       <widget class="QSplitter" name="splitter_2">
        <property name="orientation">
@@ -221,7 +205,7 @@
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="stock_pic">
             <property name="text">
              <string>TextLabel</string>
             </property>
@@ -239,8 +223,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>329</width>
-           <height>354</height>
+           <width>472</width>
+           <height>237</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
