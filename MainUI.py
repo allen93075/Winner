@@ -281,7 +281,7 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def candlestickplot(self,c=[]):
         # self.ui.label.picture('mpl_finance_TXF.png')
-        self.im = QPixmap(c).scaled(200, 200)
+        self.im = QPixmap(c).scaled(400, 300)
         self.ui.stock_pic.setPixmap(self.im)
 
     def xls(self,c=[]):
