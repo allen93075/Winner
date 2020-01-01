@@ -15,9 +15,10 @@ filename = 'Decision_Tree_model_WF.sav'
 model = pickle.load(open(filename, 'rb'))
 
 df = pd.read_csv('C:/Users/USER/Desktop/TXF1-日-成交價_20years.csv')
-data = df[['Open', 'High', 'Low', 'Close', 'TotalVolume']]
-data.columns = ['open', 'high', 'low', 'close', 'totalvolume']
-data = data.astype('float')
+data = df[['Date', 'Open', 'High', 'Low', 'Close', 'TotalVolume']]
+data.columns = ['date', 'open', 'high', 'low', 'close', 'totalvolume']
+data = data.set_index(['date'])
+#data = data.astype('float')
 
 
 ta_list = ['MACD','RSI','MOM','STOCH']
@@ -27,6 +28,7 @@ for x in ta_list:
     output.name = x.lower() if type(output) == pd.core.series.Series else None
     data = pd.merge(data, pd.DataFrame(output), left_on = data.index, right_on = output.index)
     data = data.set_index('key_0')
+    data.index.name = 'date'
 #print(data)
 
 #for n in data.index:
