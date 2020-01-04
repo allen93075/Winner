@@ -63,7 +63,6 @@ predict_train = mlp.predict(train_X)
 predict_test = mlp.predict(test_X)
 
 from sklearn.metrics import classification_report,confusion_matrix
-score(test_X, test_y, sample_weight=None)
 print(confusion_matrix(train_y,predict_train))
 print(classification_report(train_y,predict_train))
 print(confusion_matrix(test_y,predict_test))
