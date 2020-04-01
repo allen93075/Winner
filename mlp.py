@@ -1,80 +1,88 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Dec 31 20:18:53 2019
+Created on Wed Mar 18 03:07:48 2020
 
 @author: user
 """
-
-from sklearn.neural_network import MLPClassifier
-#from sklearn.model_selection import train_test_split
 import pandas as pd
 import numpy as np
-import talib
+from sklearn import model_selection,ensemble, preprocessing, metrics
+from sklearn.neural_network import MLPClassifier
 from talib import abstract
-'''
-# 透過『get_functions』語法，查看 TA-Lib 提供的所有技術指標的代碼
-all_ta_label = talib.get_functions()
-# 看一下清單
-all_ta_label
-# 共有 158 個技術指標可以運算
-len(all_ta_label)
-'''
-df = pd.read_csv('E:\畢業專題\TXF1-日-成交價_20years.csv')
-data = df[['Date', 'Open', 'High', 'Low', 'Close', 'TotalVolume']]
+from sklearn.preprocessing import StandardScaler
+
+#載入資料
+df = pd.read_csv('E:\ProjectAI\TXF1-日-成交價_20years.csv')
+data = df[['Date', 'Open', 'High', 'Low', 'Close', 'Volume']]
 data.columns = ['date', 'open', 'high', 'low', 'close', 'volume']
 data = data.set_index(['date'])
-ta_list = ['MACD','RSI','MOM','STOCH']
-# 快速計算與整理因子
+
+'''
+data = data.astype('float')
+#計算技術指標
+ta_list = ['RSI']
 for x in ta_list:
     output = eval('abstract.'+x+'(data)')
     output.name = x.lower() if type(output) == pd.core.series.Series else None
     data = pd.merge(data, pd.DataFrame(output), left_on = data.index, right_on = output.index)
     data = data.set_index('key_0')
     data.index.name = 'date'
+'''
+# 判斷漲跌1 -1 0
+s = (data.close - data.close.shift(1))/data.close.shift(1)  #漲跌幅 = 漲跌值 / 昨日收盤價
+data['s']=s
+trend=[]
+for i in range(len(data)):   
+    if(data['s'][i] > 0.0025):
+        trend.append(1)
+        #data['day_trend'][i] = 1,
+    elif(data['s'][i]< -0.0025):
+        trend.append(-1)
+        #data['day_trend'][i] = -1
+    else:
+        trend.append(0)
+        #data['day_trend'][i] = 0
+data['day_trend'] = trend
 
-#print(data)
-
-# 一日後漲標記 1，反之標記 0
-data['day_trend'] = np.where(data.close.shift(-1) > data.close, 1, 0)
-#print(data['day_trend'])
-# 檢查資料有無缺值
+#data['day_trend'] = np.where(data.close-data.close.shift(-1) > data.close*0.0015, 1, 0)
+# 檢查資料有無缺值，刪除空值
+print(data['day_trend'])
 data.isnull().sum()
-# 最簡單的作法是把有缺值的資料整列拿掉
 data = data.dropna()
 
-# 決定切割比例為 70%:30%
-split_point = int(len(data)*0.8)
-# 切割成學習樣本以及測試樣本
-train = data.iloc[:split_point,:].copy()
-test = data.iloc[split_point:-5,:].copy()
-# 訓練樣本再分成目標序列 y 以及因子矩陣 X
-train_X = train.drop('day_trend', axis = 1)
-train_y = train.day_trend
+#split_point = int(len(data)*0.9)
+train = data.iloc[::].copy()
+test = data.iloc[:-5,:].copy()
+X_train = train.drop(['s', 'day_trend'], axis = 1)
+y_train = train.day_trend
+X_test = test.drop(['s', 'day_trend'], axis = 1)
+y_test = test.day_trend
 
-# 測試樣本再分成目標序列 y 以及因子矩陣 X
-test_X = test.drop('day_trend', axis = 1)
-test_y = test.day_trend
+#正規化
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
 
-
-mlp =MLPClassifier(hidden_layer_sizes=(10, 10, 10), max_iter=1000)
-mlp.fit(train_X,train_y)
-
-predict_train = mlp.predict(train_X)
-predict_test = mlp.predict(test_X)
-
-from sklearn.metrics import classification_report,confusion_matrix
-print(confusion_matrix(train_y,predict_train))
-print(classification_report(train_y,predict_train))
-print(confusion_matrix(test_y,predict_test))
-print(classification_report(test_y,predict_test))
+from sklearn.model_selection import train_test_split
+X_train,X_test,y_train,y_test=train_test_split(X_train,y_train,test_size=0.33)
+clf = MLPClassifier(hidden_layer_sizes=(1,100), max_iter=500, alpha=1e-4,
+                    solver='lbfgs', verbose=2, tol=1e-4, random_state=32,
+                    learning_rate_init=0.5)
+clf.fit(X_train,y_train)
 
 
-#mlp.fit(X_train, y_train)
+#mlp=MLPClassifier(solver='lbfgs',#solver:'lbfgs','sgd','adam',
+#                    hidden_layer_sizes=(2,20),random_state=42,
+#                    learning_rate_init=0.001,max_iter=100)
+#mlp.fit(X_train,y_train)\n",
 
-'''
-X = [[0., 0.,0.], [1., 1.,1.],[2., 2.,2.]]
-y = [0, 1, 2]
-clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5,3), random_state=1)
-clf.fit(X, y)    
-clf.predict([[2., 2., 2.], [-1., -2.,0.],[1., 1.,0.]])
-'''
+predicts = clf.predict(X_test)
+#print('acc：%s' % clf.score(X_test, y_test))
+accuracy = metrics.accuracy_score(y_test, predicts)
+print("acc:", accuracy)
+print("predicts:", predicts)
+
+#save to csv file
+from numpy import savetxt
+savetxt('mlppredict.csv', predicts, delimiter=',')
+
