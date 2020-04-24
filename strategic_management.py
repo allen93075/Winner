@@ -190,7 +190,6 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui = Ui_Strategic_management()
         self.ui.setupUi(self)
 
-
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
