@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1066</width>
-    <height>824</height>
+    <width>917</width>
+    <height>634</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,7 +50,7 @@
            <enum>QFrame::StyledPanel</enum>
           </property>
           <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
+           <enum>QFrame::Sunken</enum>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
@@ -83,7 +83,7 @@
            <enum>QFrame::StyledPanel</enum>
           </property>
           <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
+           <enum>QFrame::Sunken</enum>
           </property>
           <layout class="QGridLayout" name="gridLayout_3">
            <item row="0" column="0">
@@ -200,21 +200,16 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1066</width>
+     <width>917</width>
      <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
-     <string>交易策略模組</string>
+     <string>交易策略</string>
     </property>
     <addaction name="actionLSMT"/>
     <addaction name="actionDT"/>
-   </widget>
-   <widget class="QMenu" name="menu_2">
-    <property name="title">
-     <string>策略管理模組</string>
-    </property>
    </widget>
    <widget class="QMenu" name="menu_3">
     <property name="title">
@@ -237,7 +232,6 @@
     </property>
    </widget>
    <addaction name="menu"/>
-   <addaction name="menu_2"/>
    <addaction name="menu_3"/>
    <addaction name="menu_4"/>
    <addaction name="menu_5"/>

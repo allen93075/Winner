@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'strategic_management.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.2
+# Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
 import sys
@@ -40,7 +40,7 @@ class Ui_Strategic_management(object):
         sizePolicy.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
         self.frame.setSizePolicy(sizePolicy)
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.frame.setObjectName("frame")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -61,7 +61,7 @@ class Ui_Strategic_management(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.frame_2.setObjectName("frame_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.frame_2)
         self.gridLayout_3.setObjectName("gridLayout_3")
@@ -124,8 +124,6 @@ class Ui_Strategic_management(object):
         self.menubar.setObjectName("menubar")
         self.menu = QtWidgets.QMenu(self.menubar)
         self.menu.setObjectName("menu")
-        self.menu_2 = QtWidgets.QMenu(self.menubar)
-        self.menu_2.setObjectName("menu_2")
         self.menu_3 = QtWidgets.QMenu(self.menubar)
         self.menu_3.setObjectName("menu_3")
         self.menu_4 = QtWidgets.QMenu(self.menubar)
@@ -145,7 +143,6 @@ class Ui_Strategic_management(object):
         self.menu.addAction(self.actionLSMT)
         self.menu.addAction(self.actionDT)
         self.menubar.addAction(self.menu.menuAction())
-        self.menubar.addAction(self.menu_2.menuAction())
         self.menubar.addAction(self.menu_3.menuAction())
         self.menubar.addAction(self.menu_4.menuAction())
         self.menubar.addAction(self.menu_5.menuAction())
@@ -175,8 +172,7 @@ class Ui_Strategic_management(object):
         self.comboBox_3.setItemText(1, _translate("MainWindow", "隨機森林"))
         self.comboBox_3.setItemText(2, _translate("MainWindow", "深度學習"))
         self.pushButton.setText(_translate("MainWindow", "Send"))
-        self.menu.setTitle(_translate("MainWindow", "交易策略模組"))
-        self.menu_2.setTitle(_translate("MainWindow", "策略管理模組"))
+        self.menu.setTitle(_translate("MainWindow", "交易策略"))
         self.menu_3.setTitle(_translate("MainWindow", "歷史回測"))
         self.menu_4.setTitle(_translate("MainWindow", "資金管理"))
         self.menu_5.setTitle(_translate("MainWindow", "績效評估"))
