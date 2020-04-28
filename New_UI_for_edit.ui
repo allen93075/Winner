@@ -36,7 +36,7 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>459</width>
+           <width>462</width>
            <height>735</height>
           </rect>
          </property>
@@ -221,10 +221,17 @@
      <string>資金管理</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuOpen">
+    <property name="title">
+     <string>Open</string>
+    </property>
+    <addaction name="actionMulticharts"/>
+   </widget>
    <addaction name="menu_2"/>
    <addaction name="menu_3"/>
    <addaction name="menu"/>
    <addaction name="menu_4"/>
+   <addaction name="menuOpen"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionTurlte_2">
@@ -295,6 +302,11 @@
   <action name="actionAverage_2">
    <property name="text">
     <string>Average</string>
+   </property>
+  </action>
+  <action name="actionMulticharts">
+   <property name="text">
+    <string>Multicharts</string>
    </property>
   </action>
  </widget>

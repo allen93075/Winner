@@ -1,4 +1,4 @@
-import sys
+import sys, os
 import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
@@ -11,6 +11,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.actionDT.triggered.connect(self.des)
+        self.ui.actionMulticharts.triggered.connect(self.callMC)
         self.ui.link1.setOpenExternalLinks(True)
         self.ui.link2.setOpenExternalLinks(True)
         self.ui.link3.setOpenExternalLinks(True)
@@ -35,6 +36,8 @@ class Mainwin(QtWidgets.QMainWindow):
         self.a = Str_tree()
         self.a.show()
 
+    def callMC(self):
+        self.call = os.system('open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
