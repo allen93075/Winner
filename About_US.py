@@ -5,7 +5,7 @@ import sys
 class About_US(QtWidgets.QMainWindow):
     def __init__(self):
         super(About_US, self).__init__()
-        self.ui = AboutUS.Ui_AboutUS()
+        self.ui = AboutUS.Ui_MainWindow()
         self.ui.setupUi(self)
 
 
