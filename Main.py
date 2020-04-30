@@ -4,6 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
 from str_tree import Str_tree
+from About_US import About_US
 from MainUI import Ui_MainWindow
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self,parent=None):
@@ -11,6 +12,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.actionDT.triggered.connect(self.des)
+        self.ui.actionAbout.triggered.connect(self.AboutUs)
         self.ui.actionMulticharts.triggered.connect(self.callMC)
         self.ui.link1.setOpenExternalLinks(True)
         self.ui.link2.setOpenExternalLinks(True)
@@ -38,6 +40,10 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def callMC(self):
         self.call = os.system('open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
+
+    def AboutUs(self):
+        self.aboutus = About_US()
+        self.aboutus.show()
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
