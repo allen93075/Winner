@@ -11,7 +11,7 @@ class Mainwin(QtWidgets.QMainWindow):
         super(Mainwin, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.actionDT.triggered.connect(self.des)
+        self.ui.actionDT_Original.triggered.connect(self.des)
         self.ui.actionAbout.triggered.connect(self.AboutUs)
         self.ui.actionAboutMC.triggered.connect(self.AboutMC)
         self.ui.actionMulticharts.triggered.connect(self.callMC)
@@ -20,6 +20,8 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.link3.setOpenExternalLinks(True)
         self.ui.link4.setOpenExternalLinks(True)
         self.ui.link5.setOpenExternalLinks(True)
+    #   MainWindow Title
+        self.setWindowTitle('期貨贏家機器人')
 
     def web(self, a=[]):
         self.ui.title1.setText(a[0])

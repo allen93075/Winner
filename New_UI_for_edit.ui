@@ -151,39 +151,7 @@
    <property name="nativeMenuBar">
     <bool>false</bool>
    </property>
-   <widget class="QMenu" name="menu">
-    <property name="sizeIncrement">
-     <size>
-      <width>0</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="title">
-     <string>策略管理</string>
-    </property>
-    <widget class="QMenu" name="menuMachineLearning">
-     <property name="title">
-      <string>機器學習</string>
-     </property>
-     <addaction name="actionRF"/>
-     <addaction name="actionDT"/>
-     <addaction name="actionLSTM"/>
-     <addaction name="actionMLP"/>
-    </widget>
-    <widget class="QMenu" name="menuStrategy">
-     <property name="title">
-      <string>程式交易</string>
-     </property>
-     <addaction name="actionTurtle"/>
-     <addaction name="actionRangeBreak"/>
-     <addaction name="actionAverage"/>
-     <addaction name="actionCCI"/>
-    </widget>
-    <addaction name="menuMachineLearning"/>
-    <addaction name="separator"/>
-    <addaction name="menuStrategy"/>
-   </widget>
-   <widget class="QMenu" name="menu_2">
+   <widget class="QMenu" name="menu_Strategy">
     <property name="sizeIncrement">
      <size>
       <width>0</width>
@@ -193,12 +161,52 @@
     <property name="title">
      <string>交易策略</string>
     </property>
-    <addaction name="actionTurtle_2"/>
+    <widget class="QMenu" name="menuTurtle">
+     <property name="title">
+      <string>海龜</string>
+     </property>
+     <widget class="QMenu" name="menuTurtle_30k">
+      <property name="title">
+       <string>海龜30k</string>
+      </property>
+      <addaction name="actionTurtle_Original"/>
+      <addaction name="actionTurtle_FixedRatio"/>
+      <addaction name="actionTurtle_Kelly"/>
+      <addaction name="actionTurtle_OptimalF"/>
+      <addaction name="actionTurtle_LarryWilliam"/>
+      <addaction name="actionTurtle_AntiMartingale"/>
+     </widget>
+     <widget class="QMenu" name="menuTurtle_60k">
+      <property name="title">
+       <string>海龜60k</string>
+      </property>
+      <addaction name="actionTurtle_Original_2"/>
+      <addaction name="actionTurtle_FixedRatio_2"/>
+      <addaction name="actionTurtle_Kelly_2"/>
+      <addaction name="actionTurtle_OptimalF_2"/>
+      <addaction name="actionTurtle_LarryWilliam_2"/>
+      <addaction name="actionTurtle_AntiMartingale_2"/>
+     </widget>
+     <addaction name="menuTurtle_30k"/>
+     <addaction name="separator"/>
+     <addaction name="menuTurtle_60k"/>
+    </widget>
+    <widget class="QMenu" name="menuMoveAverage">
+     <property name="title">
+      <string>移動均線</string>
+     </property>
+     <addaction name="actionMA_Original"/>
+     <addaction name="actionMA_Kelly"/>
+     <addaction name="actionMA_FixedRatio"/>
+     <addaction name="actionMA_OptimalF"/>
+     <addaction name="actionMA_LarryWilliam"/>
+     <addaction name="actionMA_AntiMartingale"/>
+    </widget>
+    <addaction name="menuTurtle"/>
+    <addaction name="menuMoveAverage"/>
     <addaction name="actionRangeBreak_2"/>
-    <addaction name="actionAverage_2"/>
-    <addaction name="actionCCI_2"/>
    </widget>
-   <widget class="QMenu" name="menu_3">
+   <widget class="QMenu" name="menu_AI">
     <property name="sizeIncrement">
      <size>
       <width>0</width>
@@ -208,59 +216,116 @@
     <property name="title">
      <string>智能交易</string>
     </property>
-    <addaction name="actionRF_2"/>
-    <addaction name="actionDT_2"/>
-    <addaction name="actionLSTM_2"/>
-    <addaction name="actionMLP_2"/>
+    <widget class="QMenu" name="menuMachineTranning">
+     <property name="title">
+      <string>機器訓練</string>
+     </property>
+     <addaction name="actionGetData"/>
+     <addaction name="actionTranningMachine"/>
+    </widget>
+    <widget class="QMenu" name="menuDT">
+     <property name="title">
+      <string>決策樹(DT)</string>
+     </property>
+     <addaction name="actionDT_Original"/>
+     <addaction name="actionDT_Kelly"/>
+     <addaction name="actionDT_FixedRatio"/>
+     <addaction name="actionDT_OptimalF"/>
+     <addaction name="actionDT_LarryWilliam"/>
+     <addaction name="actionDT_AntiMartingale"/>
+    </widget>
+    <widget class="QMenu" name="menuRF">
+     <property name="title">
+      <string>隨機森林(RF)</string>
+     </property>
+     <addaction name="actionRF_Original"/>
+     <addaction name="actionRF_Kelly"/>
+     <addaction name="actionRF_FixedRatio"/>
+     <addaction name="actionRF_OptimalF"/>
+     <addaction name="actionRF_LarryWilliam"/>
+     <addaction name="actionRF_AntiMartingale"/>
+    </widget>
+    <widget class="QMenu" name="menuLSTM">
+     <property name="title">
+      <string>長短期記憶(LSTM)</string>
+     </property>
+     <addaction name="actionLSTM_Original"/>
+     <addaction name="actionLSTM_Kelly"/>
+     <addaction name="actionLSTM_FixedRatio"/>
+     <addaction name="actionLSTM_OptimalF"/>
+     <addaction name="actionLSTM_LarryWilliam"/>
+     <addaction name="actionLSTM_AntiMartingale"/>
+    </widget>
+    <widget class="QMenu" name="menuMLP">
+     <property name="title">
+      <string>多層感知器(MLP)</string>
+     </property>
+     <addaction name="actionMLP_Original"/>
+     <addaction name="actionMLP_Kelly"/>
+     <addaction name="actionMLP_FixedRatio"/>
+     <addaction name="actionMLP_OptimalF"/>
+     <addaction name="actionMLP_LarryWilliam"/>
+     <addaction name="actionMLP_AntiMartingale"/>
+    </widget>
+    <widget class="QMenu" name="menuAdaboost">
+     <property name="title">
+      <string>自適應增強(Adaboost)</string>
+     </property>
+     <addaction name="actionAdaboost_Original"/>
+     <addaction name="actionAdaboost_Kelly"/>
+     <addaction name="actionAdaboost_FixedRatio"/>
+     <addaction name="actionAdaboost_OptimalF"/>
+     <addaction name="actionAdaboost_LarryWilliam"/>
+     <addaction name="actionAdaboost_AntiMartingale"/>
+    </widget>
+    <addaction name="menuMachineTranning"/>
+    <addaction name="menuDT"/>
+    <addaction name="menuRF"/>
+    <addaction name="menuLSTM"/>
+    <addaction name="menuMLP"/>
+    <addaction name="menuAdaboost"/>
    </widget>
-   <widget class="QMenu" name="menuOpen">
+   <widget class="QMenu" name="menu_Open">
     <property name="title">
      <string>開啟</string>
     </property>
     <addaction name="actionMulticharts"/>
    </widget>
-   <widget class="QMenu" name="menu_4">
+   <widget class="QMenu" name="menu_About">
     <property name="title">
-     <string>設置</string>
+     <string>關於</string>
     </property>
     <addaction name="actionAbout"/>
     <addaction name="actionAboutMC"/>
    </widget>
-   <addaction name="menu_2"/>
-   <addaction name="menu_3"/>
-   <addaction name="menu"/>
-   <addaction name="menuOpen"/>
-   <addaction name="menu_4"/>
+   <widget class="QMenu" name="menu_Webcrawler">
+    <property name="title">
+     <string>網路爬蟲</string>
+    </property>
+    <widget class="QMenu" name="menuinformation">
+     <property name="title">
+      <string>查看資訊</string>
+     </property>
+     <addaction name="actionrecentInfo"/>
+    </widget>
+    <addaction name="menuinformation"/>
+   </widget>
+   <widget class="QMenu" name="menu_Reports">
+    <property name="title">
+     <string>績效報告</string>
+    </property>
+   </widget>
+   <addaction name="menu_Strategy"/>
+   <addaction name="menu_AI"/>
+   <addaction name="menu_Webcrawler"/>
+   <addaction name="menu_Reports"/>
+   <addaction name="menu_Open"/>
+   <addaction name="menu_About"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionTurtle_2">
-   <property name="text">
-    <string>Turtle</string>
-   </property>
-  </action>
   <action name="actionRangeBreak_2">
    <property name="text">
-    <string>RangeBreak</string>
-   </property>
-  </action>
-  <action name="actionRF">
-   <property name="text">
-    <string>RF</string>
-   </property>
-  </action>
-  <action name="actionDT">
-   <property name="text">
-    <string>DT</string>
-   </property>
-  </action>
-  <action name="actionLSTM">
-   <property name="text">
-    <string>LSTM</string>
-   </property>
-  </action>
-  <action name="actionMLP">
-   <property name="text">
-    <string>MLP</string>
+    <string>區間突破</string>
    </property>
   </action>
   <action name="actionTurtle">
@@ -278,44 +343,9 @@
     <string>MoveAverage</string>
    </property>
   </action>
-  <action name="actionRF_2">
-   <property name="text">
-    <string>RF</string>
-   </property>
-  </action>
-  <action name="actionDT_2">
-   <property name="text">
-    <string>DT</string>
-   </property>
-  </action>
-  <action name="actionLSTM_2">
-   <property name="text">
-    <string>LSTM</string>
-   </property>
-  </action>
-  <action name="actionMLP_2">
-   <property name="text">
-    <string>MLP</string>
-   </property>
-  </action>
-  <action name="actionAverage_2">
-   <property name="text">
-    <string>MoveAverage</string>
-   </property>
-  </action>
   <action name="actionMulticharts">
    <property name="text">
     <string>Multicharts</string>
-   </property>
-  </action>
-  <action name="actionCCI">
-   <property name="text">
-    <string>CCI</string>
-   </property>
-  </action>
-  <action name="actionCCI_2">
-   <property name="text">
-    <string>CCI</string>
    </property>
   </action>
   <action name="actionAbout">
@@ -326,6 +356,261 @@
   <action name="actionAboutMC">
    <property name="text">
     <string>關於Multicharts</string>
+   </property>
+  </action>
+  <action name="actionrecentInfo">
+   <property name="text">
+    <string>近期期貨新聞</string>
+   </property>
+  </action>
+  <action name="actionTurtle_Original">
+   <property name="text">
+    <string>原始海龜30k</string>
+   </property>
+  </action>
+  <action name="actionTurtle_Kelly">
+   <property name="text">
+    <string>海龜30k+凱利公式</string>
+   </property>
+  </action>
+  <action name="actionTurtle_FixedRatio">
+   <property name="text">
+    <string>海龜30k+固定比率</string>
+   </property>
+  </action>
+  <action name="actionTurtle_OptimalF">
+   <property name="text">
+    <string>海龜30k+最佳F值</string>
+   </property>
+  </action>
+  <action name="actionTurtle_LarryWilliam">
+   <property name="text">
+    <string>海龜30k+LarryWilliam</string>
+   </property>
+  </action>
+  <action name="actionTurtle_AntiMartingale">
+   <property name="text">
+    <string>海龜30k+反馬丁格</string>
+   </property>
+  </action>
+  <action name="actionTurtle_Original_2">
+   <property name="text">
+    <string>原始海龜60k</string>
+   </property>
+  </action>
+  <action name="actionTurtle_Kelly_2">
+   <property name="text">
+    <string>海龜60k+凱利公式</string>
+   </property>
+  </action>
+  <action name="actionTurtle_FixedRatio_2">
+   <property name="text">
+    <string>海龜60k+固定比率</string>
+   </property>
+  </action>
+  <action name="actionTurtle_OptimalF_2">
+   <property name="text">
+    <string>海龜60k+最佳F值</string>
+   </property>
+  </action>
+  <action name="actionTurtle_LarryWilliam_2">
+   <property name="text">
+    <string>海龜60k+LarryWilliam</string>
+   </property>
+  </action>
+  <action name="actionTurtle_AntiMartingale_2">
+   <property name="text">
+    <string>海龜60k+反馬丁格</string>
+   </property>
+  </action>
+  <action name="actionMA_Original">
+   <property name="text">
+    <string>原始移動均線</string>
+   </property>
+  </action>
+  <action name="actionMA_Kelly">
+   <property name="text">
+    <string>移動均線＋凱利</string>
+   </property>
+  </action>
+  <action name="actionMA_FixedRatio">
+   <property name="text">
+    <string>移動均線＋固定比率</string>
+   </property>
+  </action>
+  <action name="actionMA_OptimalF">
+   <property name="text">
+    <string>移動均線＋最佳F值</string>
+   </property>
+  </action>
+  <action name="actionMA_LarryWilliam">
+   <property name="text">
+    <string>移動均線＋LarryWilliam</string>
+   </property>
+  </action>
+  <action name="actionMA_AntiMartingale">
+   <property name="text">
+    <string>移動均線＋反馬丁格</string>
+   </property>
+  </action>
+  <action name="actionGetData">
+   <property name="text">
+    <string>抓取資料</string>
+   </property>
+  </action>
+  <action name="actionTranningMachine">
+   <property name="text">
+    <string>訓練機器</string>
+   </property>
+  </action>
+  <action name="actionDT_Original">
+   <property name="text">
+    <string>原始DT</string>
+   </property>
+  </action>
+  <action name="actionDT_Kelly">
+   <property name="text">
+    <string>DT＋凱利</string>
+   </property>
+  </action>
+  <action name="actionDT_FixedRatio">
+   <property name="text">
+    <string>DT＋固定比例</string>
+   </property>
+  </action>
+  <action name="actionDT_OptimalF">
+   <property name="text">
+    <string>DT＋最佳F值</string>
+   </property>
+  </action>
+  <action name="actionDT_LarryWilliam">
+   <property name="text">
+    <string>DT＋LarryWilliam</string>
+   </property>
+  </action>
+  <action name="actionDT_AntiMartingale">
+   <property name="text">
+    <string>DT＋反馬丁格</string>
+   </property>
+  </action>
+  <action name="actionLSTM_Original">
+   <property name="text">
+    <string>原始LSTM</string>
+   </property>
+  </action>
+  <action name="actionLSTM_Kelly">
+   <property name="text">
+    <string>LSTM＋凱利</string>
+   </property>
+  </action>
+  <action name="actionLSTM_FixedRatio">
+   <property name="text">
+    <string>LSTM＋固定比率</string>
+   </property>
+  </action>
+  <action name="actionLSTM_OptimalF">
+   <property name="text">
+    <string>LSTM＋最佳F值</string>
+   </property>
+  </action>
+  <action name="actionLSTM_LarryWilliam">
+   <property name="text">
+    <string>LSTM＋LarryWilliam</string>
+   </property>
+  </action>
+  <action name="actionLSTM_AntiMartingale">
+   <property name="text">
+    <string>LSTM＋反馬丁格</string>
+   </property>
+  </action>
+  <action name="actionRF_Original">
+   <property name="text">
+    <string>原始RF</string>
+   </property>
+  </action>
+  <action name="actionRF_Kelly">
+   <property name="text">
+    <string>RF＋凱利</string>
+   </property>
+  </action>
+  <action name="actionRF_FixedRatio">
+   <property name="text">
+    <string>RF＋固定比率</string>
+   </property>
+  </action>
+  <action name="actionRF_OptimalF">
+   <property name="text">
+    <string>RF＋最佳F值</string>
+   </property>
+  </action>
+  <action name="actionRF_LarryWilliam">
+   <property name="text">
+    <string>RF＋LarryWilliam</string>
+   </property>
+  </action>
+  <action name="actionRF_AntiMartingale">
+   <property name="text">
+    <string>RF＋反馬丁格</string>
+   </property>
+  </action>
+  <action name="actionMLP_Original">
+   <property name="text">
+    <string>原始MLP</string>
+   </property>
+  </action>
+  <action name="actionMLP_Kelly">
+   <property name="text">
+    <string>MLP＋凱利</string>
+   </property>
+  </action>
+  <action name="actionMLP_FixedRatio">
+   <property name="text">
+    <string>MLP＋固定比率</string>
+   </property>
+  </action>
+  <action name="actionMLP_OptimalF">
+   <property name="text">
+    <string>MLP＋最佳F值</string>
+   </property>
+  </action>
+  <action name="actionMLP_LarryWilliam">
+   <property name="text">
+    <string>MLP＋LarryWilliam</string>
+   </property>
+  </action>
+  <action name="actionMLP_AntiMartingale">
+   <property name="text">
+    <string>MLP＋反馬丁格</string>
+   </property>
+  </action>
+  <action name="actionAdaboost_Original">
+   <property name="text">
+    <string>原始Adaboost</string>
+   </property>
+  </action>
+  <action name="actionAdaboost_Kelly">
+   <property name="text">
+    <string>Adaboost+凱利</string>
+   </property>
+  </action>
+  <action name="actionAdaboost_FixedRatio">
+   <property name="text">
+    <string>Adaboost＋固定比率</string>
+   </property>
+  </action>
+  <action name="actionAdaboost_OptimalF">
+   <property name="text">
+    <string>Adaboost＋最佳F值</string>
+   </property>
+  </action>
+  <action name="actionAdaboost_LarryWilliam">
+   <property name="text">
+    <string>Adaboost＋LarryWilliam</string>
+   </property>
+  </action>
+  <action name="actionAdaboost_AntiMartingale">
+   <property name="text">
+    <string>Adaboost＋反馬丁格</string>
    </property>
   </action>
  </widget>
