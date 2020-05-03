@@ -165,61 +165,24 @@
      <property name="title">
       <string>海龜</string>
      </property>
-     <widget class="QMenu" name="menuTurtle_30k">
-      <property name="title">
-       <string>海龜30k</string>
-      </property>
-      <addaction name="actionTurtle_Original"/>
-      <addaction name="actionTurtle_Kelly"/>
-      <addaction name="actionTurtle_FixedRatio"/>
-      <addaction name="actionTurtle_FixedFraction"/>
-      <addaction name="actionTurtle_OptimalF"/>
-      <addaction name="actionTurtle_LarryWilliams"/>
-      <addaction name="actionTurtle_AntiMartingale"/>
-     </widget>
-     <widget class="QMenu" name="menuTurtle_60k">
-      <property name="title">
-       <string>海龜60k</string>
-      </property>
-      <addaction name="actionTurtle_Original_2"/>
-      <addaction name="actionTurtle_Kelly_2"/>
-      <addaction name="actionTurtle_FixedRatio_2"/>
-      <addaction name="actionTurtle_FixedFraction_2"/>
-      <addaction name="actionTurtle_OptimalF_2"/>
-      <addaction name="actionTurtle_LarryWilliams_2"/>
-      <addaction name="actionTurtle_AntiMartingale_2"/>
-     </widget>
-     <addaction name="menuTurtle_30k"/>
-     <addaction name="separator"/>
-     <addaction name="menuTurtle_60k"/>
+     <addaction name="actionTurtle30k"/>
+     <addaction name="actionTurtle60k"/>
     </widget>
     <widget class="QMenu" name="menuMoveAverage">
      <property name="title">
       <string>移動均線</string>
      </property>
      <addaction name="actionMA_Original"/>
-     <addaction name="actionMA_Kelly"/>
-     <addaction name="actionMA_FixedRatio"/>
-     <addaction name="actionMA_FixedFraction"/>
-     <addaction name="actionMA_OptimalF"/>
-     <addaction name="actionMA_LarryWilliams"/>
-     <addaction name="actionMA_AntiMartingale"/>
     </widget>
-    <widget class="QMenu" name="menu">
+    <widget class="QMenu" name="menuRangeBreak">
      <property name="title">
       <string>區間突破</string>
      </property>
      <addaction name="actionRangeBreak_Original"/>
-     <addaction name="actionRangeBreak_Kelly"/>
-     <addaction name="actionRangeBreak_FixedRatio"/>
-     <addaction name="actionRangeBreak_FixedFraction"/>
-     <addaction name="actionRangeBreak_OptimalF"/>
-     <addaction name="actionRangeBreak_LarryWilliams"/>
-     <addaction name="actionRangeBreak_AntiMartingale"/>
     </widget>
     <addaction name="menuTurtle"/>
     <addaction name="menuMoveAverage"/>
-    <addaction name="menu"/>
+    <addaction name="menuRangeBreak"/>
    </widget>
    <widget class="QMenu" name="menu_AI">
     <property name="sizeIncrement">
@@ -338,19 +301,14 @@
    <addaction name="menu_About"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionTurtle">
+  <action name="actionTurtle30k">
    <property name="text">
-    <string>Turtle</string>
+    <string>海龜30k策略集</string>
    </property>
   </action>
-  <action name="actionRangeBreak">
+  <action name="actionTurtle60k">
    <property name="text">
-    <string>RangeBreak</string>
-   </property>
-  </action>
-  <action name="actionAverage">
-   <property name="text">
-    <string>MoveAverage</string>
+    <string>海龜60k策略集</string>
    </property>
   </action>
   <action name="actionMulticharts">
@@ -373,94 +331,9 @@
     <string>近期期貨新聞</string>
    </property>
   </action>
-  <action name="actionTurtle_Original">
-   <property name="text">
-    <string>原始海龜30k</string>
-   </property>
-  </action>
-  <action name="actionTurtle_Kelly">
-   <property name="text">
-    <string>海龜30k＋凱利公式</string>
-   </property>
-  </action>
-  <action name="actionTurtle_FixedRatio">
-   <property name="text">
-    <string>海龜30k＋固定比率</string>
-   </property>
-  </action>
-  <action name="actionTurtle_OptimalF">
-   <property name="text">
-    <string>海龜30k＋最佳F值</string>
-   </property>
-  </action>
-  <action name="actionTurtle_LarryWilliams">
-   <property name="text">
-    <string>海龜30k＋LarryWilliams</string>
-   </property>
-  </action>
-  <action name="actionTurtle_AntiMartingale">
-   <property name="text">
-    <string>海龜30k＋反馬丁格</string>
-   </property>
-  </action>
-  <action name="actionTurtle_Original_2">
-   <property name="text">
-    <string>原始海龜60k</string>
-   </property>
-  </action>
-  <action name="actionTurtle_Kelly_2">
-   <property name="text">
-    <string>海龜60k＋凱利公式</string>
-   </property>
-  </action>
-  <action name="actionTurtle_FixedRatio_2">
-   <property name="text">
-    <string>海龜60k＋固定比率</string>
-   </property>
-  </action>
-  <action name="actionTurtle_OptimalF_2">
-   <property name="text">
-    <string>海龜60k＋最佳F值</string>
-   </property>
-  </action>
-  <action name="actionTurtle_LarryWilliams_2">
-   <property name="text">
-    <string>海龜60k＋LarryWilliams</string>
-   </property>
-  </action>
-  <action name="actionTurtle_AntiMartingale_2">
-   <property name="text">
-    <string>海龜60k＋反馬丁格</string>
-   </property>
-  </action>
   <action name="actionMA_Original">
    <property name="text">
-    <string>原始移動均線</string>
-   </property>
-  </action>
-  <action name="actionMA_Kelly">
-   <property name="text">
-    <string>移動均線＋凱利</string>
-   </property>
-  </action>
-  <action name="actionMA_FixedRatio">
-   <property name="text">
-    <string>移動均線＋固定比率</string>
-   </property>
-  </action>
-  <action name="actionMA_OptimalF">
-   <property name="text">
-    <string>移動均線＋最佳F值</string>
-   </property>
-  </action>
-  <action name="actionMA_LarryWilliams">
-   <property name="text">
-    <string>移動均線＋LarryWilliams</string>
-   </property>
-  </action>
-  <action name="actionMA_AntiMartingale">
-   <property name="text">
-    <string>移動均線＋反馬丁格</string>
+    <string>移動均線策略集</string>
    </property>
   </action>
   <action name="actionGetData">
@@ -623,54 +496,9 @@
     <string>Adaboost＋反馬丁格</string>
    </property>
   </action>
-  <action name="actionTurtle_FixedFraction">
-   <property name="text">
-    <string>海龜30k＋固定分數</string>
-   </property>
-  </action>
-  <action name="actionTurtle_FixedFraction_2">
-   <property name="text">
-    <string>海龜60k＋固定分數</string>
-   </property>
-  </action>
-  <action name="actionMA_FixedFraction">
-   <property name="text">
-    <string>移動均線＋固定分數</string>
-   </property>
-  </action>
   <action name="actionRangeBreak_Original">
    <property name="text">
-    <string>原始區間突破</string>
-   </property>
-  </action>
-  <action name="actionRangeBreak_FixedRatio">
-   <property name="text">
-    <string>區間突破＋固定比率</string>
-   </property>
-  </action>
-  <action name="actionRangeBreak_FixedFraction">
-   <property name="text">
-    <string>區間突破＋固定分數</string>
-   </property>
-  </action>
-  <action name="actionRangeBreak_OptimalF">
-   <property name="text">
-    <string>區間突破＋最佳F值</string>
-   </property>
-  </action>
-  <action name="actionRangeBreak_LarryWilliams">
-   <property name="text">
-    <string>區間突破＋LarryWilliams</string>
-   </property>
-  </action>
-  <action name="actionRangeBreak_AntiMartingale">
-   <property name="text">
-    <string>區間突破＋反馬丁格</string>
-   </property>
-  </action>
-  <action name="actionRangeBreak_Kelly">
-   <property name="text">
-    <string>區間突破＋凱利公式</string>
+    <string>區間突破策略集</string>
    </property>
   </action>
  </widget>

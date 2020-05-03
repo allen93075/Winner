@@ -5,6 +5,7 @@ from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
 from str_tree import Str_tree
 from About_US import About_US
+from Strategies import Turtle60k_Strategies, Turtle30k_Strategies, MoveAverage_Strategies, RangeBreak_Strategies
 from MainUI import Ui_MainWindow
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self,parent=None):
@@ -15,6 +16,10 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionAbout.triggered.connect(self.AboutUs)
         self.ui.actionAboutMC.triggered.connect(self.AboutMC)
         self.ui.actionMulticharts.triggered.connect(self.callMC)
+        self.ui.actionTurtle30k.triggered.connect(self.Turtle30kUI)
+        self.ui.actionTurtle60k.triggered.connect(self.Turtle60kUI)
+        self.ui.actionMA_Original.triggered.connect(self.MAUI)
+        self.ui.actionRangeBreak_Original.triggered.connect(self.RangeBreakUI)
         self.ui.link1.setOpenExternalLinks(True)
         self.ui.link2.setOpenExternalLinks(True)
         self.ui.link3.setOpenExternalLinks(True)
@@ -50,6 +55,22 @@ class Mainwin(QtWidgets.QMainWindow):
     def AboutUs(self):
         self.aboutus = About_US()
         self.aboutus.show()
+
+    def Turtle30kUI(self):
+        self.turtle30kui = Turtle30k_Strategies()
+        self.turtle30kui.show()
+
+    def Turtle60kUI(self):
+        self.turtle60kui = Turtle60k_Strategies()
+        self.turtle60kui.show()
+
+    def MAUI(self):
+        self.maui = MoveAverage_Strategies()
+        self.maui.show()
+
+    def RangeBreakUI(self):
+        self.rangebreakui = RangeBreak_Strategies()
+        self.rangebreakui.show()
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
