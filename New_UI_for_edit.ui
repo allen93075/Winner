@@ -174,7 +174,7 @@
       <addaction name="actionTurtle_FixedRatio"/>
       <addaction name="actionTurtle_FixedFraction"/>
       <addaction name="actionTurtle_OptimalF"/>
-      <addaction name="actionTurtle_LarryWilliam"/>
+      <addaction name="actionTurtle_LarryWilliams"/>
       <addaction name="actionTurtle_AntiMartingale"/>
      </widget>
      <widget class="QMenu" name="menuTurtle_60k">
@@ -186,7 +186,7 @@
       <addaction name="actionTurtle_FixedRatio_2"/>
       <addaction name="actionTurtle_FixedFraction_2"/>
       <addaction name="actionTurtle_OptimalF_2"/>
-      <addaction name="actionTurtle_LarryWilliam_2"/>
+      <addaction name="actionTurtle_LarryWilliams_2"/>
       <addaction name="actionTurtle_AntiMartingale_2"/>
      </widget>
      <addaction name="menuTurtle_30k"/>
@@ -202,7 +202,7 @@
      <addaction name="actionMA_FixedRatio"/>
      <addaction name="actionMA_FixedFraction"/>
      <addaction name="actionMA_OptimalF"/>
-     <addaction name="actionMA_LarryWilliam"/>
+     <addaction name="actionMA_LarryWilliams"/>
      <addaction name="actionMA_AntiMartingale"/>
     </widget>
     <widget class="QMenu" name="menu">
@@ -214,7 +214,7 @@
      <addaction name="actionRangeBreak_FixedRatio"/>
      <addaction name="actionRangeBreak_FixedFraction"/>
      <addaction name="actionRangeBreak_OptimalF"/>
-     <addaction name="actionRangeBreak_LarryWilliam"/>
+     <addaction name="actionRangeBreak_LarryWilliams"/>
      <addaction name="actionRangeBreak_AntiMartingale"/>
     </widget>
     <addaction name="menuTurtle"/>
@@ -246,7 +246,7 @@
      <addaction name="actionDT_Kelly"/>
      <addaction name="actionDT_FixedRatio"/>
      <addaction name="actionDT_OptimalF"/>
-     <addaction name="actionDT_LarryWilliam"/>
+     <addaction name="actionDT_LarryWilliams"/>
      <addaction name="actionDT_AntiMartingale"/>
     </widget>
     <widget class="QMenu" name="menuRF">
@@ -257,7 +257,7 @@
      <addaction name="actionRF_Kelly"/>
      <addaction name="actionRF_FixedRatio"/>
      <addaction name="actionRF_OptimalF"/>
-     <addaction name="actionRF_LarryWilliam"/>
+     <addaction name="actionRF_LarryWilliams"/>
      <addaction name="actionRF_AntiMartingale"/>
     </widget>
     <widget class="QMenu" name="menuLSTM">
@@ -268,7 +268,7 @@
      <addaction name="actionLSTM_Kelly"/>
      <addaction name="actionLSTM_FixedRatio"/>
      <addaction name="actionLSTM_OptimalF"/>
-     <addaction name="actionLSTM_LarryWilliam"/>
+     <addaction name="actionLSTM_LarryWilliams"/>
      <addaction name="actionLSTM_AntiMartingale"/>
     </widget>
     <widget class="QMenu" name="menuMLP">
@@ -279,7 +279,7 @@
      <addaction name="actionMLP_Kelly"/>
      <addaction name="actionMLP_FixedRatio"/>
      <addaction name="actionMLP_OptimalF"/>
-     <addaction name="actionMLP_LarryWilliam"/>
+     <addaction name="actionMLP_LarryWilliams"/>
      <addaction name="actionMLP_AntiMartingale"/>
     </widget>
     <widget class="QMenu" name="menuAdaboost">
@@ -290,7 +290,7 @@
      <addaction name="actionAdaboost_Kelly"/>
      <addaction name="actionAdaboost_FixedRatio"/>
      <addaction name="actionAdaboost_OptimalF"/>
-     <addaction name="actionAdaboost_LarryWilliam"/>
+     <addaction name="actionAdaboost_LarryWilliams"/>
      <addaction name="actionAdaboost_AntiMartingale"/>
     </widget>
     <addaction name="menuMachineTranning"/>
@@ -393,9 +393,9 @@
     <string>海龜30k＋最佳F值</string>
    </property>
   </action>
-  <action name="actionTurtle_LarryWilliam">
+  <action name="actionTurtle_LarryWilliams">
    <property name="text">
-    <string>海龜30k＋LarryWilliam</string>
+    <string>海龜30k＋LarryWilliams</string>
    </property>
   </action>
   <action name="actionTurtle_AntiMartingale">
@@ -423,9 +423,9 @@
     <string>海龜60k＋最佳F值</string>
    </property>
   </action>
-  <action name="actionTurtle_LarryWilliam_2">
+  <action name="actionTurtle_LarryWilliams_2">
    <property name="text">
-    <string>海龜60k＋LarryWilliam</string>
+    <string>海龜60k＋LarryWilliams</string>
    </property>
   </action>
   <action name="actionTurtle_AntiMartingale_2">
@@ -453,9 +453,9 @@
     <string>移動均線＋最佳F值</string>
    </property>
   </action>
-  <action name="actionMA_LarryWilliam">
+  <action name="actionMA_LarryWilliams">
    <property name="text">
-    <string>移動均線＋LarryWilliam</string>
+    <string>移動均線＋LarryWilliams</string>
    </property>
   </action>
   <action name="actionMA_AntiMartingale">
@@ -493,9 +493,9 @@
     <string>DT＋最佳F值</string>
    </property>
   </action>
-  <action name="actionDT_LarryWilliam">
+  <action name="actionDT_LarryWilliams">
    <property name="text">
-    <string>DT＋LarryWilliam</string>
+    <string>DT＋LarryWilliams</string>
    </property>
   </action>
   <action name="actionDT_AntiMartingale">
@@ -523,9 +523,9 @@
     <string>LSTM＋最佳F值</string>
    </property>
   </action>
-  <action name="actionLSTM_LarryWilliam">
+  <action name="actionLSTM_LarryWilliams">
    <property name="text">
-    <string>LSTM＋LarryWilliam</string>
+    <string>LSTM＋LarryWilliams</string>
    </property>
   </action>
   <action name="actionLSTM_AntiMartingale">
@@ -553,9 +553,9 @@
     <string>RF＋最佳F值</string>
    </property>
   </action>
-  <action name="actionRF_LarryWilliam">
+  <action name="actionRF_LarryWilliams">
    <property name="text">
-    <string>RF＋LarryWilliam</string>
+    <string>RF＋LarryWilliams</string>
    </property>
   </action>
   <action name="actionRF_AntiMartingale">
@@ -583,9 +583,9 @@
     <string>MLP＋最佳F值</string>
    </property>
   </action>
-  <action name="actionMLP_LarryWilliam">
+  <action name="actionMLP_LarryWilliams">
    <property name="text">
-    <string>MLP＋LarryWilliam</string>
+    <string>MLP＋LarryWilliams</string>
    </property>
   </action>
   <action name="actionMLP_AntiMartingale">
@@ -613,9 +613,9 @@
     <string>Adaboost＋最佳F值</string>
    </property>
   </action>
-  <action name="actionAdaboost_LarryWilliam">
+  <action name="actionAdaboost_LarryWilliams">
    <property name="text">
-    <string>Adaboost＋LarryWilliam</string>
+    <string>Adaboost＋LarryWilliams</string>
    </property>
   </action>
   <action name="actionAdaboost_AntiMartingale">
@@ -658,9 +658,9 @@
     <string>區間突破＋最佳F值</string>
    </property>
   </action>
-  <action name="actionRangeBreak_LarryWilliam">
+  <action name="actionRangeBreak_LarryWilliams">
    <property name="text">
-    <string>區間突破＋LarryWilliam</string>
+    <string>區間突破＋LarryWilliams</string>
    </property>
   </action>
   <action name="actionRangeBreak_AntiMartingale">
