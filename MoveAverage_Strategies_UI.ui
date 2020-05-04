@@ -27,7 +27,7 @@
    <item row="1" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>5</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -47,7 +47,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>TextLabel</string>
+          <string>Inputs: Len1(5),Len2(20);Vars:MA1(0), MA2(0);MA1 = Average(close, Len1);MA2 = Average(close, Len2);//if average(close, 5)cross over average(close, 20)then buy next bar at marketif MA1 cross over MA2 then buy(&quot;buy&quot;) next bar at market;//if average(close, 5)cross below average(close, 20)then buy next bar at marketif MA1 cross below MA2 then sellshort(&quot;sell&quot;) next bar at market;</string>
          </property>
         </widget>
        </item>
@@ -74,7 +74,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>TextLabel</string>
+          <string>Inputs: Len1(5),Len2(20);Vars:MA1(0), MA2(0);//-----Kelly-----(1)input:InitialCapital(1000000), MaxSize(10);var:pTs(1),b(0),p(0),q(0),f(0),pCapitalperContract(200000),ExitAmount(0),MP(0);//K%=W-(1-W)/Rif Grossprofit&lt;&gt;0 and Totaltrades&lt;&gt;0 and grossloss&lt;&gt;0 and   Numlostrades &lt;&gt;0 then b = (Grossprofit/ numwintrades)/(grossloss/ Numlostrades);if Numwintrades&lt;&gt;0 and Totaltrades&lt;&gt;0 then     p = Numwintrades/ Totaltrades;     q = 1-p;if b&lt;&gt;0 and p&lt;&gt;0 then     f = p-(q/b);if f&lt;&gt;0 and f*(InitialCapital+netprofit)&gt;0 then        pTS =IntPortion((f*(InitialCapital+netprofit))/pCapitalperContract); if pTS &lt; 1 then pTS = 1 ;  if pTS &gt; MaxSize then pTS = MaxSize ;//MoveAverageMA1 = Average(close, Len1);MA2 = Average(close, Len2);//if average(close, 5)cross over average(close, 20)then buy pTS sharesif MA1 cross over MA2 then buy(&quot;buy&quot;) pTS shares next bar at market;//if average(close, 5)cross below average(close, 20)then buy pTS sharesif MA1 cross below MA2 then sellshort(&quot;sell&quot;) pTS shares next bar at market;</string>
          </property>
         </widget>
        </item>
@@ -111,7 +111,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="label_7">
          <property name="text">
-          <string>TextLabel</string>
+          <string>Inputs: Len1(5),Len2(20);Vars:MA1(0), MA2(0);//Fixed RatioInputs: InitialCapital(10000000), Delta(20000);//Fixed RatioInputs: InCloudOpenPL(false), Maxsize(10);Vars: contractAmt(0), ExitAmount(0), Equity(0), MP(0), pTS(0);//Money Management(Fixed Ratio)if InCloudOpenPL then Equity = Round((InitialCapital + Netprofit + OpenPositionProfit), 0)	else Equity = Round((InitialCapital + NetProfit), 0);	//Position Sizing - Fixed Ratioif Delta &gt; 0 and Equity/Delta &gt; 0 then	contractAmt = 0.5*(1 + SquareRoot(1 + 8*Equity/Delta));	contractAmt = MaxList(1, IntPortion(ContractAmt));	if contractAmt &lt; 1 then ContractAmt = 1;if contractAmt &gt; MaxSize then ContractAmt = Maxsize;pTS = contractAmt;//MoveAverageMA1 = Average(close, Len1);MA2 = Average(close, Len2);//if average(close, 5)cross over average(close, 20)then buy pTS sharesif MA1 cross over MA2 then buy(&quot;buy&quot;)pTS shares next bar at market;//if average(close, 5)cross below average(close, 20)then buy pTS sharesif MA1 cross below MA2 then sellshort(&quot;sell&quot;)pTS shares next bar at market;</string>
          </property>
         </widget>
        </item>
@@ -148,7 +148,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="label_9">
          <property name="text">
-          <string>TextLabel</string>
+          <string>Inputs: Len1(5),Len2(20);Vars:MA1(0), MA2(0);//Money Management(Fixed Fraction)Inputs: earning(5), out(2), pIC(1000000), Delta(9999), IncludeOpenPL(false), Maxsize(10);//Money Management(Fixed Fraction)Vars: Equity(0), contractamt(0), pTS(0);//Money Management (Fixed Fraction)if InCludeOpenPL then    Equity = Round((pIC + NetProfit + OpenPositionProfit),0)   else Equity = Round((pIC + NetProfit),0);If Delta &gt; 0 and Equity/Delta &gt; 0 then   contractamt = 0.5 * (1 + squareroot(1 + 8 * Equity/Delta));contractamt = MaxList(1, IntPortion(contractamt)); if contractamt &lt; 1 then contractamt = 1 ;  if contractamt &gt; MaxSize then contractamt = MaxSize ;pTS = contractamt;//MoveAverageMA1 = Average(close, Len1);MA2 = Average(close, Len2);//if average(close, 5)cross over average(close, 20)then buy next pTS sharesif MA1 cross over MA2 then buy(&quot;buy&quot;) pTS shares next bar at market;//if average(close, 5)cross below average(close, 20)then buy pTS sharesif MA1 cross below MA2 then sellshort(&quot;sell&quot;) pTS shares next bar at market;</string>
          </property>
         </widget>
        </item>
@@ -232,7 +232,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="label_13">
          <property name="text">
-          <string>TextLabel</string>
+          <string>Inputs: Len1(5), Len2(20);Vars:MA1(0), MA2(0);//-----LarryWilliams Rule-----Input:  InitialCapital(1000000), InCludeOpenPL(false), MaxSize(10);var: pCapitalperContract(200000), Equity(0), mp(0), ExitAmount(0), pTS(1);if InCludeOpenPL then Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)else Equity = Round((InitialCapital + NetProfit),0);if InCludeOpenPL then Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)else  Equity = Round((InitialCapital + NetProfit),0);if maxiddrawdown &lt;&gt; 0 and entryprice &lt;&gt; 0 then begin if netprofit&lt;&gt;0 and maxiddrawdown&lt;&gt;0 then  	pTS=IntPortion(netprofit/(absvalue(maxiddrawdown)*1.3))+1; if pTS &gt; IntPortion(Equity  / entryprice) then 	pTS = IntPortion(Equity  / entryprice);end;//MoveAverageMA1 = Average(close, Len1);MA2 = Average(close, Len2);//if average(close, 5)cross over average(close, 20)then buy pTS sharesif MA1 cross over MA2 then buy(&quot;buy&quot;) pTS shares next bar at market;//if average(close, 5)cross below average(close, 20)then buy pTS sharesif MA1 cross below MA2 then sellshort(&quot;sell&quot;) pTS shares next bar at market;</string>
          </property>
         </widget>
        </item>
