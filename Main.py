@@ -4,8 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
 from str_tree import Str_tree
-from About_US import About_US
-from Strategies import Turtle60k_Strategies, Turtle30k_Strategies, MoveAverage_Strategies, RangeBreak_Strategies
+from Menu import About_US, Turtle60k_Strategies, Turtle30k_Strategies, MoveAverage_Strategies, RangeBreak_Strategies
 from MainUI import Ui_MainWindow
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self,parent=None):
@@ -13,7 +12,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.actionDT_Original.triggered.connect(self.des)
-        self.ui.actionAbout.triggered.connect(self.AboutUs)
+        self.ui.actionAbout.triggered.connect(self.AboutusUI)
         self.ui.actionAboutMC.triggered.connect(self.AboutMC)
         self.ui.actionMulticharts.triggered.connect(self.callMC)
         self.ui.actionTurtle30k.triggered.connect(self.Turtle30kUI)
@@ -52,7 +51,7 @@ class Mainwin(QtWidgets.QMainWindow):
     def AboutMC(self):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")
 
-    def AboutUs(self):
+    def AboutusUI(self):
         self.aboutus = About_US()
         self.aboutus.show()
 
