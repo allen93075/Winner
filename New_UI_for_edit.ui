@@ -6,133 +6,139 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>964</width>
-    <height>806</height>
+    <width>794</width>
+    <height>638</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-color: rgb(242, 242, 242);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_4">
-    <item row="0" column="0">
-     <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="0">
-       <widget class="QScrollArea" name="scrollArea">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="widgetResizable">
-         <bool>true</bool>
-        </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>462</width>
-           <height>733</height>
-          </rect>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_2">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
-           <widget class="QLabel" name="title1">
-            <property name="text">
-             <string>TextLabel</string>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>365</width>
+               <height>543</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="2" column="0">
+               <widget class="QLabel" name="title3">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="title1">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="title4">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="title5">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="title2">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLabel" name="link1">
-            <property name="text">
-             <string>TextLabel</string>
+           <widget class="QFrame" name="frame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="title2">
-            <property name="text">
-             <string>TextLabel</string>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
             </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLabel" name="link2">
-            <property name="text">
-             <string>TextLabel</string>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
             </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="title3">
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLabel" name="link3">
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="title4">
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLabel" name="link4">
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="title5">
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QLabel" name="link5">
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
+            <layout class="QGridLayout" name="gridLayout"/>
            </widget>
           </item>
          </layout>
-        </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>70</y>
+          <width>231</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>AGA Arabesque</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
        </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QFrame" name="frame">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Sunken</enum>
-        </property>
-        <layout class="QGridLayout" name="gridLayout"/>
-       </widget>
-      </item>
-     </layout>
+      </widget>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -141,8 +147,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>964</width>
-     <height>24</height>
+     <width>794</width>
+     <height>22</height>
     </rect>
    </property>
    <property name="defaultUp">
@@ -192,78 +198,25 @@
      </size>
     </property>
     <property name="title">
-     <string>智能交易</string>
+     <string>AI</string>
     </property>
-    <widget class="QMenu" name="menuMachineTranning">
-     <property name="title">
-      <string>機器訓練</string>
-     </property>
-     <addaction name="actionGetData"/>
-     <addaction name="actionTranningMachine"/>
-    </widget>
-    <widget class="QMenu" name="menuDT">
-     <property name="title">
-      <string>決策樹(DT)</string>
-     </property>
-     <addaction name="actionDT_Original"/>
-     <addaction name="actionDT_Kelly"/>
-     <addaction name="actionDT_FixedRatio"/>
-     <addaction name="actionDT_OptimalF"/>
-     <addaction name="actionDT_LarryWilliams"/>
-     <addaction name="actionDT_AntiMartingale"/>
-    </widget>
-    <widget class="QMenu" name="menuRF">
-     <property name="title">
-      <string>隨機森林(RF)</string>
-     </property>
-     <addaction name="actionRF_Original"/>
-     <addaction name="actionRF_Kelly"/>
-     <addaction name="actionRF_FixedRatio"/>
-     <addaction name="actionRF_OptimalF"/>
-     <addaction name="actionRF_LarryWilliams"/>
-     <addaction name="actionRF_AntiMartingale"/>
-    </widget>
-    <widget class="QMenu" name="menuLSTM">
-     <property name="title">
-      <string>長短期記憶(LSTM)</string>
-     </property>
-     <addaction name="actionLSTM_Original"/>
-     <addaction name="actionLSTM_Kelly"/>
-     <addaction name="actionLSTM_FixedRatio"/>
-     <addaction name="actionLSTM_OptimalF"/>
-     <addaction name="actionLSTM_LarryWilliams"/>
-     <addaction name="actionLSTM_AntiMartingale"/>
-    </widget>
-    <widget class="QMenu" name="menuMLP">
-     <property name="title">
-      <string>多層感知器(MLP)</string>
-     </property>
-     <addaction name="actionMLP_Original"/>
-     <addaction name="actionMLP_Kelly"/>
-     <addaction name="actionMLP_FixedRatio"/>
-     <addaction name="actionMLP_OptimalF"/>
-     <addaction name="actionMLP_LarryWilliams"/>
-     <addaction name="actionMLP_AntiMartingale"/>
-    </widget>
-    <widget class="QMenu" name="menuAdaboost">
-     <property name="title">
-      <string>自適應增強(Adaboost)</string>
-     </property>
-     <addaction name="actionAdaboost_Original"/>
-     <addaction name="actionAdaboost_Kelly"/>
-     <addaction name="actionAdaboost_FixedRatio"/>
-     <addaction name="actionAdaboost_OptimalF"/>
-     <addaction name="actionAdaboost_LarryWilliams"/>
-     <addaction name="actionAdaboost_AntiMartingale"/>
-    </widget>
-    <addaction name="menuMachineTranning"/>
-    <addaction name="menuDT"/>
-    <addaction name="menuRF"/>
-    <addaction name="menuLSTM"/>
-    <addaction name="menuMLP"/>
-    <addaction name="menuAdaboost"/>
+    <addaction name="actionRF_2"/>
+    <addaction name="actionDT_2"/>
+    <addaction name="actionLSTM_2"/>
+    <addaction name="actionMLP_2"/>
    </widget>
-   <widget class="QMenu" name="menu_Open">
+   <widget class="QMenu" name="menu_Reports">
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>績效報告</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOpen">
     <property name="title">
      <string>開啟</string>
     </property>
@@ -277,31 +230,38 @@
     <addaction name="actionAbout"/>
     <addaction name="actionAboutMC"/>
    </widget>
-   <widget class="QMenu" name="menu_Webcrawler">
-    <property name="title">
-     <string>網路爬蟲</string>
-    </property>
-    <widget class="QMenu" name="menuinformation">
-     <property name="title">
-      <string>查看資訊</string>
-     </property>
-     <addaction name="actionrecentInfo"/>
-    </widget>
-    <addaction name="menuinformation"/>
-   </widget>
-   <widget class="QMenu" name="menu_Reports">
-    <property name="title">
-     <string>績效報告</string>
-    </property>
-   </widget>
    <addaction name="menu_Strategy"/>
    <addaction name="menu_AI"/>
-   <addaction name="menu_Webcrawler"/>
    <addaction name="menu_Reports"/>
-   <addaction name="menu_Open"/>
+   <addaction name="menuOpen"/>
    <addaction name="menu_About"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRF_2">
+   <property name="text">
+    <string>RF</string>
+   </property>
+  </action>
+  <action name="actionDT_2">
+   <property name="text">
+    <string>DT</string>
+   </property>
+  </action>
+  <action name="actionLSTM_2">
+   <property name="text">
+    <string>LSTM</string>
+   </property>
+  </action>
+  <action name="actionMLP_2">
+   <property name="text">
+    <string>MLP</string>
+   </property>
+  </action>
+  <action name="actionMulticharts">
+   <property name="text">
+    <string>Multicharts</string>
+   </property>
+  </action>
   <action name="actionTurtle30k">
    <property name="text">
     <string>海龜30k策略集</string>
@@ -312,9 +272,14 @@
     <string>海龜60k策略集</string>
    </property>
   </action>
-  <action name="actionMulticharts">
+  <action name="actionMA_Original">
    <property name="text">
-    <string>Multicharts</string>
+    <string>移動均線策略集</string>
+   </property>
+  </action>
+  <action name="actionRangeBreak_Original">
+   <property name="text">
+    <string>區間突破策略集</string>
    </property>
   </action>
   <action name="actionAbout">
@@ -325,181 +290,6 @@
   <action name="actionAboutMC">
    <property name="text">
     <string>關於Multicharts</string>
-   </property>
-  </action>
-  <action name="actionrecentInfo">
-   <property name="text">
-    <string>近期期貨新聞</string>
-   </property>
-  </action>
-  <action name="actionMA_Original">
-   <property name="text">
-    <string>移動均線策略集</string>
-   </property>
-  </action>
-  <action name="actionGetData">
-   <property name="text">
-    <string>抓取資料</string>
-   </property>
-  </action>
-  <action name="actionTranningMachine">
-   <property name="text">
-    <string>訓練機器</string>
-   </property>
-  </action>
-  <action name="actionDT_Original">
-   <property name="text">
-    <string>原始DT</string>
-   </property>
-  </action>
-  <action name="actionDT_Kelly">
-   <property name="text">
-    <string>DT＋凱利</string>
-   </property>
-  </action>
-  <action name="actionDT_FixedRatio">
-   <property name="text">
-    <string>DT＋固定比例</string>
-   </property>
-  </action>
-  <action name="actionDT_OptimalF">
-   <property name="text">
-    <string>DT＋最佳F值</string>
-   </property>
-  </action>
-  <action name="actionDT_LarryWilliams">
-   <property name="text">
-    <string>DT＋LarryWilliams</string>
-   </property>
-  </action>
-  <action name="actionDT_AntiMartingale">
-   <property name="text">
-    <string>DT＋反馬丁格</string>
-   </property>
-  </action>
-  <action name="actionLSTM_Original">
-   <property name="text">
-    <string>原始LSTM</string>
-   </property>
-  </action>
-  <action name="actionLSTM_Kelly">
-   <property name="text">
-    <string>LSTM＋凱利</string>
-   </property>
-  </action>
-  <action name="actionLSTM_FixedRatio">
-   <property name="text">
-    <string>LSTM＋固定比率</string>
-   </property>
-  </action>
-  <action name="actionLSTM_OptimalF">
-   <property name="text">
-    <string>LSTM＋最佳F值</string>
-   </property>
-  </action>
-  <action name="actionLSTM_LarryWilliams">
-   <property name="text">
-    <string>LSTM＋LarryWilliams</string>
-   </property>
-  </action>
-  <action name="actionLSTM_AntiMartingale">
-   <property name="text">
-    <string>LSTM＋反馬丁格</string>
-   </property>
-  </action>
-  <action name="actionRF_Original">
-   <property name="text">
-    <string>原始RF</string>
-   </property>
-  </action>
-  <action name="actionRF_Kelly">
-   <property name="text">
-    <string>RF＋凱利</string>
-   </property>
-  </action>
-  <action name="actionRF_FixedRatio">
-   <property name="text">
-    <string>RF＋固定比率</string>
-   </property>
-  </action>
-  <action name="actionRF_OptimalF">
-   <property name="text">
-    <string>RF＋最佳F值</string>
-   </property>
-  </action>
-  <action name="actionRF_LarryWilliams">
-   <property name="text">
-    <string>RF＋LarryWilliams</string>
-   </property>
-  </action>
-  <action name="actionRF_AntiMartingale">
-   <property name="text">
-    <string>RF＋反馬丁格</string>
-   </property>
-  </action>
-  <action name="actionMLP_Original">
-   <property name="text">
-    <string>原始MLP</string>
-   </property>
-  </action>
-  <action name="actionMLP_Kelly">
-   <property name="text">
-    <string>MLP＋凱利</string>
-   </property>
-  </action>
-  <action name="actionMLP_FixedRatio">
-   <property name="text">
-    <string>MLP＋固定比率</string>
-   </property>
-  </action>
-  <action name="actionMLP_OptimalF">
-   <property name="text">
-    <string>MLP＋最佳F值</string>
-   </property>
-  </action>
-  <action name="actionMLP_LarryWilliams">
-   <property name="text">
-    <string>MLP＋LarryWilliams</string>
-   </property>
-  </action>
-  <action name="actionMLP_AntiMartingale">
-   <property name="text">
-    <string>MLP＋反馬丁格</string>
-   </property>
-  </action>
-  <action name="actionAdaboost_Original">
-   <property name="text">
-    <string>原始Adaboost</string>
-   </property>
-  </action>
-  <action name="actionAdaboost_Kelly">
-   <property name="text">
-    <string>Adaboost＋凱利</string>
-   </property>
-  </action>
-  <action name="actionAdaboost_FixedRatio">
-   <property name="text">
-    <string>Adaboost＋固定比率</string>
-   </property>
-  </action>
-  <action name="actionAdaboost_OptimalF">
-   <property name="text">
-    <string>Adaboost＋最佳F值</string>
-   </property>
-  </action>
-  <action name="actionAdaboost_LarryWilliams">
-   <property name="text">
-    <string>Adaboost＋LarryWilliams</string>
-   </property>
-  </action>
-  <action name="actionAdaboost_AntiMartingale">
-   <property name="text">
-    <string>Adaboost＋反馬丁格</string>
-   </property>
-  </action>
-  <action name="actionRangeBreak_Original">
-   <property name="text">
-    <string>區間突破策略集</string>
    </property>
   </action>
   <action name="actionPowerLanguage_Editor">
