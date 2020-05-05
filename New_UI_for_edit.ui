@@ -186,9 +186,16 @@
      </property>
      <addaction name="actionRangeBreak_Original"/>
     </widget>
+    <widget class="QMenu" name="menuBigBar">
+     <property name="title">
+      <string>大量k棒高低點突破</string>
+     </property>
+     <addaction name="actionBigBar_Original"/>
+    </widget>
     <addaction name="menuTurtle"/>
     <addaction name="menuMoveAverage"/>
     <addaction name="menuRangeBreak"/>
+    <addaction name="menuBigBar"/>
    </widget>
    <widget class="QMenu" name="menu_AI">
     <property name="sizeIncrement">
@@ -301,6 +308,11 @@
   <action name="actionAdaboost">
    <property name="text">
     <string>自適應增強(Adaboost)</string>
+   </property>
+  </action>
+  <action name="actionBigBar_Original">
+   <property name="text">
+    <string>BigBar策略集</string>
    </property>
   </action>
  </widget>

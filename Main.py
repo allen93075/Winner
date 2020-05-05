@@ -3,11 +3,17 @@ import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
-from Menu import About_US, Turtle60k_Strategies, Turtle30k_Strategies, MoveAverage_Strategies, RangeBreak_Strategies, AdaboostUI, MLPUI, RFUI
+from Menu import About_US
 from MainUI import Ui_MainWindow
 from LSTM_call import LSTM
-# from RF_call import RF
-
+from RF_call import RF
+from Adaboost_call import AdaboostUI
+from BigBar_Strategies_call import BigBar_Strategies
+from MLP_UI_call import MLPUI
+from MoveAverage_Strategies_call import MoveAverage_Strategies
+from RangeBreak_Strategies_call import RangeBreak_Strategies
+from Turtle30k_Strategies_call import Turtle30k_Strategies
+from Turtle60k_Strategies_call import Turtle60k_Strategies
 
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -19,7 +25,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack1.__int__()
         self.ui.stack1.setObjectName("LSTM_UI")
         self.ui.stackedWidget.addWidget(self.ui.stack1)
-        self.ui.stack2 = RFUI()
+        self.ui.stack2 = RF()
         self.ui.stack2.__int__()
         self.ui.stack2.setObjectName("Randomforest")
         self.ui.stackedWidget.addWidget(self.ui.stack2)
@@ -27,15 +33,16 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionMLP_2.triggered.connect(self.callMLP)
         self.ui.actionAdaboost.triggered.connect(self.callAdaboost)
         self.ui.actionLSTM_2.triggered.connect(self.callLSTM)
-        self.ui.actionAbout.triggered.connect(self.AboutusUI)
-        self.ui.actionAboutMC.triggered.connect(self.AboutMC)
+        self.ui.actionAbout.triggered.connect(self.callAboutus)
+        self.ui.actionAboutMC.triggered.connect(self.callAboutMC)
         self.ui.actionMulticharts.triggered.connect(self.callMC)
         self.ui.actionPowerLanguage_Editor.triggered.connect(self.OpenPLEditor)
-        self.ui.actionTurtle30k.triggered.connect(self.Turtle30kUI)
-        self.ui.actionTurtle60k.triggered.connect(self.Turtle60kUI)
-        self.ui.actionMA_Original.triggered.connect(self.MAUI)
-        self.ui.actionRangeBreak_Original.triggered.connect(self.RangeBreakUI)
+        self.ui.actionTurtle30k.triggered.connect(self.callTurtle30k)
+        self.ui.actionTurtle60k.triggered.connect(self.callTurtle60k)
+        self.ui.actionMA_Original.triggered.connect(self.callMA)
+        self.ui.actionRangeBreak_Original.triggered.connect(self.callRangeBreak)
         self.ui.actionRF_2.triggered.connect(self.callRF)
+        self.ui.actionBigBar_Original.triggered.connect(self.callBigBar)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)
@@ -77,26 +84,26 @@ class Mainwin(QtWidgets.QMainWindow):
         self.call = os.system(
             'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
 
-    def AboutMC(self):
+    def callAboutMC(self):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")
 
-    def AboutusUI(self):
+    def callAboutus(self):
         self.aboutus = About_US()
         self.aboutus.show()
 
-    def Turtle30kUI(self):
+    def callTurtle30k(self):
         self.turtle30kui = Turtle30k_Strategies()
         self.turtle30kui.show()
 
-    def Turtle60kUI(self):
+    def callTurtle60k(self):
         self.turtle60kui = Turtle60k_Strategies()
         self.turtle60kui.show()
 
-    def MAUI(self):
+    def callMA(self):
         self.maui = MoveAverage_Strategies()
         self.maui.show()
 
-    def RangeBreakUI(self):
+    def callRangeBreak(self):
         self.rangebreakui = RangeBreak_Strategies()
         self.rangebreakui.show()
 
@@ -107,6 +114,10 @@ class Mainwin(QtWidgets.QMainWindow):
     def callMLP(self):
         self.callmlp = MLPUI()
         self.callmlp.show()
+
+    def callBigBar(self):
+        self.callbigbar = BigBar_Strategies()
+        self.callbigbar.show()
 
 
 if __name__ == '__main__':

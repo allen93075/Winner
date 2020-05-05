@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'mlp.ui'
+# Form implementation generated from reading ui file 'MLP_UI.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -212,4 +214,3 @@ class Ui_Form(object):
         self.label_16.setText(_translate("Form", "n/a"))
         self.label_7.setText(_translate("Form", "交易成本:"))
         self.label_17.setText(_translate("Form", "n/a"))
-
