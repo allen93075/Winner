@@ -204,6 +204,7 @@
     <addaction name="actionDT_2"/>
     <addaction name="actionLSTM_2"/>
     <addaction name="actionMLP_2"/>
+    <addaction name="actionAdaboost"/>
    </widget>
    <widget class="QMenu" name="menu_Reports">
     <property name="sizeIncrement">
@@ -239,22 +240,22 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionRF_2">
    <property name="text">
-    <string>RF</string>
+    <string>隨機森林(RF)</string>
    </property>
   </action>
   <action name="actionDT_2">
    <property name="text">
-    <string>DT</string>
+    <string>決策樹(DT)</string>
    </property>
   </action>
   <action name="actionLSTM_2">
    <property name="text">
-    <string>LSTM</string>
+    <string>長短期記憶(LSTM)</string>
    </property>
   </action>
   <action name="actionMLP_2">
    <property name="text">
-    <string>MLP</string>
+    <string>多層感知器(MLP)</string>
    </property>
   </action>
   <action name="actionMulticharts">
@@ -295,6 +296,11 @@
   <action name="actionPowerLanguage_Editor">
    <property name="text">
     <string>PowerLanguage Editor</string>
+   </property>
+  </action>
+  <action name="actionAdaboost">
+   <property name="text">
+    <string>自適應增強(Adaboost)</string>
    </property>
   </action>
  </widget>

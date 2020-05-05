@@ -3,7 +3,7 @@ import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
-from Menu import About_US, Turtle60k_Strategies, Turtle30k_Strategies, MoveAverage_Strategies, RangeBreak_Strategies
+from Menu import About_US, Turtle60k_Strategies, Turtle30k_Strategies, MoveAverage_Strategies, RangeBreak_Strategies, AdaboostUI, MLPUI
 from MainUI import Ui_MainWindow
 from LSTM_call import LSTM
 from RF_call import RF
@@ -24,6 +24,8 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack2.setObjectName("Randomforest")
         self.ui.stackedWidget.addWidget(self.ui.stack2)
         self.resize(600, 600)
+        self.ui.actionMLP_2.triggered.connect(self.callMLP)
+        self.ui.actionAdaboost.triggered.connect(self.callAdaboost)
         self.ui.actionLSTM_2.triggered.connect(self.callLSTM)
         self.ui.actionAbout.triggered.connect(self.AboutusUI)
         self.ui.actionAboutMC.triggered.connect(self.AboutMC)
@@ -97,6 +99,14 @@ class Mainwin(QtWidgets.QMainWindow):
     def RangeBreakUI(self):
         self.rangebreakui = RangeBreak_Strategies()
         self.rangebreakui.show()
+
+    def callAdaboost(self):
+        self.calladaboost = AdaboostUI()
+        self.calladaboost.show()
+
+    def callMLP(self):
+        self.callmlp = MLPUI()
+        self.callmlp.show()
 
 
 if __name__ == '__main__':

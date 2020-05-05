@@ -1,4 +1,4 @@
-import AboutUS_UI, Turtle60k_Strategies_UI,Turtle30k_Strategies_UI, MoveAverage_Strategies_UI, RangeBreak_Strategies_UI , os
+import AboutUS_UI, Turtle60k_Strategies_UI,Turtle30k_Strategies_UI, MoveAverage_Strategies_UI, RangeBreak_Strategies_UI , os, Adaboost_UI, MLP_UI
 from PyQt5 import QtWidgets
 
 class About_US(QtWidgets.QTableWidget):
@@ -56,3 +56,19 @@ class RangeBreak_Strategies(QtWidgets.QTableWidget):
 
     def OpenEditor(self):
         self.call = os.system('open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
+
+class AdaboostUI(QtWidgets.QTableWidget):
+    def __init__(self):
+        super(AdaboostUI, self).__init__()
+        self.ui = Adaboost_UI.Ui_Form()
+        self.ui.setupUi(self)
+#       Form Title
+        self.setWindowTitle('Adaboost')
+
+class MLPUI(QtWidgets.QTableWidget):
+    def __init__(self):
+        super(MLPUI, self).__init__()
+        self.ui = MLP_UI.Ui_Form()
+        self.ui.setupUi(self)
+#       Form Title
+        self.setWindowTitle('MLP')
