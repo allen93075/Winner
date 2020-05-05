@@ -13,7 +13,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(996, 507)
+        Form.resize(1195, 536)
+        Form.setStyleSheet("background-color: rgb(242, 242, 242);")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
         self.pushButton = QtWidgets.QPushButton(Form)
@@ -132,10 +133,7 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.pushButton.setText(_translate("Form", "前往PowerLanguage Editor"))
         self.label_2.setText(_translate("Form", "海龜30k策略"))
-        self.label_9.setText(_translate("Form", "Input: Length(20);\n"
-"if close > highest(H, Length)[1] then buy(\"buy\") next bar market;\n"
-"if close < highest(L, Length)[1] then sellshort(\"sell\") next bar market;\n"
-""))
+        self.label_9.setText(_translate("Form", "Input: Length(20);if close > highest(H, Length)[1] then buy(\"buy\") next bar market;if close < highest(L, Length)[1] then sellshort(\"sell\") next bar market;"))
         self.label.setText(_translate("Form", "策略基本介紹：\n"
 "海龜30k基本策略\n"
 "\n"

@@ -12,6 +12,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.actionDT_Original.triggered.connect(self.des)
+        # -----Menu Actions-----
         self.ui.actionAbout.triggered.connect(self.AboutusUI)
         self.ui.actionAboutMC.triggered.connect(self.AboutMC)
         self.ui.actionMulticharts.triggered.connect(self.callMC)
@@ -19,6 +20,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionTurtle60k.triggered.connect(self.Turtle60kUI)
         self.ui.actionMA_Original.triggered.connect(self.MAUI)
         self.ui.actionRangeBreak_Original.triggered.connect(self.RangeBreakUI)
+        # ----------------------
         self.ui.link1.setOpenExternalLinks(True)
         self.ui.link2.setOpenExternalLinks(True)
         self.ui.link3.setOpenExternalLinks(True)
