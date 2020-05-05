@@ -16,6 +16,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionAbout.triggered.connect(self.AboutusUI)
         self.ui.actionAboutMC.triggered.connect(self.AboutMC)
         self.ui.actionMulticharts.triggered.connect(self.callMC)
+        self.ui.actionPowerLanguage_Editor.triggered.connect(self.OpenPLEditor)
         self.ui.actionTurtle30k.triggered.connect(self.Turtle30kUI)
         self.ui.actionTurtle60k.triggered.connect(self.Turtle60kUI)
         self.ui.actionMA_Original.triggered.connect(self.MAUI)
@@ -49,6 +50,9 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def callMC(self):
         self.call = os.system('open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
+
+    def OpenPLEditor(self):
+        self.call = os.system('open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
 
     def AboutMC(self):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")
