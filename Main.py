@@ -3,10 +3,10 @@ import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
-from Menu import About_US, Turtle60k_Strategies, Turtle30k_Strategies, MoveAverage_Strategies, RangeBreak_Strategies, AdaboostUI, MLPUI
+from Menu import About_US, Turtle60k_Strategies, Turtle30k_Strategies, MoveAverage_Strategies, RangeBreak_Strategies, AdaboostUI, MLPUI, RFUI
 from MainUI import Ui_MainWindow
 from LSTM_call import LSTM
-from RF_call import RF
+# from RF_call import RF
 
 
 class Mainwin(QtWidgets.QMainWindow):
@@ -19,7 +19,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack1.__int__()
         self.ui.stack1.setObjectName("LSTM_UI")
         self.ui.stackedWidget.addWidget(self.ui.stack1)
-        self.ui.stack2 = RF()
+        self.ui.stack2 = RFUI()
         self.ui.stack2.__int__()
         self.ui.stack2.setObjectName("Randomforest")
         self.ui.stackedWidget.addWidget(self.ui.stack2)

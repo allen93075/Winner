@@ -1,4 +1,4 @@
-import AboutUS_UI, Turtle60k_Strategies_UI,Turtle30k_Strategies_UI, MoveAverage_Strategies_UI, RangeBreak_Strategies_UI , os, Adaboost_UI, MLP_UI
+import AboutUS_UI, Turtle60k_Strategies_UI,Turtle30k_Strategies_UI, MoveAverage_Strategies_UI, RangeBreak_Strategies_UI , os, Adaboost_UI, MLP_UI, RF
 from PyQt5 import QtWidgets
 
 class About_US(QtWidgets.QTableWidget):
@@ -63,7 +63,7 @@ class AdaboostUI(QtWidgets.QTableWidget):
         self.ui = Adaboost_UI.Ui_Form()
         self.ui.setupUi(self)
 #       Form Title
-        self.setWindowTitle('Adaboost')
+        self.setWindowTitle('自適應增強')
 
 class MLPUI(QtWidgets.QTableWidget):
     def __init__(self):
@@ -71,4 +71,12 @@ class MLPUI(QtWidgets.QTableWidget):
         self.ui = MLP_UI.Ui_Form()
         self.ui.setupUi(self)
 #       Form Title
-        self.setWindowTitle('MLP')
+        self.setWindowTitle('多層感知器')
+
+class RFUI(QtWidgets.QWidget):
+    def __int__(self):
+        super(RFUI,self).__init__()
+        self.ui = RF.Ui_Form()
+        self.ui.setupUi(self)
+        # Form Title
+        self.setWindowTitle("隨機森林")
