@@ -70,19 +70,6 @@ class Ui_Form(object):
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_4.addItem(spacerItem2, 2, 0, 1, 1)
         self.tabWidget.addTab(self.tab_3, "")
-        self.tab_4 = QtWidgets.QWidget()
-        self.tab_4.setObjectName("tab_4")
-        self.gridLayout_5 = QtWidgets.QGridLayout(self.tab_4)
-        self.gridLayout_5.setObjectName("gridLayout_5")
-        self.label_12 = QtWidgets.QLabel(self.tab_4)
-        self.label_12.setObjectName("label_12")
-        self.gridLayout_5.addWidget(self.label_12, 1, 0, 1, 1)
-        self.label_5 = QtWidgets.QLabel(self.tab_4)
-        self.label_5.setObjectName("label_5")
-        self.gridLayout_5.addWidget(self.label_5, 0, 0, 1, 1)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_5.addItem(spacerItem3, 2, 0, 1, 1)
-        self.tabWidget.addTab(self.tab_4, "")
         self.tab_5 = QtWidgets.QWidget()
         self.tab_5.setObjectName("tab_5")
         self.gridLayout_6 = QtWidgets.QGridLayout(self.tab_5)
@@ -93,8 +80,8 @@ class Ui_Form(object):
         self.label_6 = QtWidgets.QLabel(self.tab_5)
         self.label_6.setObjectName("label_6")
         self.gridLayout_6.addWidget(self.label_6, 0, 0, 1, 1)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_6.addItem(spacerItem4, 2, 0, 1, 1)
+        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_6.addItem(spacerItem3, 2, 0, 1, 1)
         self.tabWidget.addTab(self.tab_5, "")
         self.tab_6 = QtWidgets.QWidget()
         self.tab_6.setObjectName("tab_6")
@@ -106,22 +93,9 @@ class Ui_Form(object):
         self.label_14 = QtWidgets.QLabel(self.tab_6)
         self.label_14.setObjectName("label_14")
         self.gridLayout_8.addWidget(self.label_14, 1, 0, 1, 1)
-        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_8.addItem(spacerItem5, 2, 0, 1, 1)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_8.addItem(spacerItem4, 2, 0, 1, 1)
         self.tabWidget.addTab(self.tab_6, "")
-        self.tab_7 = QtWidgets.QWidget()
-        self.tab_7.setObjectName("tab_7")
-        self.gridLayout_7 = QtWidgets.QGridLayout(self.tab_7)
-        self.gridLayout_7.setObjectName("gridLayout_7")
-        self.label_15 = QtWidgets.QLabel(self.tab_7)
-        self.label_15.setObjectName("label_15")
-        self.gridLayout_7.addWidget(self.label_15, 1, 0, 1, 1)
-        self.label_8 = QtWidgets.QLabel(self.tab_7)
-        self.label_8.setObjectName("label_8")
-        self.gridLayout_7.addWidget(self.label_8, 0, 0, 1, 1)
-        spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_7.addItem(spacerItem6, 2, 0, 1, 1)
-        self.tabWidget.addTab(self.tab_7, "")
         self.gridLayout.addWidget(self.tabWidget, 1, 0, 1, 1)
 
         self.retranslateUi(Form)
@@ -133,7 +107,29 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.pushButton.setText(_translate("Form", "前往PowerLanguage Editor"))
         self.label_2.setText(_translate("Form", "海龜30k策略"))
-        self.label_9.setText(_translate("Form", "Input: Length(20);if close > highest(H, Length)[1] then buy(\"buy\") next bar market;if close < highest(L, Length)[1] then sellshort(\"sell\") next bar market;"))
+        self.label_9.setText(_translate("Form", "Input:len(20);\n"
+"var: pts(1),MP(0),ExitAmount(0);\n"
+"MP=marketposition*currentcontracts;\n"
+"\n"
+"if Close cross over Highest(high,len)[1] then buy(\"buy\")pts contract the next bar at market;\n"
+"if Close cross over Lowest(low,len)[1] then sellshort(\"sell\")pts contract the next bar at market;\n"
+"ExitAmount=pts;\n"
+"\n"
+"\n"
+"if MP=1 then buy pts contract next bar at entryprice*\n"
+"(1+0.01)stop;\n"
+"\n"
+"if MP=-1 then sellshort pts contract next bar at entryprice*\n"
+"(1-0.01)stop;\n"
+"\n"
+"\n"
+"\n"
+"if MP>=1 then sell pts contract next bar at entryprice*\n"
+"(1- 0.02)stop;\n"
+"\n"
+"if MP<=1 then buytocover pts contract next bar at entryprice*\n"
+"(1+0.02)stop;\n"
+""))
         self.label.setText(_translate("Form", "策略基本介紹：\n"
 "海龜30k基本策略\n"
 "\n"
@@ -143,21 +139,136 @@ class Ui_Form(object):
 "海龜30k＋凱利公式\n"
 "\n"
 "程式碼如下："))
-        self.label_10.setText(_translate("Form", "TextLabel"))
+        self.label_10.setText(_translate("Form", "//-----Kelly-----(1)\n"
+"input:InitialCapital(1000000), MaxSize(10),len(20);\n"
+"var:pTs(1),b(0),p(0),q(0),f(0),pCapitalperContract(200000),ExitAmount(0),MP(0);\n"
+"\n"
+"\n"
+"//K%=W-(1-W)/R\n"
+"if Grossprofit<>0 and Totaltrades<>0 and grossloss<>0 and   Numlostrades <>0 then\n"
+"    b = (Grossprofit/ numwintrades)/(grossloss/ Numlostrades);\n"
+"if Numwintrades<>0 and Totaltrades<>0 then\n"
+"        p = Numwintrades/ Totaltrades;\n"
+"        q = 1-p;\n"
+"if b<>0 and p<>0 then\n"
+"        f = p-(q/b);\n"
+"if f<>0 and f*(InitialCapital+netprofit)>0 then\n"
+"    pTS =IntPortion((f*(InitialCapital+netprofit))/pCapitalperContract);\n"
+"    if pTS < 1 then pTS = 1 ;\n"
+"    if pTS > MaxSize then pTS = MaxSize ;\n"
+"\n"
+"\n"
+"\n"
+"//------turtle30(len)\n"
+"\n"
+"MP=marketposition*currentcontracts;\n"
+"\n"
+"if Close cross over Highest(high,len)[1] then buy(\"buy\")pTS contract the next bar at market;\n"
+"if Close cross over Lowest(low,len)[1] then sellshort(\"sell\")pTS contract the next bar at market;\n"
+"ExitAmount=pts;\n"
+"\n"
+"\n"
+"if MP=1 then buy pTS contract next bar at entryprice*\n"
+"(1+0.01)stop;\n"
+"\n"
+"if MP=-1 then sellshort pTS contract next bar at entryprice*\n"
+"(1-0.01)stop;\n"
+"\n"
+"\n"
+"\n"
+"if MP>=1 then sell pTS contract next bar at entryprice*\n"
+"(1- 0.02)stop;\n"
+"\n"
+"if MP<=1 then buytocover pTS contract next bar at entryprice*\n"
+"(1+0.02)stop;\n"
+""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "凱利公式"))
-        self.label_11.setText(_translate("Form", "TextLabel"))
+        self.label_11.setText(_translate("Form", "//-----Fixed_Ratio-----(2)\n"
+"Inputs: InitialCapital(1000000), Delta(20000),len(20);\n"
+"Inputs: InCludeOpenPL(false), MaxSize(10);\n"
+"Var: ContractAmt(0),ExitAmount(0),Equity(0),MP(0),pts(0);\n"
+"\n"
+"if InCludeOpenPL then Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
+"     else Equity = Round((InitialCapital + NetProfit),0);\n"
+"\n"
+"{Position Sizing - Fixed Ratio }\n"
+"If Delta > 0 and Equity/Delta > 0 then\n"
+"    ContractAmt = 0.5 * (1 + squareroot(1 + 8 * Equity/Delta));\n"
+"    ContractAmt = MaxList(1, IntPortion(ContractAmt));  //IntPortion->int\n"
+"\n"
+"if ContractAmt < 1 then ContractAmt = 1 ;\n"
+"if ContractAmt > MaxSize then ContractAmt = MaxSize ;\n"
+"pts = ContractAmt;\n"
+"\n"
+"\n"
+"//------turtle(len)\n"
+"\n"
+"\n"
+"MP=marketposition*currentcontracts;\n"
+"\n"
+"if Close cross over Highest(high,len)[1] then buy(\"buy\")pts contract the next bar at market;\n"
+"if Close cross over Lowest(low,len)[1] then sellshort(\"sell\")pts contract the next bar at market;\n"
+"ExitAmount=pts;\n"
+"\n"
+"\n"
+"if MP=1 then buy pts contract next bar at entryprice*\n"
+"(1+0.01)stop;\n"
+"\n"
+"if MP=-1 then sellshort pts contract next bar at entryprice*\n"
+"(1-0.01)stop;\n"
+"\n"
+"\n"
+"\n"
+"if MP>=1 then sell pts contract next bar at entryprice*\n"
+"(1- 0.02)stop;\n"
+"\n"
+"if MP<=1 then buytocover pts contract next bar at entryprice*\n"
+"(1+0.02)stop;\n"
+""))
         self.label_4.setText(_translate("Form", "策略基本介紹：\n"
 "海龜30k＋固定比率\n"
 "\n"
 "程式碼如下："))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Form", "固定比率"))
-        self.label_12.setText(_translate("Form", "TextLabel"))
-        self.label_5.setText(_translate("Form", "策略基本介紹：\n"
-"海龜30k＋固定分數\n"
+        self.label_13.setText(_translate("Form", "//-----Optimal F Rule-----(4)\n"
 "\n"
-"程式碼如下："))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("Form", "固定分數"))
-        self.label_13.setText(_translate("Form", "TextLabel"))
+"Input:len(20);\n"
+"var: pTS(1), OptimalF_Num(10),_OptimalF(0),Equity(0),ExitAmount(0),InCludeOpenPL(false),mp(0);\n"
+"\n"
+"if InCludeOpenPL then\n"
+"    Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
+"else\n"
+"    Equity = Round((InitialCapital + NetProfit),0);\n"
+"    _OptimalF=Mf_OptimalF(close,OptimalF_Num,false)/100;\n"
+"if _OptimalF<>0 and maxiddrawdown<>0 then\n"
+"    pTS = (Equity * _OptimalF)/absvalue(maxiddrawdown);\n"
+"    pTS = MaxList(1, IntPortion(pTS));\n"
+"\n"
+"\n"
+"//------turtle(len)\n"
+"\n"
+"\n"
+"mp=marketposition*currentcontracts;\n"
+"\n"
+"if Close cross over Highest(high,len)[1] then buy(\"buy\")pTS contract the next bar at market;\n"
+"if Close cross over Lowest(low,len)[1] then sellshort(\"sell\")pTS contract the next bar at market;\n"
+"ExitAmount=pts;\n"
+"\n"
+"\n"
+"if mp=1 then buy pTS contract next bar at entryprice*\n"
+"(1+0.01)stop;\n"
+"\n"
+"if mp=-1 then sellshort pTS contract next bar at entryprice*\n"
+"(1-0.01)stop;\n"
+"\n"
+"\n"
+"\n"
+"if mp>=1 then sell pTS contract next bar at entryprice*\n"
+"(1- 0.02)stop;\n"
+"\n"
+"if mp<=1 then buytocover pTS contract next bar at entryprice*\n"
+"(1+0.02)stop;\n"
+""))
         self.label_6.setText(_translate("Form", "策略基本介紹：\n"
 "海龜30k＋最佳F值\n"
 "\n"
@@ -167,11 +278,47 @@ class Ui_Form(object):
 "海龜30k＋LarryWilliams\n"
 "\n"
 "程式碼如下："))
-        self.label_14.setText(_translate("Form", "TextLabel"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("Form", "LarryWilliams"))
-        self.label_15.setText(_translate("Form", "TextLabel"))
-        self.label_8.setText(_translate("Form", "策略基本介紹：\n"
-"海龜30k＋反馬丁格\n"
+        self.label_14.setText(_translate("Form", "//-----LarryWilliams-----(3)\n"
+"Input:  InitialCapital(1000000), InCludeOpenPL(false),MaxSize(10),len(20);\n"
+"var: pCapitalperContract(200000),Equity(0),mp(0),ExitAmount(0),pts(1);\n"
 "\n"
-"程式碼如下："))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_7), _translate("Form", "反馬丁格"))
+"if InCludeOpenPL then Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
+"else Equity = Round((InitialCapital + NetProfit),0);\n"
+"//-----LarryWilliams Rule-----\n"
+"if InCludeOpenPL then\n"
+"    Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
+"else\n"
+"    Equity = Round((InitialCapital + NetProfit),0);\n"
+"if maxiddrawdown <> 0 and entryprice <> 0 then begin\n"
+"    if netprofit<>0 and maxiddrawdown<>0 then\n"
+"              pts=IntPortion(netprofit/(absvalue(maxiddrawdown)*1.3))+1;\n"
+"    if pts > IntPortion(Equity  / entryprice) then\n"
+"        pts = IntPortion(Equity  / entryprice);\n"
+"end;\n"
+"\n"
+"\n"
+"\n"
+"//------turtle30(len)\n"
+"\n"
+"mp=marketposition*currentcontracts;\n"
+"\n"
+"if Close cross over Highest(high,len)[1] then buy(\"buy\")pts contract the next bar at market;\n"
+"if Close cross over Lowest(low,len)[1] then sellshort(\"sell\")pts contract the next bar at market;\n"
+"ExitAmount=pts;\n"
+"\n"
+"\n"
+"if mp=1 then buy pts contract next bar at entryprice*\n"
+"(1+0.01)stop;\n"
+"\n"
+"if mp=-1 then sellshort pts contract next bar at entryprice*\n"
+"(1-0.01)stop;\n"
+"\n"
+"\n"
+"\n"
+"if mp>=1 then sell pts contract next bar at entryprice*\n"
+"(1- 0.02)stop;\n"
+"\n"
+"if mp<=1 then buytocover pts contract next bar at entryprice*\n"
+"(1+0.02)stop;\n"
+""))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("Form", "LarryWilliams"))
