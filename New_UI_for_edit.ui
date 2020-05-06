@@ -223,6 +223,7 @@
     <property name="title">
      <string>績效報告</string>
     </property>
+    <addaction name="actionReports"/>
    </widget>
    <widget class="QMenu" name="menuOpen">
     <property name="title">
@@ -313,6 +314,11 @@
   <action name="actionBigBar_Original">
    <property name="text">
     <string>BigBar策略集</string>
+   </property>
+  </action>
+  <action name="actionReports">
+   <property name="text">
+    <string>績效報告</string>
    </property>
   </action>
  </widget>

@@ -14,6 +14,7 @@ from MoveAverage_Strategies_call import MoveAverage_Strategies
 from RangeBreak_Strategies_call import RangeBreak_Strategies
 from Turtle30k_Strategies_call import Turtle30k_Strategies
 from Turtle60k_Strategies_call import Turtle60k_Strategies
+from Performance_call import PerformanceUI
 
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -33,6 +34,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionMLP_2.triggered.connect(self.callMLP)
         self.ui.actionAdaboost.triggered.connect(self.callAdaboost)
         self.ui.actionLSTM_2.triggered.connect(self.callLSTM)
+        self.ui.actionReports.triggered.connect(self.callPerformance)
         self.ui.actionAbout.triggered.connect(self.callAboutus)
         self.ui.actionAboutMC.triggered.connect(self.callAboutMC)
         self.ui.actionMulticharts.triggered.connect(self.callMC)
@@ -118,6 +120,10 @@ class Mainwin(QtWidgets.QMainWindow):
     def callBigBar(self):
         self.callbigbar = BigBar_Strategies()
         self.callbigbar.show()
+
+    def callPerformance(self):
+        self.callperformance = PerformanceUI()
+        self.callperformance.show()
 
 
 if __name__ == '__main__':
