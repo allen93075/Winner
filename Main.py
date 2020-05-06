@@ -13,8 +13,8 @@ from MLP_UI_call import MLPUI
 from MoveAverage_Strategies_call import MoveAverage_Strategies
 from RangeBreak_Strategies_call import RangeBreak_Strategies
 from Turtle30k_Strategies_call import Turtle30k_Strategies
-from Turtle60k_Strategies_call import Turtle60k_Strategies
-from Performance_call import PerformanceUI
+# from Turtle60k_Strategies_call import Turtle60k_Strategies
+from Read_txt_call import ReadTXT
 
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -40,7 +40,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionMulticharts.triggered.connect(self.callMC)
         self.ui.actionPowerLanguage_Editor.triggered.connect(self.OpenPLEditor)
         self.ui.actionTurtle30k.triggered.connect(self.callTurtle30k)
-        self.ui.actionTurtle60k.triggered.connect(self.callTurtle60k)
+        # self.ui.actionTurtle60k.triggered.connect(self.callTurtle60k)
         self.ui.actionMA_Original.triggered.connect(self.callMA)
         self.ui.actionRangeBreak_Original.triggered.connect(self.callRangeBreak)
         self.ui.actionRF_2.triggered.connect(self.callRF)
@@ -97,9 +97,9 @@ class Mainwin(QtWidgets.QMainWindow):
         self.turtle30kui = Turtle30k_Strategies()
         self.turtle30kui.show()
 
-    def callTurtle60k(self):
-        self.turtle60kui = Turtle60k_Strategies()
-        self.turtle60kui.show()
+    # def callTurtle60k(self):
+    #     self.turtle60kui = Turtle60k_Strategies()
+    #     self.turtle60kui.show()
 
     def callMA(self):
         self.maui = MoveAverage_Strategies()
@@ -122,7 +122,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.callbigbar.show()
 
     def callPerformance(self):
-        self.callperformance = PerformanceUI()
+        self.callperformance = ReadTXT()
         self.callperformance.show()
 
 
