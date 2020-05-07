@@ -49,8 +49,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>365</width>
-               <height>543</height>
+               <width>373</width>
+               <height>556</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
@@ -172,7 +172,6 @@
       <string>海龜</string>
      </property>
      <addaction name="actionTurtle30k"/>
-     <!-- <addaction name="actionTurtle60k"/> -->
     </widget>
     <widget class="QMenu" name="menuMoveAverage">
      <property name="title">
@@ -208,7 +207,6 @@
      <string>AI</string>
     </property>
     <addaction name="actionRF_2"/>
-    <addaction name="actionDT_2"/>
     <addaction name="actionLSTM_2"/>
     <addaction name="actionMLP_2"/>
     <addaction name="actionAdaboost"/>
@@ -276,11 +274,6 @@
     <string>海龜30k策略集</string>
    </property>
   </action>
-  <!-- <action name="actionTurtle60k">
-   <property name="text">
-    <string>海龜60k策略集</string>
-   </property>
-  </action> -->
   <action name="actionMA_Original">
    <property name="text">
     <string>移動均線策略集</string>

@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
 from Menu import About_US
-from MainUI import Ui_MainWindow
+from New_UI_for_edit import Ui_MainWindow
 from LSTM_call import LSTM
 from RF_call import RF
 from Adaboost_call import AdaboostUI
@@ -16,6 +16,7 @@ from Turtle30k_Strategies_call import Turtle30k_Strategies
 # from Turtle60k_Strategies_call import Turtle60k_Strategies
 from Read_txt_call import ReadTXT
 
+
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super(Mainwin, self).__init__()
@@ -23,16 +24,29 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.ui.stack1 = QtWidgets.QWidget()
         self.ui.stack1 = LSTM()
-        self.ui.stack1.__int__()
+        # self.ui.stack1.__int__()
         self.ui.stack1.setObjectName("LSTM_UI")
-        self.ui.stackedWidget.addWidget(self.ui.stack1)
+        self.ui.stackedWidget.addWidget(self.ui.stack1)  # widget_index = 2
         self.ui.stack2 = RF()
-        self.ui.stack2.__int__()
+        # self.ui.stack2.__int__()
         self.ui.stack2.setObjectName("Randomforest")
-        self.ui.stackedWidget.addWidget(self.ui.stack2)
+        self.ui.stackedWidget.addWidget(self.ui.stack2)  # widget_index = 3
+        self.ui.stack3 = QtWidgets.QWidget()
+        self.ui.stack3 = MLPUI()
+        # self.ui.stack3.__init__()
+        self.ui.stack3.setObjectName("MLP")
+        self.ui.stackedWidget.addWidget(self.ui.stack3) # widget_index = 4
+        self.ui.stack4 = QtWidgets.QWidget()
+        self.ui.stack4.setObjectName("ADAboost")
+        self.ui.stack4 = AdaboostUI()
+        self.ui.stackedWidget.addWidget(self.ui.stack4) # widget_index = 5
+
         self.resize(600, 600)
+
         self.ui.actionMLP_2.triggered.connect(self.callMLP)
+
         self.ui.actionAdaboost.triggered.connect(self.callAdaboost)
+
         self.ui.actionLSTM_2.triggered.connect(self.callLSTM)
         self.ui.actionReports.triggered.connect(self.callPerformance)
         self.ui.actionAbout.triggered.connect(self.callAboutus)
@@ -110,12 +124,10 @@ class Mainwin(QtWidgets.QMainWindow):
         self.rangebreakui.show()
 
     def callAdaboost(self):
-        self.calladaboost = AdaboostUI()
-        self.calladaboost.show()
+        self.ui.stackedWidget.setCurrentIndex(5)
 
     def callMLP(self):
-        self.callmlp = MLPUI()
-        self.callmlp.show()
+        self.ui.stackedWidget.setCurrentIndex(4)
 
     def callBigBar(self):
         self.callbigbar = BigBar_Strategies()

@@ -6,7 +6,7 @@ from RF import Ui_Form
 from rf_example_new import *
 
 class RF(QtWidgets.QWidget):
-    def __int__(self):
+    def __init__(self):
         super(RF,self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)

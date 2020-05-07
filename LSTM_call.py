@@ -7,7 +7,7 @@ from LSTM2 import *
 
 
 class LSTM(QtWidgets.QWidget):
-    def __int__(self):
+    def __init__(self):
         super(LSTM, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
