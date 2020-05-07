@@ -13,8 +13,32 @@ class RF(QtWidgets.QWidget):
         self.setWindowTitle("隨機森林")
         self.ui.choseDataBtn.clicked.connect(self.slot_btn_chooseDir)
         self.ui.startTrainBtn.clicked.connect(self.exec_rf)
+        self.ui.startTrainBtn.clicked.connect(self.performance)
+
         
-        f = open(r'C:/Users/yujie/.spyder-py3/spyder_workplace/winnerProject/test.txt')
+
+        
+    def exec_rf(self):
+        rf_main(loadFile())
+
+    def slot_btn_chooseDir(self):
+        self.cwd = os.getcwd()
+        dir_choose = QtWidgets.QFileDialog.getOpenFileName(self,
+                                                           "選取文件夾",
+                                                           self.cwd,
+                                                           "excel(*.csv)")  # 起始路徑
+
+        if dir_choose == "":
+            print("\n取消選擇")
+            return
+        self.ui.comboBox.addItem(dir_choose[0])
+        print(self.ui.comboBox.currentText())
+        print(type(dir_choose))
+        print("\n你選擇的文件夾為:")
+        print(dir_choose)
+
+    def performance(self):
+        f = open(r'C:/Users/Allen/PycharmProjects/Winner/test.txt')
         t = f.readline()
         text = t.split(",")
         text = list(map(str, text))
@@ -37,25 +61,6 @@ class RF(QtWidgets.QWidget):
         self.ui.mddOut.setText(text[2])
         self.ui.tradeCuntOut.setText(text[3])
         self.ui.costOut.setText(TotalTradesCost)
-        
-    def exec_rf(self):
-        rf_main(loadFile())
-
-    def slot_btn_chooseDir(self):
-        self.cwd = os.getcwd()
-        dir_choose = QtWidgets.QFileDialog.getOpenFileName(self,
-                                                           "選取文件夾",
-                                                           self.cwd,
-                                                           "excel(*.csv)")  # 起始路徑
-
-        if dir_choose == "":
-            print("\n取消選擇")
-            return
-        self.ui.comboBox.addItem(dir_choose[0])
-        print(self.ui.comboBox.currentText())
-        print(type(dir_choose))
-        print("\n你選擇的文件夾為:")
-        print(dir_choose)
 
 
 

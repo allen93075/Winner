@@ -229,7 +229,7 @@
           </widget>
          </item>
          <item alignment="Qt::AlignLeft">
-          <widget class="QLabel" name="label_11">
+          <widget class="QLabel" name="netprofit_label">
            <property name="text">
             <string>n/a</string>
            </property>
@@ -266,7 +266,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_12">
+          <widget class="QLabel" name="winrate_label">
            <property name="text">
             <string>n/a</string>
            </property>
@@ -303,7 +303,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_13">
+          <widget class="QLabel" name="winloserate_label">
            <property name="text">
             <string>n/a</string>
            </property>
@@ -340,7 +340,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_14">
+          <widget class="QLabel" name="profit_factor_label">
            <property name="text">
             <string>n/a</string>
            </property>
@@ -377,7 +377,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_15">
+          <widget class="QLabel" name="mdd_label">
            <property name="text">
             <string>n/a</string>
            </property>
@@ -409,12 +409,12 @@
             </font>
            </property>
            <property name="text">
-            <string>夏普比率:</string>
+            <string>交易次數:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_16">
+          <widget class="QLabel" name="trade_count_label">
            <property name="text">
             <string>n/a</string>
            </property>
@@ -451,7 +451,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_17">
+          <widget class="QLabel" name="trade_cost_labeL">
            <property name="text">
             <string>n/a</string>
            </property>
