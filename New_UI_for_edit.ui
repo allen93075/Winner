@@ -204,7 +204,7 @@
      </size>
     </property>
     <property name="title">
-     <string>AI</string>
+     <string>智能交易</string>
     </property>
     <addaction name="actionRF_2"/>
     <addaction name="actionLSTM_2"/>
@@ -247,11 +247,6 @@
   <action name="actionRF_2">
    <property name="text">
     <string>隨機森林(RF)</string>
-   </property>
-  </action>
-  <action name="actionDT_2">
-   <property name="text">
-    <string>決策樹(DT)</string>
    </property>
   </action>
   <action name="actionLSTM_2">

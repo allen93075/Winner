@@ -5,7 +5,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
 from Menu import About_US
-from New_UI_for_edit import Ui_MainWindow
+from MainUI import Ui_MainWindow
 from LSTM_call import LSTM
 from RF_call import RF
 from Adaboost_call import AdaboostUI
