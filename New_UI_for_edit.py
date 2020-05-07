@@ -2,13 +2,11 @@
 
 # Form implementation generated from reading ui file 'New_UI_for_edit.ui'
 #
-# Created by: PyQt5 UI code generator 5.14.1
+# Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
 
-
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -41,7 +39,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 365, 543))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 373, 556))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -121,6 +119,8 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.actionRF_2 = QtWidgets.QAction(MainWindow)
         self.actionRF_2.setObjectName("actionRF_2")
+        self.actionDT_2 = QtWidgets.QAction(MainWindow)
+        self.actionDT_2.setObjectName("actionDT_2")
         self.actionLSTM_2 = QtWidgets.QAction(MainWindow)
         self.actionLSTM_2.setObjectName("actionLSTM_2")
         self.actionMLP_2 = QtWidgets.QAction(MainWindow)
@@ -186,11 +186,12 @@ class Ui_MainWindow(object):
         self.menuMoveAverage.setTitle(_translate("MainWindow", "移動均線"))
         self.menuRangeBreak.setTitle(_translate("MainWindow", "區間突破"))
         self.menuBigBar.setTitle(_translate("MainWindow", "大量k棒高低點突破"))
-        self.menu_AI.setTitle(_translate("MainWindow", "智能交易"))
+        self.menu_AI.setTitle(_translate("MainWindow", "AI"))
         self.menu_Reports.setTitle(_translate("MainWindow", "績效報告"))
         self.menuOpen.setTitle(_translate("MainWindow", "開啟"))
         self.menu_About.setTitle(_translate("MainWindow", "關於"))
         self.actionRF_2.setText(_translate("MainWindow", "隨機森林(RF)"))
+        self.actionDT_2.setText(_translate("MainWindow", "決策樹(DT)"))
         self.actionLSTM_2.setText(_translate("MainWindow", "長短期記憶(LSTM)"))
         self.actionMLP_2.setText(_translate("MainWindow", "多層感知器(MLP)"))
         self.actionMulticharts.setText(_translate("MainWindow", "Multicharts"))
@@ -203,3 +204,4 @@ class Ui_MainWindow(object):
         self.actionAdaboost.setText(_translate("MainWindow", "自適應增強(Adaboost)"))
         self.actionBigBar_Original.setText(_translate("MainWindow", "BigBar策略集"))
         self.actionReports.setText(_translate("MainWindow", "績效報告"))
+
