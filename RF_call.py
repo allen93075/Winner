@@ -14,12 +14,12 @@ class RF(QtWidgets.QWidget):
         self.ui.choseDataBtn.clicked.connect(self.slot_btn_chooseDir)
         self.ui.startTrainBtn.clicked.connect(self.exec_rf)
         self.ui.startTrainBtn.clicked.connect(self.performance)
-
         
 
         
     def exec_rf(self):
-        rf_main(loadFile())
+        print("_______",self.ui.comboBox.currentText())
+        rf_main(loadFile(self.ui.comboBox.currentText()))
 
     def slot_btn_chooseDir(self):
         self.cwd = os.getcwd()
@@ -44,13 +44,13 @@ class RF(QtWidgets.QWidget):
         text = list(map(str, text))
         text = [float(x) for x in text]
         # Earning odds
-        t1 = (text[4]/text[5])
-        EarningOdds = str(t1)#back to str
-        #ProfitFactor
-        t2 = (text[6]/text[7]-1)
+        t1 = (text[4] / text[5])
+        EarningOdds = str(t1)  # back to str
+        # ProfitFactor
+        t2 = (text[6] / text[7] - 1)
         ProfitFactor = str(t2)
-        #TotalTradesCost
-        t3 = (1000*text[3])
+        # TotalTradesCost
+        t3 = (1000 * text[3])
         TotalTradesCost = str(t3)
         text = [str(x) for x in text]
 
