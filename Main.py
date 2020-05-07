@@ -1,5 +1,6 @@
 import sys, os, webbrowser
 import pandas as pd
+import qdarkstyle
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
@@ -139,7 +140,10 @@ class Mainwin(QtWidgets.QMainWindow):
 
 
 if __name__ == '__main__':
+
     app = QtWidgets.QApplication(sys.argv)
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
+    app.setStyleSheet(dark_stylesheet)
     ui = Mainwin()
     ui.link(link(), webcrawler())
     ui.show()
