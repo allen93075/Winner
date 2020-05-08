@@ -6,7 +6,7 @@ from webcrawler import webcrawler, link
 from Menu import About_US
 from MainUI import Ui_MainWindow
 from LSTM_call import LSTM
-from RF_call import RF
+# from RF_call import RF
 from Adaboost_call import AdaboostUI
 from BigBar_Strategies_call import BigBar_Strategies
 from MLP_UI_call import MLPUI
@@ -27,10 +27,10 @@ class Mainwin(QtWidgets.QMainWindow):
         # self.ui.stack1.__int__()
         self.ui.stack1.setObjectName("LSTM_UI")
         self.ui.stackedWidget.addWidget(self.ui.stack1)  # widget_index = 2
-        self.ui.stack2 = RF()
+        # self.ui.stack2 = RF()
         # self.ui.stack2.__int__()
-        self.ui.stack2.setObjectName("Randomforest")
-        self.ui.stackedWidget.addWidget(self.ui.stack2)  # widget_index = 3
+        # self.ui.stack2.setObjectName("Randomforest")
+        # self.ui.stackedWidget.addWidget(self.ui.stack2)  # widget_index = 3
         self.ui.stack3 = QtWidgets.QWidget()
         self.ui.stack3 = MLPUI()
         # self.ui.stack3.__init__()
