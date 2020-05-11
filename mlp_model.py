@@ -112,4 +112,4 @@ def mlp_main(data):
     print("acc:", accuracy)
     print("predicts:", predicts)
 
-mlp_main(loadFile())
+#mlp_main(loadFile())

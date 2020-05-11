@@ -109,4 +109,4 @@ def ada_main(data):
     print("acc:", accuracy)
     print("predicts:", predicts)
 
-ada_main(loadFile())
+#ada_main(loadFile())

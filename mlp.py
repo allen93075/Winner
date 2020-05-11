@@ -139,4 +139,4 @@ def mlp_main(data):
         pickle.dump(mlp_ai, f)
     
     
-mlp_main(loadFile())
+#mlp_main(loadFile())
