@@ -16,6 +16,7 @@ from RangeBreak_Strategies_call import RangeBreak_Strategies
 from Turtle30k_Strategies_call import Turtle30k_Strategies
 # from Turtle60k_Strategies_call import Turtle60k_Strategies
 from Read_txt_call import ReadTXT
+from LSTM_controll_call import LSTMcall
 
 
 class Mainwin(QtWidgets.QMainWindow):
@@ -41,6 +42,10 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack4.setObjectName("ADAboost")
         self.ui.stack4 = AdaboostUI()
         self.ui.stackedWidget.addWidget(self.ui.stack4) # widget_index = 5
+        self.ui.stack5 = QtWidgets.QWidget()
+        self.ui.stack5.setObjectName("LSTM_controll")
+        self.ui.stack5 = LSTMcall()
+        self.ui.stackedWidget.addWidget(self.ui.stack5) # widget_index = 6
 
         self.resize(600, 600)
 
@@ -60,6 +65,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionRangeBreak_Original.triggered.connect(self.callRangeBreak)
         self.ui.actionRF_2.triggered.connect(self.callRF)
         self.ui.actionBigBar_Original.triggered.connect(self.callBigBar)
+        self.ui.actionLSTM.triggered.connect(self.call_LSTMcontroll)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)
@@ -95,11 +101,13 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def callMC(self):
         self.call = os.system(
-            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
+            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} '
+            'Applications.localized/MultiCharts64 [2].app"')
 
     def OpenPLEditor(self):
         self.call = os.system(
-            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
+            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} '
+            'Applications.localized/MultiCharts64 [4].app"')
 
     def callAboutMC(self):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")
@@ -138,12 +146,15 @@ class Mainwin(QtWidgets.QMainWindow):
         self.callperformance = ReadTXT()
         self.callperformance.show()
 
+    def call_LSTMcontroll(self):
+        self.ui.stackedWidget.setCurrentIndex(6)
+
 
 if __name__ == '__main__':
 
     app = QtWidgets.QApplication(sys.argv)
-    dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
-    app.setStyleSheet(dark_stylesheet)
+    # dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
+    # app.setStyleSheet(dark_stylesheet)
     ui = Mainwin()
     ui.link(link(), webcrawler())
     ui.show()
