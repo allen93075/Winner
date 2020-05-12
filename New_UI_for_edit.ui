@@ -58,41 +58,76 @@
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
-              <item row="2" column="0">
+              <item row="7" column="0">
+               <widget class="QLabel" name="article4">
+                <property name="text">
+                 <string>article4</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="article3">
+                <property name="text">
+                 <string>article3</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
                <widget class="QLabel" name="title3">
                 <property name="text">
-                 <string>TextLabel</string>
+                 <string>title3</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="0">
                <widget class="QLabel" name="title1">
                 <property name="text">
-                 <string>TextLabel</string>
+                 <string>title1</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
+              <item row="6" column="0">
                <widget class="QLabel" name="title4">
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
                 <property name="text">
-                 <string>TextLabel</string>
+                 <string>title4</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="0">
+              <item row="8" column="0">
                <widget class="QLabel" name="title5">
                 <property name="text">
-                 <string>TextLabel</string>
+                 <string>title5</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="title2">
+                <property name="text">
+                 <string>title2</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="article2">
+                <property name="text">
+                 <string>article2</string>
                 </property>
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QLabel" name="title2">
+               <widget class="QLabel" name="article1">
                 <property name="text">
-                 <string>TextLabel</string>
+                 <string>article1</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="article5">
+                <property name="text">
+                 <string>article5</string>
                 </property>
                </widget>
               </item>
