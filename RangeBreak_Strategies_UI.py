@@ -109,19 +109,6 @@ class Ui_Form(object):
         spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_8.addItem(spacerItem5, 2, 0, 1, 1)
         self.tabWidget.addTab(self.tab_6, "")
-        self.tab_7 = QtWidgets.QWidget()
-        self.tab_7.setObjectName("tab_7")
-        self.gridLayout_7 = QtWidgets.QGridLayout(self.tab_7)
-        self.gridLayout_7.setObjectName("gridLayout_7")
-        self.label_15 = QtWidgets.QLabel(self.tab_7)
-        self.label_15.setObjectName("label_15")
-        self.gridLayout_7.addWidget(self.label_15, 1, 0, 1, 1)
-        self.label_8 = QtWidgets.QLabel(self.tab_7)
-        self.label_8.setObjectName("label_8")
-        self.gridLayout_7.addWidget(self.label_8, 0, 0, 1, 1)
-        spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_7.addItem(spacerItem6, 2, 0, 1, 1)
-        self.tabWidget.addTab(self.tab_7, "")
         self.gridLayout.addWidget(self.tabWidget, 1, 0, 1, 1)
 
         self.retranslateUi(Form)
@@ -373,9 +360,3 @@ class Ui_Form(object):
 "\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("Form", "LarryWilliams"))
-        self.label_15.setText(_translate("Form", "TextLabel"))
-        self.label_8.setText(_translate("Form", "策略基本介紹：\n"
-"區間突破＋反馬丁格\n"
-"\n"
-"程式碼如下："))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_7), _translate("Form", "反馬丁格"))
