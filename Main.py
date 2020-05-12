@@ -1,10 +1,11 @@
 import sys, os, webbrowser
 import pandas as pd
+import qdarkstyle
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link
 from Menu import About_US
-from MainUI import Ui_MainWindow
+from New_UI_for_edit import Ui_MainWindow
 from LSTM_call import LSTM
 from RF_call import RF
 from Adaboost_call import AdaboostUI
@@ -15,6 +16,7 @@ from RangeBreak_Strategies_call import RangeBreak_Strategies
 from Turtle30k_Strategies_call import Turtle30k_Strategies
 # from Turtle60k_Strategies_call import Turtle60k_Strategies
 from Read_txt_call import ReadTXT
+from LSTM_controll_call import LSTMcall
 
 
 class Mainwin(QtWidgets.QMainWindow):
@@ -57,6 +59,10 @@ class Mainwin(QtWidgets.QMainWindow):
         # self.ui.stack9.__int__()
         self.ui.stack9.setObjectName("Randomforest")
         self.ui.stackedWidget.addWidget(self.ui.stack9)  # widget_index = 9
+        self.ui.stack10 = QtWidgets.QWidget()
+        self.ui.stack10.setObjectName("LSTM_controll")
+        self.ui.stack10 = LSTMcall()
+        self.ui.stackedWidget.addWidget(self.ui.stack10)  # widget_index = 10
 
         self.resize(600, 600)
 
@@ -75,6 +81,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionRangeBreak_Original.triggered.connect(self.callRangeBreak)
         self.ui.actionRF_2.triggered.connect(self.callRF)
         self.ui.actionBigBar_Original.triggered.connect(self.callBigBar)
+        self.ui.actionLSTM.triggered.connect(self.call_LSTMcontroll)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)
@@ -145,9 +152,14 @@ class Mainwin(QtWidgets.QMainWindow):
         self.callperformance = ReadTXT()
         self.callperformance.show()
 
+    def call_LSTMcontroll(self):
+        self.ui.stackedWidget.setCurrentIndex(10)
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
+    # dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
+    # app.setStyleSheet(dark_stylesheet)
     ui = Mainwin()
     ui.link(link(), webcrawler())
     ui.show()

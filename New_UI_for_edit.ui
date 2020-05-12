@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>share-a-coin-removebg-preview.png</normaloff>share-a-coin-removebg-preview.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true"/>
   </property>
@@ -227,8 +231,16 @@
     <property name="title">
      <string>開啟</string>
     </property>
+    <widget class="QMenu" name="menuAI">
+     <property name="title">
+      <string>AI後台控制</string>
+     </property>
+     <addaction name="actionLSTM"/>
+     <addaction name="actionRF"/>
+    </widget>
     <addaction name="actionMulticharts"/>
     <addaction name="actionPowerLanguage_Editor"/>
+    <addaction name="menuAI"/>
    </widget>
    <widget class="QMenu" name="menu_About">
     <property name="title">
@@ -307,6 +319,16 @@
   <action name="actionReports">
    <property name="text">
     <string>績效報告</string>
+   </property>
+  </action>
+  <action name="actionLSTM">
+   <property name="text">
+    <string>LSTM</string>
+   </property>
+  </action>
+  <action name="actionRF">
+   <property name="text">
+    <string>RF</string>
    </property>
   </action>
  </widget>
