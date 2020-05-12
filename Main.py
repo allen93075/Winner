@@ -14,7 +14,6 @@ from MLP_UI_call import MLPUI
 from MoveAverage_Strategies_call import MoveAverage_Strategies
 from RangeBreak_Strategies_call import RangeBreak_Strategies
 from Turtle30k_Strategies_call import Turtle30k_Strategies
-# from Turtle60k_Strategies_call import Turtle60k_Strategies
 from Read_txt_call import ReadTXT
 from LSTM_controll_call import LSTMcall
 
@@ -56,7 +55,6 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stackedWidget.addWidget(self.ui.stack8)  # widget_index = 8
         self.ui.stack9 = QtWidgets.QWidget()
         self.ui.stack9 = RF()
-        # self.ui.stack9.__int__()
         self.ui.stack9.setObjectName("Randomforest")
         self.ui.stackedWidget.addWidget(self.ui.stack9)  # widget_index = 9
         self.ui.stack10 = QtWidgets.QWidget()
