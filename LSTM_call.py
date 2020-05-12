@@ -33,7 +33,7 @@ class LSTM(QtWidgets.QWidget):
         predict(model,60,test_data(self.ui.test_data_combobox.currentText()))
 
     def performance(self):
-        f = open(r'C:/Users/Allen/PycharmProjects/Winner/test.txt')
+        f = open(r'test.txt')
         t = f.readline()
         text = t.split(",")
         text = list(map(str, text))

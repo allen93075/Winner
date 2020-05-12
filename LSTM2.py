@@ -86,7 +86,7 @@ def look_back_day(look_back_day=30):
     return look_back_day
 
 
-def train_data(path="C:/Users/Allen/Desktop/traindata2.csv"):
+def train_data(path="traindata.csv"):
     df_train = pd.read_csv(path, index_col="Date", parse_dates=True)
     return df_train
 

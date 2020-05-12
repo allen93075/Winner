@@ -38,7 +38,7 @@ class RF(QtWidgets.QWidget):
         print(dir_choose)
 
     def performance(self):
-        f = open(r'C:/Users/Allen/PycharmProjects/Winner/test.txt')
+        f = open(r'test.txt')
         t = f.readline()
         text = t.split(",")
         text = list(map(str, text))
