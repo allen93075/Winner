@@ -112,4 +112,17 @@ def mlp_main(data):
     print("acc:", accuracy)
     print("predicts:", predicts)
 
+    # 匯出時間和開高收低以及預測結果
+    c = len(data) - len(predicts)
+    b = []
+    for i in range(c):
+        b.append(i)
+        i += 1
+    pdata = data.loc[:, ["open", "high", "low", "close", "volume"]]
+    pdata = pdata.reset_index(drop=True)
+    pdata.insert(0, 'date', a['Datetime'])
+    pdata = pdata.drop(b)
+    pdata.insert(6, 'predicts', predicts)
+    pdata.to_csv('mlppredicts.csv', index=False, sep=',')
+
 #mlp_main(loadFile())
