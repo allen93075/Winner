@@ -6,7 +6,7 @@ from webcrawler import webcrawler, link
 from Menu import About_US
 from MainUI import Ui_MainWindow
 from LSTM_call import LSTM
-# from RF_call import RF
+from RF_call import RF
 from Adaboost_call import AdaboostUI
 from BigBar_Strategies_call import BigBar_Strategies
 from MLP_UI_call import MLPUI
@@ -27,19 +27,36 @@ class Mainwin(QtWidgets.QMainWindow):
         # self.ui.stack1.__int__()
         self.ui.stack1.setObjectName("LSTM_UI")
         self.ui.stackedWidget.addWidget(self.ui.stack1)  # widget_index = 2
-        # self.ui.stack2 = RF()
-        # self.ui.stack2.__int__()
-        # self.ui.stack2.setObjectName("Randomforest")
-        # self.ui.stackedWidget.addWidget(self.ui.stack2)  # widget_index = 3
         self.ui.stack3 = QtWidgets.QWidget()
         self.ui.stack3 = MLPUI()
         # self.ui.stack3.__init__()
         self.ui.stack3.setObjectName("MLP")
-        self.ui.stackedWidget.addWidget(self.ui.stack3) # widget_index = 4
+        self.ui.stackedWidget.addWidget(self.ui.stack3) # widget_index = 3
         self.ui.stack4 = QtWidgets.QWidget()
         self.ui.stack4.setObjectName("ADAboost")
         self.ui.stack4 = AdaboostUI()
-        self.ui.stackedWidget.addWidget(self.ui.stack4) # widget_index = 5
+        self.ui.stackedWidget.addWidget(self.ui.stack4) # widget_index = 4
+        self.ui.stack5 = QtWidgets.QTableWidget()
+        self.ui.stack5.setObjectName("Turtle30k")
+        self.ui.stack5 = Turtle30k_Strategies()
+        self.ui.stackedWidget.addWidget(self.ui.stack5)  # widget_index = 5
+        self.ui.stack6 = QtWidgets.QTableWidget()
+        self.ui.stack6.setObjectName("MoveAverage")
+        self.ui.stack6 = MoveAverage_Strategies()
+        self.ui.stackedWidget.addWidget(self.ui.stack6)  # widget_index = 6
+        self.ui.stack7 = QtWidgets.QTableWidget()
+        self.ui.stack7.setObjectName("RangeBreak")
+        self.ui.stack7 = RangeBreak_Strategies()
+        self.ui.stackedWidget.addWidget(self.ui.stack7)  # widget_index = 7
+        self.ui.stack8 = QtWidgets.QTableWidget()
+        self.ui.stack8.setObjectName("BigBar")
+        self.ui.stack8 = BigBar_Strategies()
+        self.ui.stackedWidget.addWidget(self.ui.stack8)  # widget_index = 8
+        self.ui.stack9 = QtWidgets.QWidget()
+        self.ui.stack9 = RF()
+        # self.ui.stack9.__int__()
+        self.ui.stack9.setObjectName("Randomforest")
+        self.ui.stackedWidget.addWidget(self.ui.stack9)  # widget_index = 9
 
         self.resize(600, 600)
 
@@ -54,7 +71,6 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionMulticharts.triggered.connect(self.callMC)
         self.ui.actionPowerLanguage_Editor.triggered.connect(self.OpenPLEditor)
         self.ui.actionTurtle30k.triggered.connect(self.callTurtle30k)
-        # self.ui.actionTurtle60k.triggered.connect(self.callTurtle60k)
         self.ui.actionMA_Original.triggered.connect(self.callMA)
         self.ui.actionRangeBreak_Original.triggered.connect(self.callRangeBreak)
         self.ui.actionRF_2.triggered.connect(self.callRF)
@@ -90,7 +106,7 @@ class Mainwin(QtWidgets.QMainWindow):
         print(self.ui.stackedWidget.indexOf(self.ui.stack1))
 
     def callRF(self):
-        self.ui.stackedWidget.setCurrentIndex(3)
+        self.ui.stackedWidget.setCurrentIndex(9)
 
     def callMC(self):
         self.call = os.system(
@@ -104,34 +120,26 @@ class Mainwin(QtWidgets.QMainWindow):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")
 
     def callAboutus(self):
-        self.aboutus = About_US()
-        self.aboutus.show()
+        self.callAboutus = About_US()
+        self.callAboutus.show()
 
     def callTurtle30k(self):
-        self.turtle30kui = Turtle30k_Strategies()
-        self.turtle30kui.show()
-
-    # def callTurtle60k(self):
-    #     self.turtle60kui = Turtle60k_Strategies()
-    #     self.turtle60kui.show()
-
-    def callMA(self):
-        self.maui = MoveAverage_Strategies()
-        self.maui.show()
-
-    def callRangeBreak(self):
-        self.rangebreakui = RangeBreak_Strategies()
-        self.rangebreakui.show()
-
-    def callAdaboost(self):
         self.ui.stackedWidget.setCurrentIndex(5)
 
-    def callMLP(self):
+    def callMA(self):
+        self.ui.stackedWidget.setCurrentIndex(6)
+
+    def callRangeBreak(self):
+        self.ui.stackedWidget.setCurrentIndex(7)
+
+    def callAdaboost(self):
         self.ui.stackedWidget.setCurrentIndex(4)
 
+    def callMLP(self):
+        self.ui.stackedWidget.setCurrentIndex(3)
+
     def callBigBar(self):
-        self.callbigbar = BigBar_Strategies()
-        self.callbigbar.show()
+        self.ui.stackedWidget.setCurrentIndex(8)
 
     def callPerformance(self):
         self.callperformance = ReadTXT()
