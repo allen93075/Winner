@@ -7,18 +7,21 @@
     <x>0</x>
     <y>0</y>
     <width>1195</width>
-    <height>536</height>
+    <height>889</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(242, 242, 242);</string>
+   <string notr="true">background-color: rgb(53, 69, 89);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="1">
     <widget class="QPushButton" name="pushButton">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
      <property name="text">
       <string>前往PowerLanguage Editor</string>
      </property>
@@ -26,6 +29,9 @@
    </item>
    <item row="0" column="0">
     <widget class="QLabel" name="label_2">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
      <property name="text">
       <string>海龜30k策略</string>
      </property>
@@ -36,6 +42,9 @@
    </item>
    <item row="1" column="0">
     <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="tabShape">
       <enum>QTabWidget::Rounded</enum>
      </property>
@@ -65,6 +74,10 @@
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_9">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(53, 69, 89);
+color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Input:len(20);
 var: pts(1),MP(0),ExitAmount(0);
@@ -100,6 +113,9 @@ if MP&lt;=1 then buytocover pts contract next bar at entryprice*
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>策略基本介紹：
 海龜30k基本策略
@@ -211,7 +227,7 @@ if InCludeOpenPL then Equity = Round((InitialCapital + NetProfit + OpenPositionP
 {Position Sizing - Fixed Ratio }
 If Delta &gt; 0 and Equity/Delta &gt; 0 then
     ContractAmt = 0.5 * (1 + squareroot(1 + 8 * Equity/Delta));
-    ContractAmt = MaxList(1, IntPortion(ContractAmt));  //IntPortion->int
+    ContractAmt = MaxList(1, IntPortion(ContractAmt));  //IntPortion-&gt;int
 
 if ContractAmt &lt; 1 then ContractAmt = 1 ;
 if ContractAmt &gt; MaxSize then ContractAmt = MaxSize ;
