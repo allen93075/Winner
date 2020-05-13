@@ -113,6 +113,7 @@ def ada_main(data):
     print("acc:", accuracy)
     print("predicts:", predicts)
 
+    '''
     c = len(data) - len(predicts)
     b = []
     for i in range(c):
@@ -126,7 +127,7 @@ def ada_main(data):
     pdata = pdata.drop(b)
     pdata.insert(6, 'predicts', predicts)
     pdata.to_csv('adapredicts.csv', index=False, sep=',')
-
+    '''
     # 保存模型
     # joblib.dump(adaboost_ai, "adaboost_train_model.pkl")
     # 儲存Model(注:save資料夾要預先建立，否則會報錯)
