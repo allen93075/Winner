@@ -25,12 +25,12 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.ui.stack1 = QtWidgets.QWidget()
         self.ui.stack1 = LSTM()
-        # self.ui.stack1.__int__()
+        self.ui.stack1.__int__()
         self.ui.stack1.setObjectName("LSTM_UI")
         self.ui.stackedWidget.addWidget(self.ui.stack1)  # widget_index = 2
         self.ui.stack3 = QtWidgets.QWidget()
         self.ui.stack3 = MLPUI()
-        # self.ui.stack3.__init__()
+        self.ui.stack3.__init__()
         self.ui.stack3.setObjectName("MLP")
         self.ui.stackedWidget.addWidget(self.ui.stack3) # widget_index = 3
         self.ui.stack4 = QtWidgets.QWidget()
@@ -61,6 +61,10 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack10.setObjectName("LSTM_controll")
         self.ui.stack10 = LSTMcall()
         self.ui.stackedWidget.addWidget(self.ui.stack10)  # widget_index = 10
+        self.ui.stack11 = QtWidgets.QWidget()
+        self.ui.stack11.setObjectName("Performance")
+        self.ui.stack11 = ReadTXT()
+        self.ui.stackedWidget.addWidget(self.ui.stack11)  # widget_index = 11
 
         self.resize(600, 600)
 
@@ -152,8 +156,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stackedWidget.setCurrentIndex(8)
 
     def callPerformance(self):
-        self.callperformance = ReadTXT()
-        self.callperformance.show()
+        self.ui.stackedWidget.setCurrentIndex(11)
 
     def call_LSTMcontroll(self):
         self.ui.stackedWidget.setCurrentIndex(10)

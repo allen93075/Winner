@@ -4,7 +4,7 @@ from PyQt5 import QtWidgets
 class ReadTXT(QtWidgets.QTableWidget):
     def __init__(self):
         #Turtle30k
-        f = open(r'C:/Users/Allen/PycharmProjects/Winner/test.txt')
+        f = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle.txt')
         t = f.readline()
         text = t.split(",")
         text = list(map(str, text))
@@ -22,7 +22,7 @@ class ReadTXT(QtWidgets.QTableWidget):
         text = [str(x) for x in text]
 
         #Turtle30k+Kelly
-        f1 = open(r'C:/Users/Allen/PycharmProjects/Winner/test.txt')
+        f1 = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle_kelly.txt')
         tk = f1.readline()
         text_tk = tk.split(",")
         text_tk = list(map(str, text_tk))
@@ -39,7 +39,7 @@ class ReadTXT(QtWidgets.QTableWidget):
         text_tk = [str(x) for x in text_tk]
 
         #Turtle30k+FixedRatio
-        f2 = open(r'C:/Users/Allen/PycharmProjects/Winner/test.txt')
+        f2 = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle_FR.txt')
         t_fr = f2.readline()
         text_fr = t_fr.split(",")
         text_fr = list(map(str, text_fr))
@@ -56,7 +56,7 @@ class ReadTXT(QtWidgets.QTableWidget):
         text_fr = [str(x) for x in text_fr]
 
         # Turtle30k+OptimalF
-        f3 = open(r'C:/Users/Allen/PycharmProjects/Winner/test.txt')
+        f3 = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle_optimalF.txt')
         t_OF = f3.readline()
         text_OF = t_OF.split(",")
         text_OF = list(map(str, text_fr))
@@ -73,7 +73,7 @@ class ReadTXT(QtWidgets.QTableWidget):
         text_OF = [str(x) for x in text_OF]
 
         # Turtle30k+LarryWilliams
-        f4 = open(r'C:/Users/Allen/PycharmProjects/Winner/test.txt')
+        f4 = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle_william.txt')
         t_lw = f4.readline()
         text_lw = t_lw.split(",")
         text_lw = list(map(str, text_lw))
