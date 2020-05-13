@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1195</width>
-    <height>536</height>
+    <height>729</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,32 +50,6 @@
        <string>原始策略</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_9">
-         <property name="text">
-          <string>Inputs: Len1(5),Len2(20);
-Vars:MA1(0), MA2(0);
-
-MA1 = Average(close, Len1);
-MA2 = Average(close, Len2);
-
-//if average(close, 5)cross over average(close, 20)then buy next bar at market
-if MA1 cross over MA2 then
-buy(&quot;buy&quot;) next bar at market;
-
-//if average(close, 5)cross below average(close, 20)then buy next bar at market
-if MA1 cross below MA2 then
-sellshort(&quot;sell&quot;) next bar at market;
-</string>
-         </property>
-         <property name="textFormat">
-          <enum>Qt::PlainText</enum>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-         </property>
-        </widget>
-       </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label">
          <property name="text">
@@ -89,18 +63,50 @@ sellshort(&quot;sell&quot;) next bar at market;
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>536</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Inputs: Len1(5),Len2(20);
+Vars:MA1(0), MA2(0);
+
+MA1 = Average(close, Len1);
+MA2 = Average(close, Len2);
+
+//if average(close, 5)cross over average(close, 20)then buy next bar at market
+if MA1 cross over MA2 then
+buy(&quot;buy&quot;) next bar at market;
+
+//if average(close, 5)cross below average(close, 20)then buy next bar at market
+if MA1 cross below MA2 then
+sellshort(&quot;sell&quot;) next bar at market;
+</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::PlainText</enum>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -109,19 +115,6 @@ sellshort(&quot;sell&quot;) next bar at market;
        <string>凱利公式</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
-       <item row="2" column="0">
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
@@ -133,9 +126,24 @@ sellshort(&quot;sell&quot;) next bar at market;
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="label_10">
-         <property name="text">
-          <string>Inputs: Len1(5),Len2(20);
+        <widget class="QScrollArea" name="scrollArea_2">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>536</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Inputs: Len1(5),Len2(20);
 Vars:MA1(0), MA2(0);
 //-----Kelly-----(1)
 input:InitialCapital(1000000), MaxSize(10)
@@ -166,7 +174,11 @@ buy(&quot;buy&quot;) pTS shares next bar at market;
 if MA1 cross below MA2 then
 sellshort(&quot;sell&quot;) pTS shares next bar at market;
 </string>
-         </property>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
       </layout>
@@ -176,10 +188,35 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
        <string>固定比率</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_11">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>Inputs: Len1(5),Len2(20);
+          <string>策略基本介紹：
+移動均線＋固定比率
+
+程式碼如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="scrollArea_3">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>536</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Inputs: Len1(5),Len2(20);
 Vars:MA1(0), MA2(0);
 //Fixed Ratio
 Inputs: InitialCapital(10000000), Delta(20000);//Fixed Ratio
@@ -211,31 +248,12 @@ buy(&quot;buy&quot;)pTS shares next bar at market;
 if MA1 cross below MA2 then
 sellshort(&quot;sell&quot;)pTS shares next bar at market;
 </string>
-         </property>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>策略基本介紹：
-移動均線＋固定比率
-
-程式碼如下：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <spacer name="verticalSpacer_3">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </widget>
@@ -244,10 +262,35 @@ sellshort(&quot;sell&quot;)pTS shares next bar at market;
        <string>固定分數</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_5">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_12">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>Inputs: Len1(5),Len2(20);
+          <string>策略基本介紹：
+移動均線＋固定分數
+
+程式碼如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="scrollArea_4">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_4">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>536</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Inputs: Len1(5),Len2(20);
 Vars:MA1(0), MA2(0);
 //Money Management(Fixed Fraction)
 Inputs: earning(5), out(2), pIC(1000000), Delta(9999), IncludeOpenPL(false), Maxsize(10);//Money Management(Fixed Fraction)
@@ -276,31 +319,12 @@ buy(&quot;buy&quot;) pTS shares next bar at market;
 if MA1 cross below MA2 then
 sellshort(&quot;sell&quot;) pTS shares next bar at market;
 </string>
-         </property>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>策略基本介紹：
-移動均線＋固定分數
-
-程式碼如下：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <spacer name="verticalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </widget>
@@ -310,9 +334,24 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
       </attribute>
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="1" column="0">
-        <widget class="QLabel" name="label_13">
-         <property name="text">
-          <string>Inputs: Len1(5),Len2(20);
+        <widget class="QScrollArea" name="scrollArea_5">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_5">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>536</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_12">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Inputs: Len1(5),Len2(20);
 Vars:MA1(0), MA2(0);
 //-----Optimal F Rule-----(4)
 
@@ -340,7 +379,11 @@ buy(&quot;buy&quot;) pTS shares next bar at market;
 if MA1 cross below MA2 then
 sellshort(&quot;sell&quot;) pTS shares next bar at market;
 </string>
-         </property>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
        <item row="0" column="0">
@@ -353,19 +396,6 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <spacer name="verticalSpacer_5">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="tab_6">
@@ -373,20 +403,25 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
        <string>LarryWilliams</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_8">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_7">
-         <property name="text">
-          <string>策略基本介紹：
-移動均線＋LarryWilliams
-
-程式碼如下：</string>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="label_14">
-         <property name="text">
-          <string>Inputs: Len1(5), Len2(20);
+        <widget class="QScrollArea" name="scrollArea_6">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_6">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>552</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_13">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Inputs: Len1(5), Len2(20);
 Vars:MA1(0), MA2(0);
 
 //-----LarryWilliams Rule-----
@@ -419,21 +454,22 @@ buy(&quot;buy&quot;) pTS shares next bar at market;
 if MA1 cross below MA2 then
 sellshort(&quot;sell&quot;) pTS shares next bar at market;
 </string>
-         </property>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
-       <item row="2" column="0">
-        <spacer name="verticalSpacer_6">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>策略基本介紹：
+移動均線＋LarryWilliams
+
+程式碼如下：</string>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
+        </widget>
        </item>
       </layout>
      </widget>
