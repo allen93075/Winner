@@ -3,7 +3,7 @@ import sys
 
 import Adaboost_UI
 from  PyQt5 import QtWidgets, QtGui
-from adaboost import *
+from ada_model import *
 
 
 class AdaboostUI(QtWidgets.QTableWidget):
