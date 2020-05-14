@@ -29,7 +29,7 @@
             <string>目前選擇策略：</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -70,15 +70,21 @@
            <property name="text">
             <string>選擇績效資料</string>
            </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
           </widget>
          </item>
          <item>
           <widget class="QToolButton" name="performancedata_toolButton">
-           <property name="text">
-            <string>...</string>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
-           <property name="popupMode">
-            <enum>QToolButton::MenuButtonPopup</enum>
+           <property name="text">
+            <string>選擇</string>
            </property>
            <property name="autoRaise">
             <bool>true</bool>

@@ -65,31 +65,6 @@ class RB_Performance(QtWidgets.QWidget):
             self.ui.trade_count_label.setText(text[3])
             self.ui.trade_cost_labeL.setText(TotalTradesCost)
             self.ui.title.setText(Filename2[0])
-    # def performance(self):
-    #     f = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/RangeBreak.txt')
-    #     t = f.readline()
-    #     text = t.split(",")
-    #     text = list(map(str, text))
-    #     text = [float(x) for x in text]
-    #     # Earning odds
-    #     t1 = (text[4] / text[5])
-    #     EarningOdds = str(t1)  # back to str
-    #     # ProfitFactor
-    #     t2 = (text[6] / text[7] - 1)
-    #     ProfitFactor = str(t2)
-    #     # TotalTradesCost
-    #     t3 = (1000 * text[3])
-    #     TotalTradesCost = str(t3)
-    #     text = [str(x) for x in text]
-    #
-    #     self.ui.netprofit_label.setText(text[0])
-    #     self.ui.winrate_label.setText(text[1])
-    #     self.ui.winloserate_label.setText(EarningOdds)
-    #     self.ui.profit_factor_label.setText(ProfitFactor)
-    #     self.ui.mdd_label.setText(text[2])
-    #     self.ui.trade_count_label.setText(text[3])
-    #     self.ui.trade_cost_labeL.setText(TotalTradesCost)
-
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
