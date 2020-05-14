@@ -14,9 +14,9 @@ from MLP_UI_call import MLPUI
 from MoveAverage_Strategies_call import MoveAverage_Strategies
 from RangeBreak_Strategies_call import RangeBreak_Strategies
 from Turtle30k_Strategies_call import Turtle30k_Strategies
-from Read_txt_call import ReadTXT
+# from Read_txt_call import ReadTXT
 from LSTM_controll_call import LSTMcall
-
+from RangeBreak_Performance_call import RB_Performance
 
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -25,7 +25,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.ui.stack1 = QtWidgets.QWidget()
         self.ui.stack1 = LSTM()
-        self.ui.stack1.__int__()
+        self.ui.stack1.__init__()
         self.ui.stack1.setObjectName("LSTM_UI")
         self.ui.stackedWidget.addWidget(self.ui.stack1)  # widget_index = 2
         self.ui.stack3 = QtWidgets.QWidget()
@@ -63,7 +63,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stackedWidget.addWidget(self.ui.stack10)  # widget_index = 10
         self.ui.stack11 = QtWidgets.QWidget()
         self.ui.stack11.setObjectName("Performance")
-        self.ui.stack11 = ReadTXT()
+        self.ui.stack11 = RB_Performance()
         self.ui.stackedWidget.addWidget(self.ui.stack11)  # widget_index = 11
 
         self.resize(600, 600)
