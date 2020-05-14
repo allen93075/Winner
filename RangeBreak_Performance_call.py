@@ -33,6 +33,14 @@ class RB_Performance(QtWidgets.QWidget):
         # print(self.ui.performance_data_combobox.currentText())
         # print(type(self.ui.performance_data_combobox.currentText()))
 
+            # print file name
+            Filename = str(file)
+            Filetext = Filename.split("/")
+            Filetext1 = Filetext
+            Filename1 = Filetext1[-1]
+            Filename2 = Filename1.split(".txt")
+
+            # read into performance and calculate
             f = open(file, "r")
             t = f.readline()
             text = t.split(",")
@@ -56,7 +64,7 @@ class RB_Performance(QtWidgets.QWidget):
             self.ui.mdd_label.setText(text[2])
             self.ui.trade_count_label.setText(text[3])
             self.ui.trade_cost_labeL.setText(TotalTradesCost)
-
+            self.ui.title.setText(Filename2[0])
     # def performance(self):
     #     f = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/RangeBreak.txt')
     #     t = f.readline()
