@@ -42,7 +42,7 @@
             </font>
            </property>
            <property name="text">
-            <string>RangeBreak</string>
+            <string>N/A</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
