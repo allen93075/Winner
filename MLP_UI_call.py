@@ -3,7 +3,7 @@ import sys
 
 from  PyQt5 import QtWidgets
 import MLP_UI 
-from mlp import *
+from mlp_model import *
 
 class MLPUI(QtWidgets.QTableWidget):
     def __init__(self):

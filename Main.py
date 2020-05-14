@@ -25,12 +25,12 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.ui.stack1 = QtWidgets.QWidget()
         self.ui.stack1 = LSTM()
-        self.ui.stack1.__init__()
+        #self.ui.stack1.__init__()
         self.ui.stack1.setObjectName("LSTM_UI")
         self.ui.stackedWidget.addWidget(self.ui.stack1)  # widget_index = 2
         self.ui.stack3 = QtWidgets.QWidget()
         self.ui.stack3 = MLPUI()
-        self.ui.stack3.__init__()
+        #self.ui.stack3.__init__()
         self.ui.stack3.setObjectName("MLP")
         self.ui.stackedWidget.addWidget(self.ui.stack3) # widget_index = 3
         self.ui.stack4 = QtWidgets.QWidget()
