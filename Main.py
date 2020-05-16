@@ -14,7 +14,8 @@ from MLP_UI_call import MLPUI
 from MoveAverage_Strategies_call import MoveAverage_Strategies
 from RangeBreak_Strategies_call import RangeBreak_Strategies
 from Turtle30k_Strategies_call import Turtle30k_Strategies
-# from Read_txt_call import ReadTXT
+from CCI_Strategies_call import CCI_Strategies
+from Read_txt_call import ReadTXT
 from LSTM_controll_call import LSTMcall
 from RangeBreak_Performance_call import RB_Performance
 
@@ -65,6 +66,10 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack11.setObjectName("Performance")
         self.ui.stack11 = RB_Performance()
         self.ui.stackedWidget.addWidget(self.ui.stack11)  # widget_index = 11
+        self.ui.stack12 = QtWidgets.QWidget()
+        self.ui.stack12.setObjectName("Performance")
+        self.ui.stack12 = CCI_Strategies()
+        self.ui.stackedWidget.addWidget(self.ui.stack12)  # widget_index = 12
 
         self.resize(600, 600)
 
@@ -84,6 +89,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionRF_2.triggered.connect(self.callRF)
         self.ui.actionBigBar_Original.triggered.connect(self.callBigBar)
         self.ui.actionLSTM.triggered.connect(self.call_LSTMcontroll)
+        self.ui.actionCCI_Original.triggered.connect(self.callCCI)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)
@@ -145,6 +151,9 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def callRangeBreak(self):
         self.ui.stackedWidget.setCurrentIndex(7)
+
+    def callCCI(self):
+        self.ui.stackedWidget.setCurrentIndex(12)
 
     def callAdaboost(self):
         self.ui.stackedWidget.setCurrentIndex(4)
