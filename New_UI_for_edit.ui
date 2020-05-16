@@ -53,8 +53,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>373</width>
-               <height>556</height>
+               <width>365</width>
+               <height>543</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
@@ -230,10 +230,17 @@
      </property>
      <addaction name="actionBigBar_Original"/>
     </widget>
+    <widget class="QMenu" name="menuCCI">
+     <property name="title">
+      <string>順勢指標 </string>
+     </property>
+     <addaction name="actionCCI_Original"/>
+    </widget>
     <addaction name="menuTurtle"/>
     <addaction name="menuMoveAverage"/>
     <addaction name="menuRangeBreak"/>
     <addaction name="menuBigBar"/>
+    <addaction name="menuCCI"/>
    </widget>
    <widget class="QMenu" name="menu_AI">
     <property name="sizeIncrement">
@@ -364,6 +371,11 @@
   <action name="actionRF">
    <property name="text">
     <string>RF</string>
+   </property>
+  </action>
+  <action name="actionCCI_Original">
+   <property name="text">
+    <string>CCI策略集</string>
    </property>
   </action>
  </widget>

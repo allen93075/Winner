@@ -68,6 +68,7 @@ class Ui_Form(object):
         self.gridLayout_9 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_9.setObjectName("gridLayout_9")
         self.label_10 = QtWidgets.QLabel(self.scrollAreaWidgetContents_2)
+        self.label_10.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_10.setObjectName("label_10")
         self.gridLayout_9.addWidget(self.label_10, 0, 0, 1, 1)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
@@ -84,11 +85,12 @@ class Ui_Form(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 948, 680))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 948, 664))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.gridLayout_10 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_3)
         self.gridLayout_10.setObjectName("gridLayout_10")
         self.label_11 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
+        self.label_11.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_11.setObjectName("label_11")
         self.gridLayout_10.addWidget(self.label_11, 0, 0, 1, 1)
         self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
@@ -110,6 +112,7 @@ class Ui_Form(object):
         self.gridLayout_11 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_4)
         self.gridLayout_11.setObjectName("gridLayout_11")
         self.label_12 = QtWidgets.QLabel(self.scrollAreaWidgetContents_4)
+        self.label_12.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_12.setObjectName("label_12")
         self.gridLayout_11.addWidget(self.label_12, 0, 0, 1, 1)
         self.scrollArea_4.setWidget(self.scrollAreaWidgetContents_4)
@@ -131,6 +134,7 @@ class Ui_Form(object):
         self.gridLayout_12 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_5)
         self.gridLayout_12.setObjectName("gridLayout_12")
         self.label_13 = QtWidgets.QLabel(self.scrollAreaWidgetContents_5)
+        self.label_13.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_13.setObjectName("label_13")
         self.gridLayout_12.addWidget(self.label_13, 0, 0, 1, 1)
         self.scrollArea_5.setWidget(self.scrollAreaWidgetContents_5)
@@ -152,6 +156,7 @@ class Ui_Form(object):
         self.gridLayout_13 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_6)
         self.gridLayout_13.setObjectName("gridLayout_13")
         self.label_14 = QtWidgets.QLabel(self.scrollAreaWidgetContents_6)
+        self.label_14.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_14.setObjectName("label_14")
         self.gridLayout_13.addWidget(self.label_14, 0, 0, 1, 1)
         self.scrollArea_6.setWidget(self.scrollAreaWidgetContents_6)
@@ -160,7 +165,7 @@ class Ui_Form(object):
         self.gridLayout.addWidget(self.tabWidget, 1, 0, 1, 1)
 
         self.retranslateUi(Form)
-        self.tabWidget.setCurrentIndex(5)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -168,243 +173,88 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.pushButton.setText(_translate("Form", "前往PowerLanguage Editor"))
         self.label_2.setText(_translate("Form", "區間突破策略"))
-        self.label.setText(_translate("Form", "策略基本介紹：\n"
+        self.label.setText(_translate("Form", "名稱：\n"
 "區間突破基本策略\n"
 "\n"
-"程式碼如下："))
-        self.label_9.setText(_translate("Form", "Inputs: LookBack(10), Rang(0.4), When(4);\n"
-"Vars: HighValue(0), LowValue(1000000),Tr(0);\n"
-"\n"
-"LowValue = Lowest(L, LookBack);\n"
-"HighValue = Highest(H, LookBack);\n"
-"Tr = (HighValue - LowValue)*Range;\n"
-"\n"
-"//RangeBreak\n"
-"Buy(\"buy\") next bar closed(1) + Tr stop;\n"
-"sellshort(\"sell\") next bar closed(1) - Tr stop;\n"
-"\n"
-"If Close < LowValue[1] Then\n"
-"sell(\"EXIT_buy\") next bar market;\n"
-"If Close > HighValue[1] Then\n"
-"buytocover(\"EXIT_sell\") next bar market;\n"
-"\n"
-"If barssinceentry = When and openpositionprofit < 0 then begin\n"
-"sell next bar market;\n"
-"buytocover next bar market;\n"
-"end;\n"
+"解釋如下："))
+        self.label_9.setText(_translate("Form", "區間突破策略主要是以開盤後取一定區間的價格當作基準，\n"
+"若突破區間則進行交易。\n"
 "\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Form", "原始策略"))
-        self.label_3.setText(_translate("Form", "策略基本介紹：\n"
+        self.label_3.setText(_translate("Form", "名稱：\n"
 "區間突破＋凱利公式\n"
 "\n"
-"程式碼如下："))
-        self.label_10.setText(_translate("Form", "Inputs: LookBack(10), Rang(0.4), When(4);\n"
-"Vars: HighValue(0), LowValue(1000000),Tr(0);\n"
-"//-----Kelly-----(1)\n"
-"input:InitialCapital(1000000), MaxSize(10)\n"
-";\n"
-"var:pTs(1),b(0),p(0),q(0),f(0),pCapitalperContract(200000),ExitAmount(0),MP(0);\n"
-"//K%=W-(1-W)/R\n"
-"if Grossprofit<>0 and Totaltrades<>0 and grossloss<>0 and   Numlostrades <>0 then\n"
-" b = (Grossprofit/ numwintrades)/(grossloss/ Numlostrades);\n"
-"if Numwintrades<>0 and Totaltrades<>0 then\n"
-"     p = Numwintrades/ Totaltrades;\n"
-"     q = 1-p;\n"
-"if b<>0 and p<>0 then\n"
-"     f = p-(q/b);\n"
-"if f<>0 and f*(InitialCapital+netprofit)>0 then\n"
-" pTS =IntPortion((f*(InitialCapital+netprofit))/pCapitalperContract);\n"
-" if pTS < 1 then pTS = 1 ;\n"
-" if pTS > MaxSize then pTS = MaxSize ;\n"
+"解釋如下："))
+        self.label_10.setText(_translate("Form", "凱利公式是一種資金管理的方法，\n"
+"最初為貝爾實驗室物理學家John Larry Kelly於1956年在《貝爾系統技術期刊》中發表，\n"
+"用以計算每次賭局中，決定下一次賭注所投入的資金比例。\n"
 "\n"
-"//RangeBreak\n"
-"LowValue = Lowest(L, LookBack);\n"
-"HighValue = Highest(H, LookBack);\n"
-"Tr = (HighValue - LowValue)*Range;\n"
+"f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率\n"
+"並且設定pTS(交易口數)=f\n"
 "\n"
-"Buy(\"buy\") pTS shares next bar closed(1) + Tr stop;\n"
-"sellshort(\"sell\") pTS shares next bar closed(1) - Tr stop;\n"
-"\n"
-"If Close < LowValue[1] Then\n"
-"sell(\"EXIT_buy\") pTS shares next bar market;\n"
-"If Close > HighValue[1] Then\n"
-"buytocover(\"EXIT_sell\") pTS shares next bar market;\n"
-"\n"
-"If barssinceentry = When and openpositionprofit < 0 then begin\n"
-"sell pTS shares next bar market;\n"
-"buytocover pTS shares next bar market;\n"
-"end;\n"
+"並且將凱利公式加上區間突破策略搭配使用\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "凱利公式"))
-        self.label_4.setText(_translate("Form", "策略基本介紹：\n"
+        self.label_4.setText(_translate("Form", "名稱：\n"
 "區間突破＋固定比率\n"
 "\n"
-"程式碼如下："))
-        self.label_11.setText(_translate("Form", "Inputs: LookBack(10), Rang(0.4), When(4);\n"
-"Vars: HighValue(0), LowValue(1000000),Tr(0);\n"
-"Inputs: InitialCapital(10000000), Delta(20000);//Fixed Ratio\n"
-"Inputs: InCloudOpenPL(false), Maxsize(10);\n"
-"Vars: contractAmt(0), ExitAmount(0), Equity(0), MP(0), pTS(0);\n"
+"解釋如下："))
+        self.label_11.setText(_translate("Form", "固定比率（Fixed Ratio）的資金管理模式，是由Ryan Jones在1999寫的「The Trading Game」書中所提出的。\n"
+"基本上的計算方式是這樣的：\n"
 "\n"
-"LowValue = Lowest(L, LookBack);\n"
-"HighValue = Highest(H, LookBack);\n"
-"Tr = (HighValue - LowValue)*Range;\n"
+"假設我們的初始資金有NTD $100萬，delta 設為 NTD $20000。假設我們現在用$100萬交易一口合約。\n"
 "\n"
+"交易第二口合約所需資金 = 交易第一口合約所需資金 + delta($2萬元) * 1\n"
 "\n"
-"//Fixed Ratio\n"
-"if InCloudOpenPL then Equity = Round((InitialCapital + Netprofit + OpenPositionProfit), 0)\n"
-"    else Equity = Round((InitialCapital + NetProfit), 0);\n"
+"交易第三口合約所需資金 = 交易第二口合約所需資金 + delta($2萬元) * 2\n"
 "\n"
-"//Position Sizing - Fixed Ratio\n"
-"if Delta > 0 and Equity/Delta > 0 then\n"
-"    contractAmt = 0.5*(1 + SquareRoot(1 + 8*Equity/Delta));\n"
-"    contractAmt = MaxList(1, IntPortion(ContractAmt));\n"
+"依此類推……\n"
 "\n"
-"if contractAmt < 1 then ContractAmt = 1;\n"
-"if contractAmt > MaxSize then ContractAmt = Maxsize;\n"
-"pTS = contractAmt;\n"
+"並設定\n"
+"Equity = Round((InitialCapital + Netprofit + OpenPositionProfit), 0)\n"
+"contractamount = 0.5*(1 + SquareRoot(1 + 8*Equity/Delta));\n"
+"if contractamount < 1 then ContractAmt = 1;\n"
+"if contractamount > MaxSize then ContractAmt = Maxsize;\n"
+"而pTS（交易口數）＝ contractamount\n"
 "\n"
-"//RangeBreak\n"
-"if Marketposition = 0 then\n"
-"    Buy(\"buy\") pTS shares next bar closed(1) + Tr stop;\n"
-"if ExitAmount = ContractAmt then\n"
-"    sellshort(\"sell\")pTS shares next bar closed(1) - Tr stop;\n"
-"\n"
-"If Close < LowValue[1] Then\n"
-"sell(\"EXIT_buy\") pTS shares next bar market;\n"
-"If Close > HighValue[1] Then\n"
-"buytocover(\"EXIT_sell\") pTS shares next bar market;\n"
-"\n"
-"If barssinceentry = When and openpositionprofit < 0 then begin\n"
-"sell pTS shares next bar market;\n"
-"buytocover pTS shares next bar market;\n"
-"end;\n"
-"\n"
+"最後將此套入移動暈線策略中搭配使用。\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Form", "固定比率"))
-        self.label_5.setText(_translate("Form", "策略基本介紹：\n"
+        self.label_5.setText(_translate("Form", "名稱：\n"
 "區間突破＋固定分數\n"
 "\n"
-"程式碼如下："))
-        self.label_12.setText(_translate("Form", "Inputs: LookBack(10), Rang(0.4), When(4);\n"
-"Vars: HighValue(0), LowValue(1000000),Tr(0);\n"
-"Inputs: earning(5), out(2), pIC(1000000), Delta(9999), IncludeOpenPL(false), Maxsize(10);//Money Management(Fixed Fraction)\n"
-"Vars: Equity(0), contractamt(0), pTS(0);\n"
+"解釋如下："))
+        self.label_12.setText(_translate("Form", "固定分數（Fixed Fraction）和固定比率都是常用的資金管理模式，\n"
+"而固定分數的基本邏輯是，限制住每一交易所冒的風險佔我們整體資金的比例。\n"
+"假設今天我們有NTD $100萬的資金，而每次交易的損失不超過手中資金的2%，而這2%就數我們的交易風險比例。\n"
 "\n"
-"LowValue = Lowest(L, LookBack);\n"
-"HighValue = Highest(H, LookBack);\n"
-"Tr = (HighValue - LowValue)*Range;\n"
-"\n"
-"//Money Management (Fixed Fraction)\n"
-"if InCludeOpenPL then\n"
-"   Equity = Round((pIC + NetProfit + OpenPositionProfit),0)\n"
-"   else Equity = Round((pIC + NetProfit),0);\n"
-"If Delta > 0 and Equity/Delta > 0 then\n"
-"   contractamt = 0.5 * (1 + squareroot(1 + 8 * Equity/Delta));\n"
-"contractamt = MaxList(1, IntPortion(contractamt));\n"
-"if contractamt < 1 then contractamt = 1 ;\n"
-"if contractamt > MaxSize then contractamt = MaxSize ;\n"
-"pTS = contractamt;\n"
-"\n"
-"//RangeBreak\n"
-"Buy(\"buy\") pTS shares next bar closed(1) + Tr stop;\n"
-"sellshort(\"sell\")pTS shares next bar closed(1) - Tr stop;\n"
-"\n"
-"If Close < LowValue[1] Then\n"
-"sell(\"EXIT_buy\")pTS shares next bar market;\n"
-"\n"
-"If Close > HighValue[1] Then\n"
-"buytocover(\"EXIT_sell\")pTS shares next bar market;\n"
-"\n"
-"If barssinceentry = When and openpositionprofit < 0 then begin\n"
-"sell pTS shares next bar market;\n"
-"buytocover pTS shares next bar market;\n"
-"end;\n"
-"\n"
+"我們將此資金管理方法加入移動均線策略中搭配使用。\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("Form", "固定分數"))
-        self.label_6.setText(_translate("Form", "策略基本介紹：\n"
+        self.label_6.setText(_translate("Form", "名稱：\n"
 "區間突破＋最佳F值\n"
 "\n"
-"程式碼如下："))
-        self.label_13.setText(_translate("Form", "Inputs: LookBack(10), Rang(0.4), When(4);\n"
-"Vars: HighValue(0), LowValue(1000000),Tr(0);\n"
+"解釋如下："))
+        self.label_13.setText(_translate("Form", "最佳F值法是由Ralph Vince在1992年\n"
+"《The Mathematics of Money Management: Risk Analysis Techniques for Traders》一\n"
+"書中認為凱利公式只適用於理論上輸贏機率各半的傳統賭局，不適合變化多端的實際賭局因此提出。\n"
+"最佳F值法（Optimal f），巧妙的運用Kelly的概念，\n"
+"由於實際賭局中輸贏機率為動態的，故透過下注後去計算每次的持有收益率，\n"
+"進而避開傳統賭局的固定機率與賠率的限制，\n"
+"期望在資金配置的同時可以在投資與損失之中達到平衡。\n"
 "\n"
-"//-----Optimal F Rule-----(4)\n"
-"\n"
-"var: pTS(1), OptimalF_Num(10),_OptimalF(0),Equity(0),ExitAmount(0),InCludeOpenPL(false),mp(0), len(0);\n"
-"\n"
-"if InCludeOpenPL then\n"
-" Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
-"else\n"
-" Equity = Round((InitialCapital + NetProfit),0);\n"
-" _OptimalF=Mf_OptimalF(close,OptimalF_Num,false)/100;\n"
-"if _OptimalF<>0 and maxiddrawdown<>0 then\n"
-" pTS = (Equity * _OptimalF)/absvalue(maxiddrawdown);\n"
-" pTS = MaxList(1, IntPortion(pTS));\n"
-"\n"
-"\n"
-"//RangeBreak\n"
-"LowValue = Lowest(L, LookBack);\n"
-"HighValue = Highest(H, LookBack);\n"
-"Tr = (HighValue - LowValue)*Range;\n"
-"\n"
-"Buy(\"buy\") pTS shares next bar closed(1) + Tr stop;\n"
-"sellshort(\"sell\") pTS shares next bar closed(1) - Tr stop;\n"
-"\n"
-"If Close < LowValue[1] Then\n"
-"sell(\"EXIT_buy\") pTS shares next bar market;\n"
-"If Close > HighValue[1] Then\n"
-"buytocover(\"EXIT_sell\") pTS shares next bar market;\n"
-"\n"
-"If barssinceentry = When and openpositionprofit < 0 then begin\n"
-"sell pTS shares next bar market;\n"
-"buytocover pTS shares next bar market;\n"
-"end;"))
+"我們將此資金管理方法加入移動均線策略中搭配使用。\n"
+""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), _translate("Form", "最佳F值"))
-        self.label_7.setText(_translate("Form", "策略基本介紹：\n"
+        self.label_7.setText(_translate("Form", "名稱：\n"
 "區間突破＋LarryWilliams\n"
 "\n"
-"程式碼如下："))
-        self.label_14.setText(_translate("Form", "Inputs: LookBack(10), Rang(0.4), When(4);\n"
-"Vars: HighValue(0), LowValue(1000000),Tr(0);\n"
+"解釋如下："))
+        self.label_14.setText(_translate("Form", "Larry Williams資金方法，\n"
+"係指第一口合約所需資金 = 初始保證金＋歷史回測中的MDD(最大策略虧損)*150%\n"
+"每賺到一個MDD*150%的資金，就加碼一口\n"
 "\n"
-"//-----LarryWilliams Rule-----\n"
-"Input:  InitialCapital(1000000), InCludeOpenPL(false), MaxSize(10);\n"
-"var: pCapitalperContract(200000), Equity(0), mp(0), ExitAmount(0), pTS(1);\n"
-"\n"
-"if InCludeOpenPL then Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
-"else Equity = Round((InitialCapital + NetProfit),0);\n"
-"\n"
-"if InCludeOpenPL then\n"
-" Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
-"else\n"
-" Equity = Round((InitialCapital + NetProfit),0);\n"
-"if maxiddrawdown <> 0 and entryprice <> 0 then begin\n"
-" if netprofit<>0 and maxiddrawdown<>0 then\n"
-"     pTS=IntPortion(netprofit/(absvalue(maxiddrawdown)*1.3))+1;\n"
-" if pTS > IntPortion(Equity  / entryprice) then\n"
-"     pTS = IntPortion(Equity  / entryprice);\n"
-"end;\n"
-"\n"
-"//RangeBreak\n"
-"LowValue = Lowest(L, LookBack);\n"
-"HighValue = Highest(H, LookBack);\n"
-"Tr = (HighValue - LowValue)*Range;\n"
-"\n"
-"Buy(\"buy\") pTS shares next bar closed(1) + Tr stop;\n"
-"sellshort(\"sell\") pTS shares next bar closed(1) - Tr stop;\n"
-"\n"
-"If Close < LowValue[1] Then\n"
-"sell(\"EXIT_buy\") pTS shares next bar market;\n"
-"If Close > HighValue[1] Then\n"
-"buytocover(\"EXIT_sell\") pTS shares next bar market;\n"
-"\n"
-"If barssinceentry = When and openpositionprofit < 0 then begin\n"
-"sell pTS shares next bar market;\n"
-"buytocover pTS shares next bar market;\n"
-"end;\n"
-"\n"
+"並且將此資金管理方法加入移動均線策略中使用。\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("Form", "LarryWilliams"))

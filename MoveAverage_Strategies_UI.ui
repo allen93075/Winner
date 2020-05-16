@@ -53,10 +53,10 @@
        <item row="0" column="0">
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>策略基本介紹：
+          <string>名稱：
 移動均線基本策略
 
-程式碼如下：</string>
+解釋如下：</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -81,19 +81,9 @@
            <item row="0" column="0">
             <widget class="QLabel" name="label_9">
              <property name="text">
-              <string>Inputs: Len1(5),Len2(20);
-Vars:MA1(0), MA2(0);
-
-MA1 = Average(close, Len1);
-MA2 = Average(close, Len2);
-
-//if average(close, 5)cross over average(close, 20)then buy next bar at market
-if MA1 cross over MA2 then
-buy(&quot;buy&quot;) next bar at market;
-
-//if average(close, 5)cross below average(close, 20)then buy next bar at market
-if MA1 cross below MA2 then
-sellshort(&quot;sell&quot;) next bar at market;
+              <string>移動均線策略是以5日均線以及20日均線的交叉作為買賣交易點，
+當5日均線由下向上穿越20日均線（黃金交叉），則在下一根K棒買進，
+當5日均線由上向下穿越20日均線（死亡交叉），則在下一根K棒作空。
 </string>
              </property>
              <property name="textFormat">
@@ -118,10 +108,10 @@ sellshort(&quot;sell&quot;) next bar at market;
        <item row="0" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>策略基本介紹：
+          <string>名稱：
 移動均線＋凱利公式
 
-程式碼如下：</string>
+解釋如下：</string>
          </property>
         </widget>
        </item>
@@ -143,37 +133,20 @@ sellshort(&quot;sell&quot;) next bar at market;
            <item row="0" column="0">
             <widget class="QLabel" name="label_10">
              <property name="text">
-              <string>Inputs: Len1(5),Len2(20);
-Vars:MA1(0), MA2(0);
-//-----Kelly-----(1)
-input:InitialCapital(1000000), MaxSize(10)
-;
-var:pTs(1),b(0),p(0),q(0),f(0),pCapitalperContract(200000),ExitAmount(0),MP(0);
-//K%=W-(1-W)/R
-if Grossprofit&lt;&gt;0 and Totaltrades&lt;&gt;0 and grossloss&lt;&gt;0 and   Numlostrades &lt;&gt;0 then
- b = (Grossprofit/ numwintrades)/(grossloss/ Numlostrades);
-if Numwintrades&lt;&gt;0 and Totaltrades&lt;&gt;0 then
-     p = Numwintrades/ Totaltrades;
-     q = 1-p;
-if b&lt;&gt;0 and p&lt;&gt;0 then
-     f = p-(q/b);
-if f&lt;&gt;0 and f*(InitialCapital+netprofit)&gt;0 then
- pTS =IntPortion((f*(InitialCapital+netprofit))/pCapitalperContract);
- if pTS &lt; 1 then pTS = 1 ;
- if pTS &gt; MaxSize then pTS = MaxSize ;
+              <string>凱利公式是一種資金管理的方法，
+最初為貝爾實驗室物理學家John Larry Kelly於1956年在《貝爾系統技術期刊》中發表，
+用以計算每次賭局中，決定下一次賭注所投入的資金比例。
 
-//MoveAverage
-MA1 = Average(close, Len1);
-MA2 = Average(close, Len2);
+f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率
+並且設定pTS(交易口數)=f
 
-//if average(close, 5)cross over average(close, 20)then buy pTS shares
-if MA1 cross over MA2 then
-buy(&quot;buy&quot;) pTS shares next bar at market;
-
-//if average(close, 5)cross below average(close, 20)then buy pTS shares
-if MA1 cross below MA2 then
-sellshort(&quot;sell&quot;) pTS shares next bar at market;
+並且將凱利公式加上移動均線策略：
+當5日均線由下向上穿越20日均線（黃金交叉），則在下一根K棒買進pTS，
+當5日均線由上向下穿越20日均線（死亡交叉），則在下一根K棒作空pTS。
 </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
              </property>
             </widget>
            </item>
@@ -191,10 +164,10 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
        <item row="0" column="0">
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>策略基本介紹：
+          <string>名稱：
 移動均線＋固定比率
 
-程式碼如下：</string>
+解釋如下：</string>
          </property>
         </widget>
        </item>
@@ -216,38 +189,30 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
            <item row="0" column="0">
             <widget class="QLabel" name="label_11">
              <property name="text">
-              <string>Inputs: Len1(5),Len2(20);
-Vars:MA1(0), MA2(0);
-//Fixed Ratio
-Inputs: InitialCapital(10000000), Delta(20000);//Fixed Ratio
-Inputs: InCloudOpenPL(false), Maxsize(10);
-Vars: contractAmt(0), ExitAmount(0), Equity(0), MP(0), pTS(0);
+              <string>固定比率（Fixed Ratio）的資金管理模式，是由Ryan Jones在1999寫的「The Trading Game」書中所提出的。
+基本上的計算方式是這樣的：
 
-//Money Management(Fixed Ratio)
-if InCloudOpenPL then Equity = Round((InitialCapital + Netprofit + OpenPositionProfit), 0)
-	else Equity = Round((InitialCapital + NetProfit), 0);
+假設我們的初始資金有NTD $100萬，delta 設為 NTD $20000。假設我們現在用$100萬交易一口合約。
 
-//Position Sizing - Fixed Ratio
-if Delta &gt; 0 and Equity/Delta &gt; 0 then
-	contractAmt = 0.5*(1 + SquareRoot(1 + 8*Equity/Delta));
-	contractAmt = MaxList(1, IntPortion(ContractAmt));
+交易第二口合約所需資金 = 交易第一口合約所需資金 + delta($2萬元) * 1
 
-if contractAmt &lt; 1 then ContractAmt = 1;
-if contractAmt &gt; MaxSize then ContractAmt = Maxsize;
-pTS = contractAmt;
+交易第三口合約所需資金 = 交易第二口合約所需資金 + delta($2萬元) * 2
 
-//MoveAverage
-MA1 = Average(close, Len1);
-MA2 = Average(close, Len2);
+依此類推……
 
-//if average(close, 5)cross over average(close, 20)then buy pTS shares
-if MA1 cross over MA2 then
-buy(&quot;buy&quot;)pTS shares next bar at market;
-
-//if average(close, 5)cross below average(close, 20)then buy pTS shares
-if MA1 cross below MA2 then
-sellshort(&quot;sell&quot;)pTS shares next bar at market;
+並設定
+Equity = Round((InitialCapital + Netprofit + OpenPositionProfit), 0)
+contractamount = 0.5*(1 + SquareRoot(1 + 8*Equity/Delta));
+if contractamount &lt; 1 then ContractAmt = 1;
+if contractamount &gt; MaxSize then ContractAmt = Maxsize;
+而pTS（交易口數）＝ contractamount
+最後將此套入移動暈線策略中使用：
+當5日均線由下向上穿越20日均線（黃金交叉），則在下一根K棒買進pTS，
+當5日均線由上向下穿越20日均線（死亡交叉），則在下一根K棒作空pTS。
 </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
              </property>
             </widget>
            </item>
@@ -265,10 +230,10 @@ sellshort(&quot;sell&quot;)pTS shares next bar at market;
        <item row="0" column="0">
         <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>策略基本介紹：
+          <string>名稱：
 移動均線＋固定分數
 
-程式碼如下：</string>
+解釋如下：</string>
          </property>
         </widget>
        </item>
@@ -290,35 +255,17 @@ sellshort(&quot;sell&quot;)pTS shares next bar at market;
            <item row="0" column="0">
             <widget class="QLabel" name="label_12">
              <property name="text">
-              <string>Inputs: Len1(5),Len2(20);
-Vars:MA1(0), MA2(0);
-//Money Management(Fixed Fraction)
-Inputs: earning(5), out(2), pIC(1000000), Delta(9999), IncludeOpenPL(false), Maxsize(10);//Money Management(Fixed Fraction)
-Vars: Equity(0), contractamt(0), pTS(0);
+              <string>固定分數（Fixed Fraction）和固定比率都是常用的資金管理模式，
+而固定分數的基本邏輯是，限制住每一交易所冒的風險佔我們整體資金的比例。
+假設今天我們有NTD $100萬的資金，而每次交易的損失不超過手中資金的2%，而這2%就數我們的交易風險比例。
 
-//Money Management (Fixed Fraction)
-if InCludeOpenPL then
-   Equity = Round((pIC + NetProfit + OpenPositionProfit),0)
-   else Equity = Round((pIC + NetProfit),0);
-If Delta &gt; 0 and Equity/Delta &gt; 0 then
-   contractamt = 0.5 * (1 + squareroot(1 + 8 * Equity/Delta));
-contractamt = MaxList(1, IntPortion(contractamt));
-if contractamt &lt; 1 then contractamt = 1 ;
-if contractamt &gt; MaxSize then contractamt = MaxSize ;
-pTS = contractamt;
-
-//MoveAverage
-MA1 = Average(close, Len1);
-MA2 = Average(close, Len2);
-
-//if average(close, 5)cross over average(close, 20)then buy next pTS shares
-if MA1 cross over MA2 then
-buy(&quot;buy&quot;) pTS shares next bar at market;
-
-//if average(close, 5)cross below average(close, 20)then buy pTS shares
-if MA1 cross below MA2 then
-sellshort(&quot;sell&quot;) pTS shares next bar at market;
+我們將此資金管理方法加入移動均線策略中使用：
+當5日均線由下向上穿越20日均線（黃金交叉），則在下一根K棒買進pTS，
+當5日均線由上向下穿越20日均線（死亡交叉），則在下一根K棒作空pTS。
 </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
              </property>
             </widget>
            </item>
@@ -351,34 +298,21 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
            <item row="0" column="0">
             <widget class="QLabel" name="label_13">
              <property name="text">
-              <string>Inputs: Len1(5),Len2(20);
-Vars:MA1(0), MA2(0);
-//-----Optimal F Rule-----(4)
+              <string>最佳F值法是由Ralph Vince在1992年
+《The Mathematics of Money Management: Risk Analysis Techniques for Traders》一
+書中認為凱利公式只適用於理論上輸贏機率各半的傳統賭局，不適合變化多端的實際賭局因此提出。
+最佳F值法（Optimal f），巧妙的運用Kelly的概念，
+由於實際賭局中輸贏機率為動態的，故透過下注後去計算每次的持有收益率，
+進而避開傳統賭局的固定機率與賠率的限制，
+期望在資金配置的同時可以在投資與損失之中達到平衡。
 
-var: pTS(1), OptimalF_Num(10),_OptimalF(0),Equity(0),ExitAmount(0),InCludeOpenPL(false),mp(0), len(0);
-
-if InCludeOpenPL then
- Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)
-else
- Equity = Round((InitialCapital + NetProfit),0);
- _OptimalF=Mf_OptimalF(close,OptimalF_Num,false)/100;
-if _OptimalF&lt;&gt;0 and maxiddrawdown&lt;&gt;0 then
- pTS = (Equity * _OptimalF)/absvalue(maxiddrawdown);
- pTS = MaxList(1, IntPortion(pTS));
-
-
-//MoveAverage
-MA1 = Average(close, Len1);
-MA2 = Average(close, Len2);
-
-//if average(close, 5)cross over average(close, 20)then buy pTS shares
-if MA1 cross over MA2 then
-buy(&quot;buy&quot;) pTS shares next bar at market;
-
-//if average(close, 5)cross below average(close, 20)then buy pTS shares
-if MA1 cross below MA2 then
-sellshort(&quot;sell&quot;) pTS shares next bar at market;
+我們將此資金管理方法加入移動均線策略中使用：
+當5日均線由下向上穿越20日均線（黃金交叉），則在下一根K棒買進pTS，
+當5日均線由上向下穿越20日均線（死亡交叉），則在下一根K棒作空pTS。
 </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
              </property>
             </widget>
            </item>
@@ -389,10 +323,10 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
        <item row="0" column="0">
         <widget class="QLabel" name="label_6">
          <property name="text">
-          <string>策略基本介紹：
+          <string>名稱：
 移動均線＋最佳F值
 
-程式碼如下：</string>
+解釋如下：</string>
          </property>
         </widget>
        </item>
@@ -414,46 +348,22 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
             <x>0</x>
             <y>0</y>
             <width>948</width>
-            <height>552</height>
+            <height>536</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_13">
            <item row="0" column="0">
             <widget class="QLabel" name="label_14">
              <property name="text">
-              <string>Inputs: Len1(5), Len2(20);
-Vars:MA1(0), MA2(0);
+              <string>Larry Williams資金方法，
+係指第一口合約所需資金 = 初始保證金＋歷史回測中的MDD(最大策略虧損)*150%
+每賺到一個MDD*150%的資金，就加碼一口
 
-//-----LarryWilliams Rule-----
-Input:  InitialCapital(1000000), InCludeOpenPL(false), MaxSize(10);
-var: pCapitalperContract(200000), Equity(0), mp(0), ExitAmount(0), pTS(1);
-
-if InCludeOpenPL then Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)
-else Equity = Round((InitialCapital + NetProfit),0);
-
-if InCludeOpenPL then
- Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)
-else
- Equity = Round((InitialCapital + NetProfit),0);
-if maxiddrawdown &lt;&gt; 0 and entryprice &lt;&gt; 0 then begin
- if netprofit&lt;&gt;0 and maxiddrawdown&lt;&gt;0 then
- 	pTS=IntPortion(netprofit/(absvalue(maxiddrawdown)*1.3))+1;
- if pTS &gt; IntPortion(Equity  / entryprice) then
- 	pTS = IntPortion(Equity  / entryprice);
-end;
-
-//MoveAverage
-MA1 = Average(close, Len1);
-MA2 = Average(close, Len2);
-
-//if average(close, 5)cross over average(close, 20)then buy pTS shares
-if MA1 cross over MA2 then
-buy(&quot;buy&quot;) pTS shares next bar at market;
-
-//if average(close, 5)cross below average(close, 20)then buy pTS shares
-if MA1 cross below MA2 then
-sellshort(&quot;sell&quot;) pTS shares next bar at market;
+並且將此資金管理方法加入移動均線策略中使用。
 </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
              </property>
             </widget>
            </item>
@@ -464,10 +374,10 @@ sellshort(&quot;sell&quot;) pTS shares next bar at market;
        <item row="0" column="0">
         <widget class="QLabel" name="label_7">
          <property name="text">
-          <string>策略基本介紹：
+          <string>名稱：
 移動均線＋LarryWilliams
 
-程式碼如下：</string>
+解釋如下：</string>
          </property>
         </widget>
        </item>

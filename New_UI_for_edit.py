@@ -2,11 +2,13 @@
 
 # Form implementation generated from reading ui file 'New_UI_for_edit.ui'
 #
-# Created by: PyQt5 UI code generator 5.9.2
+# Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -42,7 +44,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 373, 556))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 365, 543))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -121,6 +123,8 @@ class Ui_MainWindow(object):
         self.menuRangeBreak.setObjectName("menuRangeBreak")
         self.menuBigBar = QtWidgets.QMenu(self.menu_Strategy)
         self.menuBigBar.setObjectName("menuBigBar")
+        self.menuCCI = QtWidgets.QMenu(self.menu_Strategy)
+        self.menuCCI.setObjectName("menuCCI")
         self.menu_AI = QtWidgets.QMenu(self.menubar)
         self.menu_AI.setSizeIncrement(QtCore.QSize(0, 0))
         self.menu_AI.setObjectName("menu_AI")
@@ -167,14 +171,18 @@ class Ui_MainWindow(object):
         self.actionLSTM.setObjectName("actionLSTM")
         self.actionRF = QtWidgets.QAction(MainWindow)
         self.actionRF.setObjectName("actionRF")
+        self.actionCCI_Original = QtWidgets.QAction(MainWindow)
+        self.actionCCI_Original.setObjectName("actionCCI_Original")
         self.menuTurtle.addAction(self.actionTurtle30k)
         self.menuMoveAverage.addAction(self.actionMA_Original)
         self.menuRangeBreak.addAction(self.actionRangeBreak_Original)
         self.menuBigBar.addAction(self.actionBigBar_Original)
+        self.menuCCI.addAction(self.actionCCI_Original)
         self.menu_Strategy.addAction(self.menuTurtle.menuAction())
         self.menu_Strategy.addAction(self.menuMoveAverage.menuAction())
         self.menu_Strategy.addAction(self.menuRangeBreak.menuAction())
         self.menu_Strategy.addAction(self.menuBigBar.menuAction())
+        self.menu_Strategy.addAction(self.menuCCI.menuAction())
         self.menu_AI.addAction(self.actionRF_2)
         self.menu_AI.addAction(self.actionLSTM_2)
         self.menu_AI.addAction(self.actionMLP_2)
@@ -216,6 +224,7 @@ class Ui_MainWindow(object):
         self.menuMoveAverage.setTitle(_translate("MainWindow", "移動均線"))
         self.menuRangeBreak.setTitle(_translate("MainWindow", "區間突破"))
         self.menuBigBar.setTitle(_translate("MainWindow", "大量k棒高低點突破"))
+        self.menuCCI.setTitle(_translate("MainWindow", "順勢指標 "))
         self.menu_AI.setTitle(_translate("MainWindow", "智能交易"))
         self.menu_Reports.setTitle(_translate("MainWindow", "績效報告"))
         self.menuOpen.setTitle(_translate("MainWindow", "開啟"))
@@ -236,4 +245,4 @@ class Ui_MainWindow(object):
         self.actionReports.setText(_translate("MainWindow", "績效報告"))
         self.actionLSTM.setText(_translate("MainWindow", "LSTM"))
         self.actionRF.setText(_translate("MainWindow", "RF"))
-
+        self.actionCCI_Original.setText(_translate("MainWindow", "CCI策略集"))
