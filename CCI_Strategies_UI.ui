@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1195</width>
+    <height>857</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(242, 242, 242);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>前往PowerLanguage Editor</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>CCI策略</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="tabBarAutoHide">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>原始策略</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>名稱：
+CCI基本策略
+
+解釋如下：</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>664</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>CCI指標(順勢指標)的全稱是Commodity Channel Index，
+主要作用是向我們展示市場是超賣還是超買。
+CCI並不會告訴我們趨勢是漲還是跌！
+CCI指標的根據為市場的波動周期性變化，而價格的高、低是連續周期性出現的，如果能夠預測這些周期，那麼就可以預測價格趨勢的開始和結束。這一指標也被劃分為震盪指標。
+
+CCI指標的計算公式：
+CCI（N日）=(TP－MA)/MD/0.015
+TP=(最高價+最低價+收盤價)/3
+MA=最近N日收盤價的累計和/N
+MD=最近N日(MA－收盤價)的累計和/N
+0.015為計算係數
+N為計算周期
+
+
+</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::PlainText</enum>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>凱利公式</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>名稱：
+CCI＋凱利公式
+
+解釋如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="scrollArea_2">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>664</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>凱利公式是一種資金管理的方法，
+最初為貝爾實驗室物理學家John Larry Kelly於1956年在《貝爾系統技術期刊》中發表，
+用以計算每次賭局中，決定下一次賭注所投入的資金比例。
+
+f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率
+並且設定pTS(交易口數)=f
+
+並且將凱利公式加上CCI策略搭配使用
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>固定比率</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>名稱：
+CCI＋固定比率
+
+解釋如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="scrollArea_3">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>664</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>固定比率（Fixed Ratio）的資金管理模式，是由Ryan Jones在1999寫的「The Trading Game」書中所提出的。
+基本上的計算方式是這樣的：
+
+假設我們的初始資金有NTD $100萬，delta 設為 NTD $20000。假設我們現在用$100萬交易一口合約。
+
+交易第二口合約所需資金 = 交易第一口合約所需資金 + delta($2萬元) * 1
+
+交易第三口合約所需資金 = 交易第二口合約所需資金 + delta($2萬元) * 2
+
+依此類推……
+
+並設定
+Equity = Round((InitialCapital + Netprofit + OpenPositionProfit), 0)
+contractamount = 0.5*(1 + SquareRoot(1 + 8*Equity/Delta));
+if contractamount &lt; 1 then ContractAmt = 1;
+if contractamount &gt; MaxSize then ContractAmt = Maxsize;
+而pTS（交易口數）＝ contractamount
+
+最後將此套入移動暈線策略中搭配使用。
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>固定分數</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>名稱：
+CCI＋固定分數
+
+解釋如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="scrollArea_4">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_4">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>664</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>固定分數（Fixed Fraction）和固定比率都是常用的資金管理模式，
+而固定分數的基本邏輯是，限制住每一交易所冒的風險佔我們整體資金的比例。
+假設今天我們有NTD $100萬的資金，而每次交易的損失不超過手中資金的2%，而這2%就數我們的交易風險比例。
+
+我們將此資金管理方法加入移動均線策略中搭配使用。
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>最佳F值</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>名稱：
+CCI＋最佳F值
+
+解釋如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="scrollArea_5">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_5">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>664</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_12">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>最佳F值法是由Ralph Vince在1992年
+《The Mathematics of Money Management: Risk Analysis Techniques for Traders》一
+書中認為凱利公式只適用於理論上輸贏機率各半的傳統賭局，不適合變化多端的實際賭局因此提出。
+最佳F值法（Optimal f），巧妙的運用Kelly的概念，
+由於實際賭局中輸贏機率為動態的，故透過下注後去計算每次的持有收益率，
+進而避開傳統賭局的固定機率與賠率的限制，
+期望在資金配置的同時可以在投資與損失之中達到平衡。
+
+我們將此資金管理方法加入移動均線策略中搭配使用。
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_6">
+      <attribute name="title">
+       <string>LarryWilliams</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>名稱：
+CCI＋LarryWilliams
+
+解釋如下：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="scrollArea_6">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_6">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>948</width>
+            <height>664</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_13">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Larry Williams資金方法，
+係指第一口合約所需資金 = 初始保證金＋歷史回測中的MDD(最大策略虧損)*150%
+每賺到一個MDD*150%的資金，就加碼一口
+
+並且將此資金管理方法加入移動均線策略中使用。
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
