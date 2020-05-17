@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1195, 1129)
+        Form.resize(1195, 857)
         Form.setStyleSheet("background-color: rgb(242, 242, 242);")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
@@ -40,7 +40,7 @@ class Ui_Form(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 948, 936))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 948, 664))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_7 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_7.setObjectName("gridLayout_7")
@@ -50,28 +50,29 @@ class Ui_Form(object):
         self.label_9.setObjectName("label_9")
         self.gridLayout_7.addWidget(self.label_9, 0, 0, 1, 1)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-        self.gridLayout_2.addWidget(self.scrollArea, 1, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.scrollArea, 2, 0, 1, 1)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.tab_2)
         self.gridLayout_3.setObjectName("gridLayout_3")
+        self.label_3 = QtWidgets.QLabel(self.tab_2)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout_3.addWidget(self.label_3, 0, 0, 1, 1)
         self.scrollArea_2 = QtWidgets.QScrollArea(self.tab_2)
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 948, 936))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 948, 664))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.gridLayout_9 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_9.setObjectName("gridLayout_9")
         self.label_10 = QtWidgets.QLabel(self.scrollAreaWidgetContents_2)
+        self.label_10.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_10.setObjectName("label_10")
         self.gridLayout_9.addWidget(self.label_10, 0, 0, 1, 1)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
         self.gridLayout_3.addWidget(self.scrollArea_2, 1, 0, 1, 1)
-        self.label_3 = QtWidgets.QLabel(self.tab_2)
-        self.label_3.setObjectName("label_3")
-        self.gridLayout_3.addWidget(self.label_3, 0, 0, 1, 1)
         self.tabWidget.addTab(self.tab_2, "")
         self.tab_3 = QtWidgets.QWidget()
         self.tab_3.setObjectName("tab_3")
@@ -84,11 +85,12 @@ class Ui_Form(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 948, 936))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 948, 664))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.gridLayout_10 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_3)
         self.gridLayout_10.setObjectName("gridLayout_10")
         self.label_11 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
+        self.label_11.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_11.setObjectName("label_11")
         self.gridLayout_10.addWidget(self.label_11, 0, 0, 1, 1)
         self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
@@ -105,11 +107,12 @@ class Ui_Form(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollArea_4.setObjectName("scrollArea_4")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 948, 952))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 948, 664))
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.gridLayout_11 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_4)
         self.gridLayout_11.setObjectName("gridLayout_11")
         self.label_12 = QtWidgets.QLabel(self.scrollAreaWidgetContents_4)
+        self.label_12.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_12.setObjectName("label_12")
         self.gridLayout_11.addWidget(self.label_12, 0, 0, 1, 1)
         self.scrollArea_4.setWidget(self.scrollAreaWidgetContents_4)
@@ -119,22 +122,23 @@ class Ui_Form(object):
         self.tab_5.setObjectName("tab_5")
         self.gridLayout_6 = QtWidgets.QGridLayout(self.tab_5)
         self.gridLayout_6.setObjectName("gridLayout_6")
+        self.label_6 = QtWidgets.QLabel(self.tab_5)
+        self.label_6.setObjectName("label_6")
+        self.gridLayout_6.addWidget(self.label_6, 0, 0, 1, 1)
         self.scrollArea_5 = QtWidgets.QScrollArea(self.tab_5)
         self.scrollArea_5.setWidgetResizable(True)
         self.scrollArea_5.setObjectName("scrollArea_5")
         self.scrollAreaWidgetContents_5 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_5.setGeometry(QtCore.QRect(0, 0, 948, 936))
+        self.scrollAreaWidgetContents_5.setGeometry(QtCore.QRect(0, 0, 948, 664))
         self.scrollAreaWidgetContents_5.setObjectName("scrollAreaWidgetContents_5")
         self.gridLayout_12 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_5)
         self.gridLayout_12.setObjectName("gridLayout_12")
         self.label_13 = QtWidgets.QLabel(self.scrollAreaWidgetContents_5)
+        self.label_13.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_13.setObjectName("label_13")
         self.gridLayout_12.addWidget(self.label_13, 0, 0, 1, 1)
         self.scrollArea_5.setWidget(self.scrollAreaWidgetContents_5)
         self.gridLayout_6.addWidget(self.scrollArea_5, 1, 0, 1, 1)
-        self.label_6 = QtWidgets.QLabel(self.tab_5)
-        self.label_6.setObjectName("label_6")
-        self.gridLayout_6.addWidget(self.label_6, 0, 0, 1, 1)
         self.tabWidget.addTab(self.tab_5, "")
         self.tab_6 = QtWidgets.QWidget()
         self.tab_6.setObjectName("tab_6")
@@ -147,11 +151,12 @@ class Ui_Form(object):
         self.scrollArea_6.setWidgetResizable(True)
         self.scrollArea_6.setObjectName("scrollArea_6")
         self.scrollAreaWidgetContents_6 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_6.setGeometry(QtCore.QRect(0, 0, 948, 936))
+        self.scrollAreaWidgetContents_6.setGeometry(QtCore.QRect(0, 0, 948, 664))
         self.scrollAreaWidgetContents_6.setObjectName("scrollAreaWidgetContents_6")
         self.gridLayout_13 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_6)
         self.gridLayout_13.setObjectName("gridLayout_13")
         self.label_14 = QtWidgets.QLabel(self.scrollAreaWidgetContents_6)
+        self.label_14.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_14.setObjectName("label_14")
         self.gridLayout_13.addWidget(self.label_14, 0, 0, 1, 1)
         self.scrollArea_6.setWidget(self.scrollAreaWidgetContents_6)
@@ -168,292 +173,90 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.pushButton.setText(_translate("Form", "前往PowerLanguage Editor"))
         self.label_2.setText(_translate("Form", "BigBar策略"))
-        self.label.setText(_translate("Form", "策略基本介紹：\n"
+        self.label.setText(_translate("Form", "名稱：\n"
 "BigBar基本策略\n"
 "\n"
-"程式碼如下："))
-        self.label_9.setText(_translate("Form", "///////BigBar(100)\n"
-"Inputs:length(100);\n"
+"解釋如下："))
+        self.label_9.setText(_translate("Form", "大量K棒高低點突破策略(BigBar)\n"
+"記錄過去100根K內最大交易量K棒的高低點，並透過這個來做交易。\n"
+"BigBar同樣也是通道突破系統但使用的K棒是更為大量，屬順勢交易。\n"
+"單靠一個訊號來判斷交易可能會出現有時準有時不準的情況，因此加入濾網來提高判斷標準!\n"
 "\n"
-"Vars:step(0),tobuy(0),toshort(0),pts(1),StopRatio(0.02),aa(20000),ab(10),ExitAmount(0);\n"
-"for step=0 to length-1 begiN\n"
-"    If V[step]=highest(V,length) then begin\n"
-"            toshort=L[step];\n"
-"            tobuy=H[step];\n"
-"    end;\n"
-"end;\n"
-"\n"
-"if close>tobuy  then buy pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"if close<toshort then sellshort  pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"\n"
-"//If marketposition <=0 then  buy  next bar tobuy stop;\n"
-"//If marketposition >=0 then  sellshort next bar toshort stop;\n"
-"\n"
-"\n"
-"\n"
-"////////stoploss exit\n"
-"if marketposition > 0 then\n"
-"   sell ExitAmount contract next bar at entryprice*( 1 - StopRatio ) stop ;\n"
-"if marketposition < 0 then\n"
-"   buytocover  ExitAmount contract next bar at entryprice*( 1 + StopRatio ) stop ;\n"
-"//0.98 sell\n"
-"//1.02 buytocover\n"
-"\n"
-"\n"
-"\n"
-"setpercenttrailing(aa ,ab);\n"
-"//aa=20000,ab=10%\n"
-"//2000\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Form", "原始策略"))
-        self.label_10.setText(_translate("Form", "//-----Kelly-----(1)\n"
-"input:InitialCapital(1000000), MaxSize(10)\n"
-";\n"
-"var:pTs(1),b(0),p(0),q(0),f(0),pCapitalperContract(200000),MP(0);\n"
-"\n"
-"\n"
-"//K%=W-(1-W)/R\n"
-"if Grossprofit<>0 and Totaltrades<>0 and grossloss<>0 and   Numlostrades <>0 then\n"
-" b = (Grossprofit/ numwintrades)/(grossloss/ Numlostrades);\n"
-"if Numwintrades<>0 and Totaltrades<>0 then\n"
-"     p = Numwintrades/ Totaltrades;\n"
-"     q = 1-p;\n"
-"if b<>0 and p<>0 then\n"
-"     f = p-(q/b);\n"
-"if f<>0 and f*(InitialCapital+netprofit)>0 then\n"
-" pTS =IntPortion((f*(InitialCapital+netprofit))/pCapitalperContract);\n"
-" if pTS < 1 then pTS = 1 ;\n"
-" if pTS > MaxSize then pTS = MaxSize ;\n"
-"///////BigBar(100)\n"
-"Inputs:length(100);\n"
-"\n"
-"Vars:step(0),tobuy(0),toshort(0),StopRatio(0.02),aa(20000),ab(10),ExitAmount(0);\n"
-"for step=0 to length-1 begiN\n"
-"    If V[step]=highest(V,length) then begin\n"
-"            toshort=L[step];\n"
-"            tobuy=H[step];\n"
-"    end;\n"
-"end;\n"
-"\n"
-"if close>tobuy  then buy pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"if close<toshort then sellshort  pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"\n"
-"//If marketposition <=0 then  buy  next bar tobuy stop;\n"
-"//If marketposition >=0 then  sellshort next bar toshort stop;\n"
-"\n"
-"\n"
-"\n"
-"////////stoploss exit\n"
-"if marketposition > 0 then\n"
-"   sell ExitAmount contract next bar at entryprice*( 1 - StopRatio ) stop ;\n"
-"if marketposition < 0 then\n"
-"   buytocover  ExitAmount contract next bar at entryprice*( 1 + StopRatio ) stop ;\n"
-"//0.98 sell\n"
-"//1.02 buytocover\n"
-"\n"
-"\n"
-"\n"
-"setpercenttrailing(aa ,ab);\n"
-"//aa=20000,ab=10%\n"
-"//2000\n"
-""))
-        self.label_3.setText(_translate("Form", "策略基本介紹：\n"
+        self.label_3.setText(_translate("Form", "名稱：\n"
 "BigBar＋凱利公式\n"
 "\n"
-"程式碼如下："))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "凱利公式"))
-        self.label_4.setText(_translate("Form", "策略基本介紹：\n"
-"BigBar＋固定比率\n"
+"解釋如下："))
+        self.label_10.setText(_translate("Form", "凱利公式是一種資金管理的方法，\n"
+"最初為貝爾實驗室物理學家John Larry Kelly於1956年在《貝爾系統技術期刊》中發表，\n"
+"用以計算每次賭局中，決定下一次賭注所投入的資金比例。\n"
 "\n"
-"程式碼如下："))
-        self.label_11.setText(_translate("Form", "TextLabel"))
+"f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率\n"
+"並且設定pTS(交易口數)=f\n"
+"\n"
+"並且將凱利公式加上BigBar策略搭配使用\n"
+""))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "凱利公式"))
+        self.label_4.setText(_translate("Form", "名稱：\n"
+"CCI＋固定比率\n"
+"\n"
+"解釋如下："))
+        self.label_11.setText(_translate("Form", "固定比率（Fixed Ratio）的資金管理模式，是由Ryan Jones在1999寫的「The Trading Game」書中所提出的。\n"
+"基本上的計算方式是這樣的：\n"
+"\n"
+"假設我們的初始資金有NTD $100萬，delta 設為 NTD $20000。假設我們現在用$100萬交易一口合約。\n"
+"\n"
+"交易第二口合約所需資金 = 交易第一口合約所需資金 + delta($2萬元) * 1\n"
+"\n"
+"交易第三口合約所需資金 = 交易第二口合約所需資金 + delta($2萬元) * 2\n"
+"\n"
+"依此類推……\n"
+"\n"
+"並設定\n"
+"Equity = Round((InitialCapital + Netprofit + OpenPositionProfit), 0)\n"
+"contractamount = 0.5*(1 + SquareRoot(1 + 8*Equity/Delta));\n"
+"if contractamount < 1 then ContractAmt = 1;\n"
+"if contractamount > MaxSize then ContractAmt = Maxsize;\n"
+"而pTS（交易口數）＝ contractamount\n"
+"\n"
+"最後將此套入BigBar策略中搭配使用。\n"
+""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Form", "固定比率"))
-        self.label_5.setText(_translate("Form", "策略基本介紹：\n"
+        self.label_5.setText(_translate("Form", "名稱：\n"
 "BigBar＋固定分數\n"
 "\n"
-"程式碼如下："))
-        self.label_12.setText(_translate("Form", "//-----Fixed_Ratio-----(2)\n"
-"Inputs: InitialCapital(1000000), Delta(20000);\n"
-"Inputs: InCludeOpenPL(false), MaxSize(10);\n"
-"Var: ContractAmt(0),ExitAmount(0),Equity(0),MP(0),pts(0);\n"
+"解釋如下："))
+        self.label_12.setText(_translate("Form", "固定分數（Fixed Fraction）和固定比率都是常用的資金管理模式，\n"
+"而固定分數的基本邏輯是，限制住每一交易所冒的風險佔我們整體資金的比例。\n"
+"假設今天我們有NTD $100萬的資金，而每次交易的損失不超過手中資金的2%，而這2%就數我們的交易風險比例。\n"
 "\n"
-"if InCludeOpenPL then Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
-"     else Equity = Round((InitialCapital + NetProfit),0);\n"
-"\n"
-"{Position Sizing - Fixed Ratio }\n"
-"If Delta > 0 and Equity/Delta > 0 then\n"
-"    ContractAmt = 0.5 * (1 + squareroot(1 + 8 * Equity/Delta));\n"
-"    ContractAmt = MaxList(1, IntPortion(ContractAmt));  //IntPortion->int\n"
-"\n"
-"if ContractAmt < 1 then ContractAmt = 1 ;\n"
-"if ContractAmt > MaxSize then ContractAmt = MaxSize ;\n"
-"pts = ContractAmt;\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"///////BigBar(100)\n"
-"Inputs:length(100);\n"
-"\n"
-"Vars:step(0),tobuy(0),toshort(0),StopRatio(0.02),aa(20000),ab(10);\n"
-"for step=0 to length-1 begiN\n"
-"    If V[step]=highest(V,length) then begin\n"
-"            toshort=L[step];\n"
-"            tobuy=H[step];\n"
-"    end;\n"
-"end;\n"
-"\n"
-"if close>tobuy  then buy pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"if close<toshort then sellshort  pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"\n"
-"//If marketposition <=0 then  buy  next bar tobuy stop;\n"
-"//If marketposition >=0 then sellshort next bar toshort stop;\n"
-"\n"
-"\n"
-"\n"
-"////////stoploss exit\n"
-"if marketposition > 0 then\n"
-"   sell ExitAmount contract next bar at entryprice*( 1 - StopRatio ) stop ;\n"
-"if marketposition < 0 then\n"
-"   buytocover  ExitAmount contract next bar at entryprice*( 1 + StopRatio ) stop ;\n"
-"//0.98 sell\n"
-"//1.02 buytocover\n"
-"\n"
-"\n"
-"\n"
-"setpercenttrailing(aa ,ab);\n"
-"//aa=20000,ab=10%\n"
-"//2000\n"
+"我們將此資金管理方法加入BigBar策略中搭配使用。\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("Form", "固定分數"))
-        self.label_13.setText(_translate("Form", "//-----Optimal F Rule-----(4)\n"
-"\n"
-"var: pTS(1), OptimalF_Num(10),_OptimalF(0),Equity(0),ExitAmount(0),InCludeOpenPL(false),mp(0);\n"
-"\n"
-"if InCludeOpenPL then\n"
-" Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
-"else\n"
-" Equity = Round((InitialCapital + NetProfit),0);\n"
-" _OptimalF=Mf_OptimalF(close,OptimalF_Num,false)/100;\n"
-"if _OptimalF<>0 and maxiddrawdown<>0 then\n"
-" pTS = (Equity * _OptimalF)/absvalue(maxiddrawdown);\n"
-" pTS = MaxList(1, IntPortion(pTS));\n"
-"\n"
-"\n"
-"///////BigBar(100)\n"
-"Inputs:length(100);\n"
-"\n"
-"Vars:step(0),tobuy(0),toshort(0),StopRatio(0.02),aa(20000),ab(10);\n"
-"for step=0 to length-1 begiN\n"
-"    If V[step]=highest(V,length) then begin\n"
-"            toshort=L[step];\n"
-"            tobuy=H[step];\n"
-"    end;\n"
-"end;\n"
-"\n"
-"if close>tobuy  then buy pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"if close<toshort then sellshort  pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"\n"
-"//If marketposition <=0 then  buy  next bar tobuy stop;\n"
-"//If marketposition >=0 then  sellshort next bar toshort stop;\n"
-"\n"
-"\n"
-"\n"
-"////////stoploss exit\n"
-"if marketposition > 0 then\n"
-"   sell ExitAmount contract next bar at entryprice*( 1 - StopRatio ) stop ;\n"
-"if marketposition < 0 then\n"
-"   buytocover  ExitAmount contract next bar at entryprice*( 1 + StopRatio ) stop ;\n"
-"//0.98 sell\n"
-"//1.02 buytocover\n"
-"\n"
-"\n"
-"\n"
-"setpercenttrailing(aa ,ab);\n"
-"//aa=20000,ab=10%\n"
-"//2000\n"
-""))
-        self.label_6.setText(_translate("Form", "策略基本介紹：\n"
+        self.label_6.setText(_translate("Form", "名稱：\n"
 "BigBar＋最佳F值\n"
 "\n"
-"程式碼如下："))
+"解釋如下："))
+        self.label_13.setText(_translate("Form", "最佳F值法是由Ralph Vince在1992年\n"
+"《The Mathematics of Money Management: Risk Analysis Techniques for Traders》一\n"
+"書中認為凱利公式只適用於理論上輸贏機率各半的傳統賭局，不適合變化多端的實際賭局因此提出。\n"
+"最佳F值法（Optimal f），巧妙的運用Kelly的概念，\n"
+"由於實際賭局中輸贏機率為動態的，故透過下注後去計算每次的持有收益率，\n"
+"進而避開傳統賭局的固定機率與賠率的限制，\n"
+"期望在資金配置的同時可以在投資與損失之中達到平衡。\n"
+"\n"
+"我們將此資金管理方法加入BigBar策略中搭配使用。\n"
+""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), _translate("Form", "最佳F值"))
-        self.label_7.setText(_translate("Form", "策略基本介紹：\n"
+        self.label_7.setText(_translate("Form", "名稱：\n"
 "BigBar＋LarryWilliams\n"
 "\n"
-"程式碼如下："))
-        self.label_14.setText(_translate("Form", "//-----LarryWilliams-----(3)\n"
-"Input:  InitialCapital(1000000), InCludeOpenPL(false),MaxSize(10);\n"
-"var: pCapitalperContract(200000),Equity(0),mp(0),ExitAmount(0),pts(1);\n"
+"解釋如下："))
+        self.label_14.setText(_translate("Form", "Larry Williams資金方法，\n"
+"係指第一口合約所需資金 = 初始保證金＋歷史回測中的MDD(最大策略虧損)*150%\n"
+"每賺到一個MDD*150%的資金，就加碼一口\n"
 "\n"
-"if InCludeOpenPL then Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
-"else Equity = Round((InitialCapital + NetProfit),0);\n"
-"//-----LarryWilliams Rule-----\n"
-"if InCludeOpenPL then\n"
-" Equity = Round((InitialCapital + NetProfit + OpenPositionProfit),0)\n"
-"else\n"
-" Equity = Round((InitialCapital + NetProfit),0);\n"
-"if maxiddrawdown <> 0 and entryprice <> 0 then begin\n"
-" if netprofit<>0 and maxiddrawdown<>0 then\n"
-"           pts=IntPortion(netprofit/(absvalue(maxiddrawdown)*1.3))+1;\n"
-" if pts > IntPortion(Equity  / entryprice) then\n"
-"  pts = IntPortion(Equity  / entryprice);\n"
-"end;\n"
-"\n"
-"\n"
-"\n"
-"///////BigBar(100)\n"
-"Inputs:length(100);\n"
-"\n"
-"Vars:step(0),tobuy(0),toshort(0),StopRatio(0.02),aa(20000),ab(10);\n"
-"for step=0 to length-1 begiN\n"
-"    If V[step]=highest(V,length) then begin\n"
-"            toshort=L[step];\n"
-"            tobuy=H[step];\n"
-"    end;\n"
-"end;\n"
-"\n"
-"if close>tobuy  then buy pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"if close<toshort then sellshort  pts contract next bar market;\n"
-"    ExitAmount=pts;\n"
-"\n"
-"\n"
-"//If marketposition <=0 then  buy  next bar tobuy stop;\n"
-"//If marketposition >=0 then  sellshort next bar toshort stop;\n"
-"\n"
-"\n"
-"\n"
-"////////stoploss exit\n"
-"if marketposition > 0 then\n"
-"   sell ExitAmount contract next bar at entryprice*( 1 - StopRatio ) stop ;\n"
-"if marketposition < 0 then\n"
-"   buytocover  ExitAmount contract next bar at entryprice*( 1 + StopRatio ) stop ;\n"
-"//0.98 sell\n"
-"//1.02 buytocover\n"
-"\n"
-"\n"
-"\n"
-"setpercenttrailing(aa ,ab);\n"
-"//aa=20000,ab=10%\n"
-"//2000\n"
+"並且將此資金管理方法加入BigBar策略中使用。\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("Form", "LarryWilliams"))
