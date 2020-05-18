@@ -69,6 +69,13 @@
         </widget>
        </item>
        <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>固定分數</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="label_10">
          <property name="font">
           <font>
@@ -123,6 +130,16 @@
          </item>
          <item>
           <widget class="QLabel" name="fixratio1">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="fixfraction1">
            <property name="text">
             <string>TextLabel</string>
            </property>
@@ -196,6 +213,16 @@
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="fixfraction2">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QLabel" name="kelly2">
            <property name="text">
             <string>TextLabel</string>
@@ -251,6 +278,16 @@
          </item>
          <item>
           <widget class="QLabel" name="fixratio3">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="fixfraction3">
            <property name="text">
             <string>TextLabel</string>
            </property>
@@ -324,6 +361,16 @@
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="fixfraction4">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QLabel" name="kelly4">
            <property name="text">
             <string>TextLabel</string>
@@ -379,6 +426,16 @@
          </item>
          <item>
           <widget class="QLabel" name="fixratio5">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="fixfraction5">
            <property name="text">
             <string>TextLabel</string>
            </property>
@@ -452,6 +509,16 @@
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="fixfraction6">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QLabel" name="kelly6">
            <property name="text">
             <string>TextLabel</string>
@@ -507,6 +574,16 @@
          </item>
          <item>
           <widget class="QLabel" name="fixratio7">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="fixfraction7">
            <property name="text">
             <string>TextLabel</string>
            </property>

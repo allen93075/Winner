@@ -89,6 +89,23 @@ class ReadTXT(QtWidgets.QTableWidget):
         TotalTradesCost_lw = str(t_lw3)
         text_lw = [str(x) for x in text_lw]
 
+        # Turtle30k+FixedFractional
+        f5 = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle_FF.txt')
+        t_ff = f5.readline()
+        text_ff = t_ff.split(",")
+        text_ff = list(map(str, text_ff))
+        text_ff = [float(x) for x in text_ff]
+        # Earning odds
+        t_ff1 = (text_ff[4] / text_ff[5])
+        EarningOdds_ff = str(t_ff1)  # back to str
+        # ProfitFactor
+        t_ff2 = (text_ff[6] / text_ff[7] - 1)
+        ProfitFactor_ff = str(t_ff2)
+        # TotalTradesCost
+        t_ff3 = (1000 * text_ff[3])
+        TotalTradesCost_ff = str(t_ff3)
+        text_ff = [str(x) for x in text_ff]
+
 
         super(ReadTXT, self).__init__()
         self.ui = Read_txt_UI.Ui_Form()
@@ -132,6 +149,14 @@ class ReadTXT(QtWidgets.QTableWidget):
         self.ui.william5.setText(text_lw[2])
         self.ui.william6.setText(text_lw[3])
         self.ui.william7.setText(TotalTradesCost_lw)
+
+        self.ui.fixfraction1.setText(text_ff[0])
+        self.ui.fixfraction2.setText(text_ff[1])
+        self.ui.fixfraction3.setText(EarningOdds_ff)
+        self.ui.fixfraction4.setText(ProfitFactor_ff)
+        self.ui.fixfraction5.setText(text_ff[2])
+        self.ui.fixfraction6.setText(text_ff[3])
+        self.ui.fixfraction7.setText(TotalTradesCost_ff)
 
         # self.ui.toolButton.clicked.connect(self.slot_btn_chooseDir)
 #       Form Title
