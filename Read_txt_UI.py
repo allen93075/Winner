@@ -21,9 +21,7 @@ class Ui_Form(object):
         Form.setSizePolicy(sizePolicy)
         Form.setSizeIncrement(QtCore.QSize(600, 600))
         Form.setStyleSheet("background-color: rgb(242, 242, 242);")
-        self.gridLayout_2 = QtWidgets.QGridLayout(Form)
-        self.gridLayout_2.setObjectName("gridLayout_2")
-        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
@@ -283,7 +281,6 @@ class Ui_Form(object):
         self.verticalLayout_9.addWidget(self.william7)
         self.horizontalLayout_2.addLayout(self.verticalLayout_9)
         self.gridLayout.addLayout(self.horizontalLayout_2, 0, 1, 1, 1)
-        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
