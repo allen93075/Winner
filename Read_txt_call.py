@@ -4,6 +4,7 @@ from PyQt5 import QtWidgets
 class ReadTXT(QtWidgets.QTableWidget):
     def __init__(self):
 
+
         #Turtle30k
         f = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle.txt')
         t = f.readline()
