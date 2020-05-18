@@ -66,7 +66,7 @@ class MLPUI(QtWidgets.QTableWidget):
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     ui = MLPUI()
-    ui.__init__()
+    # ui.__init__()
     ui.show()
     sys.exit(app.exec_())
 

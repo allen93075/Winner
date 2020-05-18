@@ -38,24 +38,24 @@ def ada_main(data):
 
     # 加入指標
     data['MA3'] = talib.MA(data['close'], timeperiod=3)
-    # data['MA5'] = talib.MA(data['close'], timeperiod=5)
-    # data['MA10'] = talib.MA(data['close'], timeperiod=10)
-    # data['MA20'] = talib.MA(data['close'], timeperiod=20)
+    data['MA5'] = talib.MA(data['close'], timeperiod=5)
+    data['MA10'] = talib.MA(data['close'], timeperiod=10)
+    data['MA20'] = talib.MA(data['close'], timeperiod=20)
     data['RSI3'] = talib.RSI(data['close'], timeperiod=3)
-    # data['RSI5'] = talib.RSI(data['close'], timeperiod=5) #RSI的天数一般是6、12、24
-    # data['RSI10'] = talib.RSI(data['close'], timeperiod=10)
-    # data['RSI20'] = talib.RSI(data['close'], timeperiod=20)
+    data['RSI5'] = talib.RSI(data['close'], timeperiod=5) #RSI的天数一般是6、12、24
+    data['RSI10'] = talib.RSI(data['close'], timeperiod=10)
+    data['RSI20'] = talib.RSI(data['close'], timeperiod=20)
     data['MOM3'] = talib.MOM(data['close'], timeperiod=3)
-    # data['MOM5'] = talib.MOM(data['close'], timeperiod=5)
-    # data['MOM10'] = talib.MOM(data['close'], timeperiod=10)
-    # data['MOM20'] = talib.MOM(data['close'], timeperiod=20)
+    data['MOM5'] = talib.MOM(data['close'], timeperiod=5)
+    data['MOM10'] = talib.MOM(data['close'], timeperiod=10)
+    data['MOM20'] = talib.MOM(data['close'], timeperiod=20)
     data['MACD'], data['MACDSIGNAL'], data['MACDHIST'] = talib.MACD(data['close'], fastperiod=5, slowperiod=10,
                                                                     signalperiod=4)
-    # data["upperband"], data["middleband"], data["lowerband"] = talib.BBANDS(data['close'], timeperiod=5, nbdevup=2,
-    # nbdevdn=2,matype=0)
+    data["upperband"], data["middleband"], data["lowerband"] = talib.BBANDS(data['close'], timeperiod=5, nbdevup=2,
+    nbdevdn=2,matype=0)
     data['k'], data['d'] = talib.STOCH(data['high'], data['low'], data['close'])
-    # data['WILLR5'] = talib.WILLR(data['high'], data['low'], data['close'], timeperiod=5)
-    # data['WILLR10'] = talib.WILLR(data['high'], data['low'], data['close'], timeperiod=10)
+    data['WILLR5'] = talib.WILLR(data['high'], data['low'], data['close'], timeperiod=5)
+    data['WILLR10'] = talib.WILLR(data['high'], data['low'], data['close'], timeperiod=10)
     data['OBV'] = talib.OBV(data['close'], data['volume'])
 
     a = pd.read_csv('index_date.csv')
@@ -90,8 +90,8 @@ def ada_main(data):
     data = data.dropna()
 
     # .iloc取固定行列值
-    # train = data.iloc[::].copy()
-    # test = data.iloc[:-5,:].copy()
+    train = data.iloc[::].copy()
+    test = data.iloc[:-5,:].copy()
     # 將資料分成訓練資料和測試資料
     count = int(round(len(data) * 0.4))
     train, test = data[:count], data[count:]
@@ -134,4 +134,4 @@ def ada_main(data):
     with open('save/adaboost_train_model.pickle', 'wb') as f:
         pickle.dump(ada_ai, f)
 
-# ada_main(loadFile())
+ada_main(loadFile())

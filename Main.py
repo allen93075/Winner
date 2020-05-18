@@ -18,6 +18,7 @@ from CCI_Strategies_call import CCI_Strategies
 from Read_txt_call import ReadTXT
 from LSTM_controll_call import LSTMcall
 from RangeBreak_Performance_call import RB_Performance
+from useRF_call import useRF
 
 class Mainwin(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -55,7 +56,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack8 = BigBar_Strategies()
         self.ui.stackedWidget.addWidget(self.ui.stack8)  # widget_index = 8
         self.ui.stack9 = QtWidgets.QWidget()
-        self.ui.stack9 = RF()
+        self.ui.stack9 = useRF()
         self.ui.stack9.setObjectName("Randomforest")
         self.ui.stackedWidget.addWidget(self.ui.stack9)  # widget_index = 9
         self.ui.stack10 = QtWidgets.QWidget()
@@ -70,7 +71,8 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack12.setObjectName("CCI")
         self.ui.stack12 = CCI_Strategies()
         self.ui.stackedWidget.addWidget(self.ui.stack12)  # widget_index = 12
-
+        self.ui.stack13 = RF()
+        self.ui.stackedWidget.addWidget(self.ui.stack13) # widget_index = 13
         self.resize(800, 600)
 
         self.ui.actionMLP_2.triggered.connect(self.callMLP)
@@ -90,6 +92,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionBigBar_Original.triggered.connect(self.callBigBar)
         self.ui.actionLSTM.triggered.connect(self.call_LSTMcontroll)
         self.ui.actionCCI_Original.triggered.connect(self.callCCI)
+        self.ui.actionRF.triggered.connect(self.call_RFcontroll)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)
@@ -169,6 +172,9 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def call_LSTMcontroll(self):
         self.ui.stackedWidget.setCurrentIndex(10)
+
+    def call_RFcontroll(self):
+        self.ui.stackedWidget.setCurrentIndex(13)
 
 
 if __name__ == '__main__':
