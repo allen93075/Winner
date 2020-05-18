@@ -6,17 +6,17 @@ from PyQt5.QtGui import QPixmap
 from webcrawler import webcrawler, link , article
 from Menu import About_US
 from New_UI_for_edit import Ui_MainWindow
-# from LSTM_call import LSTM
-# from RF_call import RF
-# from Adaboost_call import AdaboostUI
+from LSTM_call import LSTM
+from RF_call import RF
+from Adaboost_call import AdaboostUI
 from BigBar_Strategies_call import BigBar_Strategies
-# from MLP_UI_call import MLPUI
+from MLP_UI_call import MLPUI
 from MoveAverage_Strategies_call import MoveAverage_Strategies
 from RangeBreak_Strategies_call import RangeBreak_Strategies
 from Turtle30k_Strategies_call import Turtle30k_Strategies
 from CCI_Strategies_call import CCI_Strategies
 from Read_txt_call import ReadTXT
-# from LSTM_controll_call import LSTMcall
+from LSTM_controll_call import LSTMcall
 from RangeBreak_Performance_call import RB_Performance
 
 class Mainwin(QtWidgets.QMainWindow):
@@ -25,18 +25,18 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.stack1 = QtWidgets.QWidget()
-        # self.ui.stack1 = LSTM()
+        self.ui.stack1 = LSTM()
         #self.ui.stack1.__init__()
         self.ui.stack1.setObjectName("LSTM_UI")
         self.ui.stackedWidget.addWidget(self.ui.stack1)  # widget_index = 2
         self.ui.stack3 = QtWidgets.QWidget()
-        # self.ui.stack3 = MLPUI()
+        self.ui.stack3 = MLPUI()
         #self.ui.stack3.__init__()
         self.ui.stack3.setObjectName("MLP")
         self.ui.stackedWidget.addWidget(self.ui.stack3) # widget_index = 3
         self.ui.stack4 = QtWidgets.QWidget()
         self.ui.stack4.setObjectName("ADAboost")
-        # self.ui.stack4 = AdaboostUI()
+        self.ui.stack4 = AdaboostUI()
         self.ui.stackedWidget.addWidget(self.ui.stack4) # widget_index = 4
         self.ui.stack5 = QtWidgets.QTableWidget()
         self.ui.stack5.setObjectName("Turtle30k")
@@ -55,12 +55,12 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack8 = BigBar_Strategies()
         self.ui.stackedWidget.addWidget(self.ui.stack8)  # widget_index = 8
         self.ui.stack9 = QtWidgets.QWidget()
-        # self.ui.stack9 = RF()
+        self.ui.stack9 = RF()
         self.ui.stack9.setObjectName("Randomforest")
         self.ui.stackedWidget.addWidget(self.ui.stack9)  # widget_index = 9
         self.ui.stack10 = QtWidgets.QWidget()
         self.ui.stack10.setObjectName("LSTM_controll")
-        # self.ui.stack10 = LSTMcall()
+        self.ui.stack10 = LSTMcall()
         self.ui.stackedWidget.addWidget(self.ui.stack10)  # widget_index = 10
         self.ui.stack11 = QtWidgets.QWidget()
         self.ui.stack11.setObjectName("Performance")
@@ -71,7 +71,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stack12 = CCI_Strategies()
         self.ui.stackedWidget.addWidget(self.ui.stack12)  # widget_index = 12
 
-        self.resize(1000, 600)
+        self.resize(800, 600)
 
         self.ui.actionMLP_2.triggered.connect(self.callMLP)
 
