@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets
 
 class ReadTXT(QtWidgets.QTableWidget):
     def __init__(self):
+
         #Turtle30k
         f = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle.txt')
         t = f.readline()
@@ -23,20 +24,20 @@ class ReadTXT(QtWidgets.QTableWidget):
 
         #Turtle30k+Kelly
         f1 = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle_kelly.txt')
-        tk = f1.readline()
-        text_tk = tk.split(",")
-        text_tk = list(map(str, text_tk))
-        text_tk = [float(x) for x in text_tk]
+        k = f1.readline()
+        text_k = k.split(",")
+        text_k = list(map(str, text_k))
+        text_k = [float(x) for x in text_k]
         # Earning odds
-        tk1 = (text_tk[4] / text_tk[5])
-        EarningOdds_tk = str(tk1)  # back to str
+        k1 = (text_k[4] / text_k[5])
+        EarningOdds_k = str(k1)  # back to str
         # ProfitFactor
-        tk2 = (text_tk[6] / text_tk[7] - 1)
-        ProfitFactor_tk = str(tk2)
+        k2 = (text_k[6] / text_k[7] - 1)
+        ProfitFactor_k = str(k2)
         # TotalTradesCost
-        tk3 = (1000 * text_tk[3])
-        TotalTradesCost_tk = str(tk3)
-        text_tk = [str(x) for x in text_tk]
+        k3 = (1000 * text_k[3])
+        TotalTradesCost_k = str(k3)
+        text_k = [str(x) for x in text_k]
 
         #Turtle30k+FixedRatio
         f2 = open(r'/Users/tienyou/PycharmProjects/Winner/Performance/turtle_FR.txt')
@@ -118,13 +119,13 @@ class ReadTXT(QtWidgets.QTableWidget):
         self.ui.origin6.setText(text[3])
         self.ui.origin7.setText(TotalTradesCost)
 
-        self.ui.kelly1.setText(text_tk[0])
-        self.ui.kelly2.setText(text_tk[1])
-        self.ui.kelly3.setText(EarningOdds_tk)
-        self.ui.kelly4.setText(ProfitFactor_tk)
-        self.ui.kelly5.setText(text_tk[2])
-        self.ui.kelly6.setText(text_tk[3])
-        self.ui.kelly7.setText(TotalTradesCost_tk)
+        self.ui.kelly1.setText(text_k[0])
+        self.ui.kelly2.setText(text_k[1])
+        self.ui.kelly3.setText(EarningOdds_k)
+        self.ui.kelly4.setText(ProfitFactor_k)
+        self.ui.kelly5.setText(text_k[2])
+        self.ui.kelly6.setText(text_k[3])
+        self.ui.kelly7.setText(TotalTradesCost_k)
 
         self.ui.fixratio1.setText(text_fr[0])
         self.ui.fixratio2.setText(text_fr[1])
