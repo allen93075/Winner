@@ -64,10 +64,10 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stackedWidget.addWidget(self.ui.stack10)  # widget_index = 10
         self.ui.stack11 = QtWidgets.QWidget()
         self.ui.stack11.setObjectName("Performance")
-        self.ui.stack11 = RB_Performance()
+        self.ui.stack11 = ReadTXT()
         self.ui.stackedWidget.addWidget(self.ui.stack11)  # widget_index = 11
         self.ui.stack12 = QtWidgets.QWidget()
-        self.ui.stack12.setObjectName("Performance")
+        self.ui.stack12.setObjectName("CCI")
         self.ui.stack12 = CCI_Strategies()
         self.ui.stackedWidget.addWidget(self.ui.stack12)  # widget_index = 12
 
