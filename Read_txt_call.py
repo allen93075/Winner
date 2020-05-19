@@ -1,25 +1,26 @@
-import Read_txt_UI, sys
+import Read_txt_UI, sys, os
 from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import  QFileDialog
 
 class ReadTXT(QtWidgets.QTableWidget):
     def __init__(self):
-        #Turtle30k
-        f = open(r'Performance/turtle.txt')
-        t = f.readline()
-        text = t.split(",")
-        text = list(map(str, text))
-        text = [float(x) for x in text]
-        # text = [round(x) for x in text]#round floats to integers
-        # Earning odds
-        t1 = (text[4]/text[5])
-        EarningOdds = str(t1)#back to str
-        #ProfitFactor
-        t2 = (text[6]/text[7]-1)
-        ProfitFactor = str(t2)
-        #TotalTradesCost
-        t3 = (1000*text[3])
-        TotalTradesCost = str(t3)
-        text = [str(x) for x in text]
+        # #Turtle30k
+        # f = open(r'Performance/turtle.txt')
+        # t = f.readline()
+        # text = t.split(",")
+        # text = list(map(str, text))
+        # text = [float(x) for x in text]
+        # # text = [round(x) for x in text]#round floats to integers
+        # # Earning odds
+        # t1 = (text[4]/text[5])
+        # EarningOdds = str(t1)#back to str
+        # #ProfitFactor
+        # t2 = (text[6]/text[7]-1)
+        # ProfitFactor = str(t2)
+        # #TotalTradesCost
+        # t3 = (1000*text[3])
+        # TotalTradesCost = str(t3)
+        # text = [str(x) for x in text]
 
         #Turtle30k+Kelly
         f1 = open(r'Performance/turtle_kelly.txt')
@@ -106,61 +107,311 @@ class ReadTXT(QtWidgets.QTableWidget):
         TotalTradesCost_ff = str(t_ff3)
         text_ff = [str(x) for x in text_ff]
 
-
         super(ReadTXT, self).__init__()
         self.ui = Read_txt_UI.Ui_Form()
         self.ui.setupUi(self)
-        self.ui.origin1.setText(text[0])
-        self.ui.origin2.setText(text[1])
-        self.ui.origin3.setText(EarningOdds)
-        self.ui.origin4.setText(ProfitFactor)
-        self.ui.origin5.setText(text[2])
-        self.ui.origin6.setText(text[3])
-        self.ui.origin7.setText(TotalTradesCost)
+        self.ui.toolButton.clicked.connect(self.slot_btn_chooseDir)
+        self.ui.toolButton_2.clicked.connect(self.slot_btn_chooseDir2)
+        self.ui.toolButton_3.clicked.connect(self.slot_btn_chooseDir3)
+        self.ui.toolButton_4.clicked.connect(self.slot_btn_chooseDir4)
+        self.ui.toolButton_5.clicked.connect(self.slot_btn_chooseDir5)
+        self.ui.toolButton_6.clicked.connect(self.slot_btn_chooseDir6)
 
-        self.ui.kelly1.setText(text_tk[0])
-        self.ui.kelly2.setText(text_tk[1])
-        self.ui.kelly3.setText(EarningOdds_tk)
-        self.ui.kelly4.setText(ProfitFactor_tk)
-        self.ui.kelly5.setText(text_tk[2])
-        self.ui.kelly6.setText(text_tk[3])
-        self.ui.kelly7.setText(TotalTradesCost_tk)
-
-        self.ui.fixratio1.setText(text_fr[0])
-        self.ui.fixratio2.setText(text_fr[1])
-        self.ui.fixratio3.setText(EarningOdds_fr)
-        self.ui.fixratio4.setText(ProfitFactor_fr)
-        self.ui.fixratio5.setText(text_fr[2])
-        self.ui.fixratio6.setText(text_fr[3])
-        self.ui.fixratio7.setText(TotalTradesCost_fr)
-
-        self.ui.optimal1.setText(text_OF[0])
-        self.ui.optimal2.setText(text_OF[1])
-        self.ui.optimal3.setText(EarningOdds_OF)
-        self.ui.optimal4.setText(ProfitFactor_OF)
-        self.ui.optimal5.setText(text_OF[2])
-        self.ui.optimal6.setText(text_OF[3])
-        self.ui.optimal7.setText(TotalTradesCost_OF)
-
-        self.ui.william1.setText(text_lw[0])
-        self.ui.william2.setText(text_lw[1])
-        self.ui.william3.setText(EarningOdds_lw)
-        self.ui.william4.setText(ProfitFactor_lw)
-        self.ui.william5.setText(text_lw[2])
-        self.ui.william6.setText(text_lw[3])
-        self.ui.william7.setText(TotalTradesCost_lw)
-
-        self.ui.fixfraction1.setText(text_ff[0])
-        self.ui.fixfraction2.setText(text_ff[1])
-        self.ui.fixfraction3.setText(EarningOdds_ff)
-        self.ui.fixfraction4.setText(ProfitFactor_ff)
-        self.ui.fixfraction5.setText(text_ff[2])
-        self.ui.fixfraction6.setText(text_ff[3])
-        self.ui.fixfraction7.setText(TotalTradesCost_ff)
-
-        # self.ui.toolButton.clicked.connect(self.slot_btn_chooseDir)
 #       Form Title
         self.setWindowTitle('績效報告')
+
+    def slot_btn_chooseDir(self):
+        self.cwd = os.getcwd()
+        files, filetype = QFileDialog.getOpenFileNames(self,
+                                                           "選取多文件",
+                                                           self.cwd,
+                                                           "Text Files (*.txt)")  # 起始路径
+        if len(files) == 0:
+            print("\n取消選擇")
+
+        if len(files) >0:
+            print("\n你選擇的文件為:")
+            for file in files:
+                print(file)
+            print("\n你選擇的文件類型為:", filetype)
+        # print(self.ui.performance_data_combobox.currentText())
+        # print(type(self.ui.performance_data_combobox.currentText()))
+
+            # print file name
+            Filename = str(file)
+            Filetext = Filename.split("/")
+            Filetext1 = Filetext
+            Filename1 = Filetext1[-1]
+            Filename2 = Filename1.split(".txt")
+
+            # read into performance and calculate
+            f = open(file, "r")
+            t = f.readline()
+            text = t.split(",")
+            text = list(map(str, text))
+            text = [float(x) for x in text]
+            # Earning odds
+            t1 = (text[4] / text[5])
+            EarningOdds = str(t1)  # back to str
+            # ProfitFactor
+            t2 = (text[6] / text[7] - 1)
+            ProfitFactor = str(t2)
+            # TotalTradesCost
+            t3 = (1000 * text[3])
+            TotalTradesCost = str(t3)
+            text = [str(x) for x in text]
+
+            self.ui.origin1.setText(text[0])
+            self.ui.origin2.setText(text[1])
+            self.ui.origin3.setText(EarningOdds)
+            self.ui.origin4.setText(ProfitFactor)
+            self.ui.origin5.setText(text[2])
+            self.ui.origin6.setText(text[3])
+            self.ui.origin7.setText(TotalTradesCost)
+    def slot_btn_chooseDir2(self):
+        self.cwd = os.getcwd()
+        files, filetype = QFileDialog.getOpenFileNames(self,
+                                                           "選取多文件",
+                                                           self.cwd,
+                                                           "Text Files (*.txt)")  # 起始路径
+        if len(files) == 0:
+            print("\n取消選擇")
+
+        if len(files) >0:
+            print("\n你選擇的文件為:")
+            for file in files:
+                print(file)
+            print("\n你選擇的文件類型為:", filetype)
+        # print(self.ui.performance_data_combobox.currentText())
+        # print(type(self.ui.performance_data_combobox.currentText()))
+
+            # print file name
+            Filename = str(file)
+            Filetext = Filename.split("/")
+            Filetext1 = Filetext
+            Filename1 = Filetext1[-1]
+            Filename2 = Filename1.split(".txt")
+
+            # read into performance and calculate
+            f = open(file, "r")
+            t = f.readline()
+            text = t.split(",")
+            text = list(map(str, text))
+            text = [float(x) for x in text]
+            # Earning odds
+            t1 = (text[4] / text[5])
+            EarningOdds = str(t1)  # back to str
+            # ProfitFactor
+            t2 = (text[6] / text[7] - 1)
+            ProfitFactor = str(t2)
+            # TotalTradesCost
+            t3 = (1000 * text[3])
+            TotalTradesCost = str(t3)
+            text = [str(x) for x in text]
+
+            self.ui.kelly1.setText(text[0])
+            self.ui.kelly2.setText(text[1])
+            self.ui.kelly3.setText(EarningOdds)
+            self.ui.kelly4.setText(ProfitFactor)
+            self.ui.kelly5.setText(text[2])
+            self.ui.kelly6.setText(text[3])
+            self.ui.kelly7.setText(TotalTradesCost)
+
+    def slot_btn_chooseDir3(self):
+        self.cwd = os.getcwd()
+        files, filetype = QFileDialog.getOpenFileNames(self,
+                                                           "選取多文件",
+                                                           self.cwd,
+                                                           "Text Files (*.txt)")  # 起始路径
+        if len(files) == 0:
+            print("\n取消選擇")
+
+        if len(files) >0:
+            print("\n你選擇的文件為:")
+            for file in files:
+                print(file)
+            print("\n你選擇的文件類型為:", filetype)
+        # print(self.ui.performance_data_combobox.currentText())
+        # print(type(self.ui.performance_data_combobox.currentText()))
+
+            # print file name
+            Filename = str(file)
+            Filetext = Filename.split("/")
+            Filetext1 = Filetext
+            Filename1 = Filetext1[-1]
+            Filename2 = Filename1.split(".txt")
+
+            # read into performance and calculate
+            f = open(file, "r")
+            t = f.readline()
+            text = t.split(",")
+            text = list(map(str, text))
+            text = [float(x) for x in text]
+            # Earning odds
+            t1 = (text[4] / text[5])
+            EarningOdds = str(t1)  # back to str
+            # ProfitFactor
+            t2 = (text[6] / text[7] - 1)
+            ProfitFactor = str(t2)
+            # TotalTradesCost
+            t3 = (1000 * text[3])
+            TotalTradesCost = str(t3)
+            text = [str(x) for x in text]
+
+            self.ui.fixratio1.setText(text[0])
+            self.ui.fixratio2.setText(text[1])
+            self.ui.fixratio3.setText(EarningOdds)
+            self.ui.fixratio4.setText(ProfitFactor)
+            self.ui.fixratio5.setText(text[2])
+            self.ui.fixratio6.setText(text[3])
+            self.ui.fixratio7.setText(TotalTradesCost)
+
+    def slot_btn_chooseDir4(self):
+        self.cwd = os.getcwd()
+        files, filetype = QFileDialog.getOpenFileNames(self,
+                                                           "選取多文件",
+                                                           self.cwd,
+                                                           "Text Files (*.txt)")  # 起始路径
+        if len(files) == 0:
+            print("\n取消選擇")
+
+        if len(files) >0:
+            print("\n你選擇的文件為:")
+            for file in files:
+                print(file)
+            print("\n你選擇的文件類型為:", filetype)
+        # print(self.ui.performance_data_combobox.currentText())
+        # print(type(self.ui.performance_data_combobox.currentText()))
+
+            # print file name
+            Filename = str(file)
+            Filetext = Filename.split("/")
+            Filetext1 = Filetext
+            Filename1 = Filetext1[-1]
+            Filename2 = Filename1.split(".txt")
+
+            # read into performance and calculate
+            f = open(file, "r")
+            t = f.readline()
+            text = t.split(",")
+            text = list(map(str, text))
+            text = [float(x) for x in text]
+            # Earning odds
+            t1 = (text[4] / text[5])
+            EarningOdds = str(t1)  # back to str
+            # ProfitFactor
+            t2 = (text[6] / text[7] - 1)
+            ProfitFactor = str(t2)
+            # TotalTradesCost
+            t3 = (1000 * text[3])
+            TotalTradesCost = str(t3)
+            text = [str(x) for x in text]
+
+            self.ui.optimal1.setText(text[0])
+            self.ui.optimal2.setText(text[1])
+            self.ui.optimal3.setText(EarningOdds)
+            self.ui.optimal4.setText(ProfitFactor)
+            self.ui.optimal5.setText(text[2])
+            self.ui.optimal6.setText(text[3])
+            self.ui.optimal7.setText(TotalTradesCost)
+
+    def slot_btn_chooseDir5(self):
+        self.cwd = os.getcwd()
+        files, filetype = QFileDialog.getOpenFileNames(self,
+                                                           "選取多文件",
+                                                           self.cwd,
+                                                           "Text Files (*.txt)")  # 起始路径
+        if len(files) == 0:
+            print("\n取消選擇")
+
+        if len(files) >0:
+            print("\n你選擇的文件為:")
+            for file in files:
+                print(file)
+            print("\n你選擇的文件類型為:", filetype)
+        # print(self.ui.performance_data_combobox.currentText())
+        # print(type(self.ui.performance_data_combobox.currentText()))
+
+            # print file name
+            Filename = str(file)
+            Filetext = Filename.split("/")
+            Filetext1 = Filetext
+            Filename1 = Filetext1[-1]
+            Filename2 = Filename1.split(".txt")
+
+            # read into performance and calculate
+            f = open(file, "r")
+            t = f.readline()
+            text = t.split(",")
+            text = list(map(str, text))
+            text = [float(x) for x in text]
+            # Earning odds
+            t1 = (text[4] / text[5])
+            EarningOdds = str(t1)  # back to str
+            # ProfitFactor
+            t2 = (text[6] / text[7] - 1)
+            ProfitFactor = str(t2)
+            # TotalTradesCost
+            t3 = (1000 * text[3])
+            TotalTradesCost = str(t3)
+            text = [str(x) for x in text]
+
+            self.ui.william1.setText(text[0])
+            self.ui.william2.setText(text[1])
+            self.ui.william3.setText(EarningOdds)
+            self.ui.william4.setText(ProfitFactor)
+            self.ui.william5.setText(text[2])
+            self.ui.william6.setText(text[3])
+            self.ui.william7.setText(TotalTradesCost)
+
+    def slot_btn_chooseDir6(self):
+        self.cwd = os.getcwd()
+        files, filetype = QFileDialog.getOpenFileNames(self,
+                                                           "選取多文件",
+                                                           self.cwd,
+                                                           "Text Files (*.txt)")  # 起始路径
+        if len(files) == 0:
+            print("\n取消選擇")
+
+        if len(files) >0:
+            print("\n你選擇的文件為:")
+            for file in files:
+                print(file)
+            print("\n你選擇的文件類型為:", filetype)
+        # print(self.ui.performance_data_combobox.currentText())
+        # print(type(self.ui.performance_data_combobox.currentText()))
+
+            # print file name
+            Filename = str(file)
+            Filetext = Filename.split("/")
+            Filetext1 = Filetext
+            Filename1 = Filetext1[-1]
+            Filename2 = Filename1.split(".txt")
+
+            # read into performance and calculate
+            f = open(file, "r")
+            t = f.readline()
+            text = t.split(",")
+            text = list(map(str, text))
+            text = [float(x) for x in text]
+            # Earning odds
+            t1 = (text[4] / text[5])
+            EarningOdds = str(t1)  # back to str
+            # ProfitFactor
+            t2 = (text[6] / text[7] - 1)
+            ProfitFactor = str(t2)
+            # TotalTradesCost
+            t3 = (1000 * text[3])
+            TotalTradesCost = str(t3)
+            text = [str(x) for x in text]
+
+            self.ui.fixfraction1.setText(text[0])
+            self.ui.fixfraction2.setText(text[1])
+            self.ui.fixfraction3.setText(EarningOdds)
+            self.ui.fixfraction4.setText(ProfitFactor)
+            self.ui.fixfraction5.setText(text[2])
+            self.ui.fixfraction6.setText(text[3])
+            self.ui.fixfraction7.setText(TotalTradesCost)
 
 
 if __name__ == '__main__':
