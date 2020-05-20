@@ -53,10 +53,10 @@ class ReadTXT(QtWidgets.QTableWidget):
             text = [float(x) for x in text]
             # Earning odds
             t1 = (text[4] / text[5])
-            EarningOdds = str(t1)  # back to str
+            EarningOdds = str(round(t1,3))  # back to str
             # ProfitFactor
             t2 = (text[6] / text[7] - 1)
-            ProfitFactor = str(t2)
+            ProfitFactor = str(round(t2,3))
             # TotalTradesCost
             t3 = (1000 * text[3])
             TotalTradesCost = str(t3)
@@ -103,10 +103,10 @@ class ReadTXT(QtWidgets.QTableWidget):
             text = [float(x) for x in text]
             # Earning odds
             t1 = (text[4] / text[5])
-            EarningOdds = str(t1)  # back to str
+            EarningOdds = str(round(t1,3))  # back to str
             # ProfitFactor
             t2 = (text[6] / text[7] - 1)
-            ProfitFactor = str(t2)
+            ProfitFactor = str(round(t2,3))
             # TotalTradesCost
             t3 = (1000 * text[3])
             TotalTradesCost = str(t3)
@@ -153,10 +153,10 @@ class ReadTXT(QtWidgets.QTableWidget):
             text = [float(x) for x in text]
             # Earning odds
             t1 = (text[4] / text[5])
-            EarningOdds = str(t1)  # back to str
+            EarningOdds = str(round(t1,3))  # back to str
             # ProfitFactor
             t2 = (text[6] / text[7] - 1)
-            ProfitFactor = str(t2)
+            ProfitFactor = str(round(t2,3))
             # TotalTradesCost
             t3 = (1000 * text[3])
             TotalTradesCost = str(t3)
@@ -203,10 +203,10 @@ class ReadTXT(QtWidgets.QTableWidget):
             text = [float(x) for x in text]
             # Earning odds
             t1 = (text[4] / text[5])
-            EarningOdds = str(t1)  # back to str
+            EarningOdds = str(round(t1,3))  # back to str
             # ProfitFactor
             t2 = (text[6] / text[7] - 1)
-            ProfitFactor = str(t2)
+            ProfitFactor = str(round(t2,3))
             # TotalTradesCost
             t3 = (1000 * text[3])
             TotalTradesCost = str(t3)
@@ -253,10 +253,10 @@ class ReadTXT(QtWidgets.QTableWidget):
             text = [float(x) for x in text]
             # Earning odds
             t1 = (text[4] / text[5])
-            EarningOdds = str(t1)  # back to str
+            EarningOdds = str(round(t1,3))  # back to str
             # ProfitFactor
             t2 = (text[6] / text[7] - 1)
-            ProfitFactor = str(t2)
+            ProfitFactor = str(round(t2,3))
             # TotalTradesCost
             t3 = (1000 * text[3])
             TotalTradesCost = str(t3)
@@ -303,10 +303,10 @@ class ReadTXT(QtWidgets.QTableWidget):
             text = [float(x) for x in text]
             # Earning odds
             t1 = (text[4] / text[5])
-            EarningOdds = str(t1)  # back to str
+            EarningOdds = str(round(t1,3))  # back to str
             # ProfitFactor
             t2 = (text[6] / text[7] - 1)
-            ProfitFactor = str(t2)
+            ProfitFactor = str(round(t2,3))
             # TotalTradesCost
             t3 = (1000 * text[3])
             TotalTradesCost = str(t3)
