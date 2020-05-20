@@ -32,7 +32,7 @@
    <item row="0" column="0">
     <widget class="QFrame" name="frame">
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
@@ -50,6 +50,12 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>請選擇策略</string>
             </property>
@@ -58,10 +64,16 @@
           <item>
            <widget class="QToolButton" name="toolButton">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>第一項</string>
@@ -74,10 +86,16 @@
           <item>
            <widget class="QToolButton" name="toolButton_2">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>第二項</string>
@@ -90,10 +108,16 @@
           <item>
            <widget class="QToolButton" name="toolButton_3">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>第三項</string>
@@ -106,10 +130,16 @@
           <item>
            <widget class="QToolButton" name="toolButton_4">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>第四項</string>
@@ -122,10 +152,16 @@
           <item>
            <widget class="QToolButton" name="toolButton_5">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>第五項</string>
@@ -138,10 +174,16 @@
           <item>
            <widget class="QToolButton" name="toolButton_6">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>第六項</string>
@@ -178,7 +220,7 @@
             <property name="font">
              <font>
               <family>微軟正黑體</family>
-              <pointsize>12</pointsize>
+              <pointsize>13</pointsize>
              </font>
             </property>
             <property name="text">
@@ -194,7 +236,7 @@
             <property name="font">
              <font>
               <family>微軟正黑體</family>
-              <pointsize>12</pointsize>
+              <pointsize>13</pointsize>
              </font>
             </property>
             <property name="text">
@@ -207,6 +249,12 @@
           </item>
           <item>
            <widget class="QLabel" name="strategy_3">
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>13</pointsize>
+              </font>
+             </property>
             <property name="text">
              <string>N/A</string>
             </property>
@@ -217,6 +265,12 @@
           </item>
           <item>
            <widget class="QLabel" name="strategy_4">
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>13</pointsize>
+              </font>
+             </property>
             <property name="text">
              <string>N/A</string>
             </property>
@@ -227,6 +281,12 @@
           </item>
           <item>
            <widget class="QLabel" name="strategy_5">
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>13</pointsize>
+              </font>
+             </property>
             <property name="text">
              <string>N/A</string>
             </property>
@@ -237,6 +297,12 @@
           </item>
           <item>
            <widget class="QLabel" name="strategy_6">
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>13</pointsize>
+              </font>
+             </property>
             <property name="text">
              <string>N/A</string>
             </property>
@@ -253,6 +319,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
              <widget class="QLabel" name="label">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>淨利</string>
               </property>
@@ -263,6 +335,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_1">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -273,6 +351,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st2_1">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -283,6 +367,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st3_1">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -293,6 +383,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st4_1">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -303,6 +399,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st5_1">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -313,6 +415,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st6_1">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -343,6 +451,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
              <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>勝率</string>
               </property>
@@ -353,6 +467,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_2">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -363,6 +483,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st2_2">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -373,6 +499,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st3_2">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -383,6 +515,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st4_2">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -393,6 +531,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st5_2">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -403,6 +547,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st6_2">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -433,6 +583,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_5">
             <item>
              <widget class="QLabel" name="label_3">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>賺賠比</string>
               </property>
@@ -443,6 +599,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_3">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -453,6 +615,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st2_3">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -463,6 +631,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st3_3">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -473,6 +647,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st4_3">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -483,6 +663,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st5_3">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -493,6 +679,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st6_3">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -523,6 +715,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_6">
             <item>
              <widget class="QLabel" name="label_4">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>獲利因子</string>
               </property>
@@ -533,6 +731,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_4">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -543,6 +747,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st2_4">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -553,6 +763,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st3_4">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -563,6 +779,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st4_4">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -573,6 +795,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st5_4">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -583,6 +811,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st6_4">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -613,6 +847,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_7">
             <item>
              <widget class="QLabel" name="label_5">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>最大策略虧損</string>
               </property>
@@ -623,6 +863,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_5">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -633,6 +879,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st2_5">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -643,6 +895,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st3_5">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -653,6 +911,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st4_5">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -663,6 +927,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st5_5">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -673,6 +943,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st6_5">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -703,6 +979,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_8">
             <item>
              <widget class="QLabel" name="label_6">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>總交易次數</string>
               </property>
@@ -713,6 +995,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_6">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -723,6 +1011,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st2_6">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -733,6 +1027,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st3_6">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -743,6 +1043,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st4_6">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -753,6 +1059,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st5_6">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -763,6 +1075,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st6_6">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -793,6 +1111,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_9">
             <item>
              <widget class="QLabel" name="label_7">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>交易成本</string>
               </property>
@@ -803,6 +1127,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_7">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -813,6 +1143,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st2_7">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -823,6 +1159,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st3_7">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -833,6 +1175,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st4_7">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -843,6 +1191,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st5_7">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -853,6 +1207,12 @@
             </item>
             <item>
              <widget class="QLabel" name="st6_7">
+               <property name="font">
+                <font>
+                 <family>微軟正黑體</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
               <property name="text">
                <string>n/a</string>
               </property>
