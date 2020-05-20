@@ -28,6 +28,7 @@ class Ui_Form(object):
         sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
         self.label.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
+        font.setFamily("微軟正黑體")
         font.setPointSize(14)
         self.label.setFont(font)
         self.label.setFrameShape(QtWidgets.QFrame.NoFrame)
