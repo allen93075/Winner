@@ -270,12 +270,14 @@ class Ui_Form(object):
 "解釋如下："))
         self.label_10.setText(_translate("Form", "凱利公式是一種資金管理的方法，\n"
 "最初為貝爾實驗室物理學家John Larry Kelly於1956年在《貝爾系統技術期刊》中發表，\n"
-"用以計算每次賭局中，決定下一次賭注所投入的資金比例。\n"
+"用以計算每次賭局中，決定下一次賭注所投入的資金比例，重在長期累積的獲利，只在乎最終輸贏的結果不在乎順序，\n"
+"用最佳化的下注比例，以最大化長期的收益累計。\n"
 "\n"
 "f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率\n"
 "並且設定pTS(交易口數)=f\n"
 "\n"
 "並且將凱利公式加上BigBar策略搭配使用\n"
+"備註：凱利公式並未計算到MDD(最大策略虧損)，因此一般使用上大多都是只用於比較資金管理後的差異，不會實際放在是市場上使用。\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "凱利公式"))
         self.label_4.setText(_translate("Form", "名稱：\n"
