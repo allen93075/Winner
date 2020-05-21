@@ -19,6 +19,12 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="1">
     <widget class="QPushButton" name="pushButton">
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
      <property name="text">
       <string>前往PowerLanguage Editor</string>
      </property>
@@ -26,6 +32,12 @@
    </item>
    <item row="0" column="0">
     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
      <property name="text">
       <string>CCI策略</string>
      </property>
@@ -46,12 +58,24 @@
       <bool>false</bool>
      </property>
      <widget class="QWidget" name="tab">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       <attribute name="title">
        <string>原始策略</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>微軟正黑體</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
          <property name="text">
           <string>名稱：
 CCI基本策略
@@ -80,6 +104,12 @@ CCI基本策略
           <layout class="QGridLayout" name="gridLayout_7">
            <item row="0" column="0">
             <widget class="QLabel" name="label_9">
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
              <property name="text">
               <string>CCI指標(順勢指標)的全稱是Commodity Channel Index，
 主要作用是向我們展示市場是超賣還是超買。
@@ -112,12 +142,24 @@ N為計算周期
       </layout>
      </widget>
      <widget class="QWidget" name="tab_2">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       <attribute name="title">
        <string>凱利公式</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <family>微軟正黑體</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
          <property name="text">
           <string>名稱：
 CCI＋凱利公式
@@ -143,15 +185,23 @@ CCI＋凱利公式
           <layout class="QGridLayout" name="gridLayout_9">
            <item row="0" column="0">
             <widget class="QLabel" name="label_10">
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
              <property name="text">
               <string>凱利公式是一種資金管理的方法，
 最初為貝爾實驗室物理學家John Larry Kelly於1956年在《貝爾系統技術期刊》中發表，
-用以計算每次賭局中，決定下一次賭注所投入的資金比例。
+用以計算每次賭局中，決定下一次賭注所投入的資金比例，重在長期累積的獲利，只在乎最終輸贏的結果不在乎順序，
+用最佳化的下注比例，以最大化長期的收益累計。
 
 f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率
 並且設定pTS(交易口數)=f
 
 並且將凱利公式加上CCI策略搭配使用
+備註：凱利公式並未計算到MDD(最大策略虧損)，因此一般使用上大多都是只用於比較資金管理後的差異，不會實際放在是市場上使用。
 </string>
              </property>
              <property name="alignment">
@@ -166,12 +216,24 @@ f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率
       </layout>
      </widget>
      <widget class="QWidget" name="tab_3">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       <attribute name="title">
        <string>固定比率</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="0">
         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <family>微軟正黑體</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
          <property name="text">
           <string>名稱：
 CCI＋固定比率
@@ -197,6 +259,12 @@ CCI＋固定比率
           <layout class="QGridLayout" name="gridLayout_10">
            <item row="0" column="0">
             <widget class="QLabel" name="label_11">
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
              <property name="text">
               <string>固定比率（Fixed Ratio）的資金管理模式，是由Ryan Jones在1999寫的「The Trading Game」書中所提出的。
 基本上的計算方式是這樣的：
@@ -231,12 +299,24 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
       </layout>
      </widget>
      <widget class="QWidget" name="tab_4">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       <attribute name="title">
        <string>固定分數</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <family>微軟正黑體</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
          <property name="text">
           <string>名稱：
 CCI＋固定分數
@@ -262,6 +342,12 @@ CCI＋固定分數
           <layout class="QGridLayout" name="gridLayout_11">
            <item row="0" column="0">
             <widget class="QLabel" name="label_12">
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
              <property name="text">
               <string>固定分數（Fixed Fraction）和固定比率都是常用的資金管理模式，
 而固定分數的基本邏輯是，限制住每一交易所冒的風險佔我們整體資金的比例。
@@ -282,12 +368,24 @@ CCI＋固定分數
       </layout>
      </widget>
      <widget class="QWidget" name="tab_5">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       <attribute name="title">
        <string>最佳F值</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="0" column="0">
         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <family>微軟正黑體</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
          <property name="text">
           <string>名稱：
 CCI＋最佳F值
@@ -313,6 +411,12 @@ CCI＋最佳F值
           <layout class="QGridLayout" name="gridLayout_12">
            <item row="0" column="0">
             <widget class="QLabel" name="label_13">
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
              <property name="text">
               <string>最佳F值法是由Ralph Vince在1992年
 《The Mathematics of Money Management: Risk Analysis Techniques for Traders》一
@@ -337,12 +441,24 @@ CCI＋最佳F值
       </layout>
      </widget>
      <widget class="QWidget" name="tab_6">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       <attribute name="title">
        <string>LarryWilliams</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_8">
        <item row="0" column="0">
         <widget class="QLabel" name="label_7">
+          <property name="font">
+           <font>
+            <family>微軟正黑體</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
          <property name="text">
           <string>名稱：
 CCI＋LarryWilliams
@@ -368,6 +484,12 @@ CCI＋LarryWilliams
           <layout class="QGridLayout" name="gridLayout_13">
            <item row="0" column="0">
             <widget class="QLabel" name="label_14">
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
              <property name="text">
               <string>Larry Williams資金方法，
 係指第一口合約所需資金 = 初始保證金＋歷史回測中的MDD(最大策略虧損)*150%

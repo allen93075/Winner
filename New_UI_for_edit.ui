@@ -291,11 +291,18 @@
     <addaction name="actionAbout"/>
     <addaction name="actionAboutMC"/>
    </widget>
+   <widget class="QMenu" name="menuHome">
+    <property name="title">
+     <string>主頁</string>
+    </property>
+    <addaction name="actionHomepage"/>
+   </widget>
    <addaction name="menu_Strategy"/>
    <addaction name="menu_AI"/>
    <addaction name="menu_Reports"/>
    <addaction name="menuOpen"/>
    <addaction name="menu_About"/>
+   <addaction name="menuHome"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionRF_2">
@@ -376,6 +383,11 @@
   <action name="actionCCI_Original">
    <property name="text">
     <string>CCI策略集</string>
+   </property>
+  </action>
+  <action name="actionHomepage">
+   <property name="text">
+    <string>返回主頁</string>
    </property>
   </action>
  </widget>

@@ -42,6 +42,7 @@
        </property>
        <property name="font">
         <font>
+         <family>微軟正黑體</family>
          <pointsize>14</pointsize>
         </font>
        </property>
