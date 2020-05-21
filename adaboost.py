@@ -134,4 +134,4 @@ def ada_main(data):
     with open('save/adaboost_train_model.pickle', 'wb') as f:
         pickle.dump(ada_ai, f)
 
-ada_main(loadFile())
+# ada_main(loadFile())

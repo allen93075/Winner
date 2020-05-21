@@ -163,4 +163,4 @@ def rf_main(data):
     df=pd.DataFrame({'date': a6, 'open': a10, 'high': a11, 'low': a12, 'close': a13, 'volume': a14, 'predict': a5})
     df.to_csv("ouo.csv", index=False)
     '''
-#rf_main(loadFile('TXF1_日.csv'))
+rf_main(loadFile('TXF1_日.csv'))

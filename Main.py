@@ -132,12 +132,13 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stackedWidget.setCurrentIndex(9)
 
     def callMC(self):
-        self.call = os.system(
-            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
-
+        # self.call = os.system(
+        #     'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
+        self.call = os.system('"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"')
     def OpenPLEditor(self):
-        self.call = os.system(
-            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
+        # self.call = os.system(
+        #     'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
+        self.call = os.system('"C:\Program Files\TS Support\MultiCharts64\PLEditor.exe"')
 
     def callAboutMC(self):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")

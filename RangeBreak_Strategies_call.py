@@ -11,7 +11,8 @@ class RangeBreak_Strategies(QtWidgets.QTableWidget):
         self.setWindowTitle('區間突破策略集')
         self.resize(600, 600)
     def OpenEditor(self):
-        self.call = os.system('open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
+        # self.call = os.system('open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
+        self.call = os.system('"C:\Program Files\TS Support\MultiCharts64\PLEditor.exe"')
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     ui = RangeBreak_Strategies()
