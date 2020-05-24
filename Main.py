@@ -17,7 +17,6 @@ from Turtle30k_Strategies_call import Turtle30k_Strategies
 from CCI_Strategies_call import CCI_Strategies
 from Read_txt_call import ReadTXT
 from LSTM_controll_call import LSTMcall
-from RangeBreak_Performance_call import RB_Performance
 from useRF_call import useRF
 
 class Mainwin(QtWidgets.QMainWindow):
