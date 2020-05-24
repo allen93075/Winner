@@ -14,6 +14,7 @@ class useRF(QtWidgets.QWidget):
         self.ui.choseDataBtn.clicked.connect(self.slot_btn_chooseDir)
         self.ui.startTrainBtn.clicked.connect(self.exec_userf)
         self.ui.startTrainBtn.clicked.connect(self.performance)
+        self.resize(800, 600)
         
 
         
@@ -45,10 +46,10 @@ class useRF(QtWidgets.QWidget):
         text = [float(x) for x in text]
         # Earning odds
         t1 = (text[4] / text[5])
-        EarningOdds = str(t1)  # back to str
+        EarningOdds = str(round(t1,3))  # back to str
         # ProfitFactor
         t2 = (text[6] / text[7] - 1)
-        ProfitFactor = str(t2)
+        ProfitFactor = str(round(t2,3))
         # TotalTradesCost
         t3 = (1000 * text[3])
         TotalTradesCost = str(t3)
