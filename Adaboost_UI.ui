@@ -16,6 +16,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(243, 243, 243);</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -83,12 +86,12 @@
        </item>
        <item>
         <widget class="QPushButton" name="startTrainBtn">
-          <property name="font">
-           <font>
-            <family>微軟正黑體</family>
-            <pointsize>18</pointsize>
-           </font>
-          </property>
+         <property name="font">
+          <font>
+           <family>微軟正黑體</family>
+           <pointsize>18</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>開始訓練</string>
          </property>
