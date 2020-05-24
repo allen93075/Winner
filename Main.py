@@ -93,7 +93,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionLSTM.triggered.connect(self.call_LSTMcontroll)
         self.ui.actionCCI_Original.triggered.connect(self.callCCI)
         self.ui.actionRF.triggered.connect(self.call_RFcontroll)
-        self.ui.menuHome.triggered.connect(self.BackHome)
+        self.ui.actionHomepage.triggered.connect(self.BackHome)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)

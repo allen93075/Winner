@@ -176,6 +176,8 @@ class Ui_MainWindow(object):
         self.actionCCI_Original = QtWidgets.QAction(MainWindow)
         self.actionCCI_Original.setObjectName("actionCCI_Original")
         self.actionHomepage = QtWidgets.QAction(MainWindow)
+        self.actionHomepage.setEnabled(True)
+        self.actionHomepage.setVisible(True)
         self.actionHomepage.setObjectName("actionHomepage")
         self.menuTurtle.addAction(self.actionTurtle30k)
         self.menuMoveAverage.addAction(self.actionMA_Original)

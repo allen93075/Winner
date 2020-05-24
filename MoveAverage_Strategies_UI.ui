@@ -19,12 +19,12 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="1">
     <widget class="QPushButton" name="pushButton">
-      <property name="font">
-       <font>
-        <family>微軟正黑體</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>前往PowerLanguage Editor</string>
      </property>
@@ -32,12 +32,12 @@
    </item>
    <item row="0" column="0">
     <widget class="QLabel" name="label_2">
-      <property name="font">
-       <font>
-        <family>微軟正黑體</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>移動均線策略</string>
      </property>
@@ -46,7 +46,7 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
+   <item row="2" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="tabShape">
       <enum>QTabWidget::Rounded</enum>
@@ -58,24 +58,24 @@
       <bool>false</bool>
      </property>
      <widget class="QWidget" name="tab">
-       <property name="font">
-        <font>
-         <family>微軟正黑體</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <attribute name="title">
        <string>原始策略</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
         <widget class="QLabel" name="label">
-          <property name="font">
-           <font>
-            <family>微軟正黑體</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
+         <property name="font">
+          <font>
+           <family>微軟正黑體</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>名稱：
 移動均線基本策略
@@ -97,19 +97,19 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>948</width>
-            <height>536</height>
+            <width>958</width>
+            <height>513</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
            <item row="0" column="0">
             <widget class="QLabel" name="label_9">
-              <property name="font">
-               <font>
-                <family>微軟正黑體</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>移動均線策略是以5日均線以及20日均線的交叉作為買賣交易點，
 當5日均線由下向上穿越20日均線（黃金交叉），則在下一根K棒買進，
@@ -131,24 +131,24 @@
       </layout>
      </widget>
      <widget class="QWidget" name="tab_2">
-       <property name="font">
-        <font>
-         <family>微軟正黑體</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <attribute name="title">
        <string>凱利公式</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
         <widget class="QLabel" name="label_3">
-          <property name="font">
-           <font>
-            <family>微軟正黑體</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
+         <property name="font">
+          <font>
+           <family>微軟正黑體</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>名稱：
 移動均線＋凱利公式
@@ -167,19 +167,19 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>948</width>
-            <height>536</height>
+            <width>958</width>
+            <height>515</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_9">
            <item row="0" column="0">
             <widget class="QLabel" name="label_10">
-              <property name="font">
-               <font>
-                <family>微軟正黑體</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>凱利公式是一種資金管理的方法，
 最初為貝爾實驗室物理學家John Larry Kelly於1956年在《貝爾系統技術期刊》中發表，
@@ -207,24 +207,24 @@ f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率
       </layout>
      </widget>
      <widget class="QWidget" name="tab_3">
-       <property name="font">
-        <font>
-         <family>微軟正黑體</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <attribute name="title">
        <string>固定比率</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="0">
         <widget class="QLabel" name="label_4">
-          <property name="font">
-           <font>
-            <family>微軟正黑體</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
+         <property name="font">
+          <font>
+           <family>微軟正黑體</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>名稱：
 移動均線＋固定比率
@@ -243,19 +243,19 @@ f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>948</width>
-            <height>536</height>
+            <width>958</width>
+            <height>515</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_10">
            <item row="0" column="0">
             <widget class="QLabel" name="label_11">
-              <property name="font">
-               <font>
-                <family>微軟正黑體</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>固定比率（Fixed Ratio）的資金管理模式，是由Ryan Jones在1999寫的「The Trading Game」書中所提出的。
 基本上的計算方式是這樣的：
@@ -291,24 +291,24 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
       </layout>
      </widget>
      <widget class="QWidget" name="tab_4">
-       <property name="font">
-        <font>
-         <family>微軟正黑體</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <attribute name="title">
        <string>固定分數</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
         <widget class="QLabel" name="label_5">
-          <property name="font">
-           <font>
-            <family>微軟正黑體</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
+         <property name="font">
+          <font>
+           <family>微軟正黑體</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>名稱：
 移動均線＋固定分數
@@ -327,19 +327,19 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>948</width>
-            <height>536</height>
+            <width>958</width>
+            <height>515</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_11">
            <item row="0" column="0">
             <widget class="QLabel" name="label_12">
-              <property name="font">
-               <font>
-                <family>微軟正黑體</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>固定分數（Fixed Fraction）和固定比率都是常用的資金管理模式，
 而固定分數的基本邏輯是，限制住每一交易所冒的風險佔我們整體資金的比例。
@@ -362,12 +362,12 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
       </layout>
      </widget>
      <widget class="QWidget" name="tab_5">
-       <property name="font">
-        <font>
-         <family>微軟正黑體</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <attribute name="title">
        <string>最佳F值</string>
       </attribute>
@@ -382,19 +382,19 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>948</width>
-            <height>536</height>
+            <width>958</width>
+            <height>515</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_12">
            <item row="0" column="0">
             <widget class="QLabel" name="label_13">
-              <property name="font">
-               <font>
-                <family>微軟正黑體</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>最佳F值法是由Ralph Vince在1992年
 《The Mathematics of Money Management: Risk Analysis Techniques for Traders》一
@@ -420,12 +420,12 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label_6">
-          <property name="font">
-           <font>
-            <family>微軟正黑體</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
+         <property name="font">
+          <font>
+           <family>微軟正黑體</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>名稱：
 移動均線＋最佳F值
@@ -437,12 +437,12 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
       </layout>
      </widget>
      <widget class="QWidget" name="tab_6">
-       <property name="font">
-        <font>
-         <family>微軟正黑體</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <attribute name="title">
        <string>LarryWilliams</string>
       </attribute>
@@ -457,19 +457,19 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>948</width>
-            <height>536</height>
+            <width>958</width>
+            <height>515</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_13">
            <item row="0" column="0">
             <widget class="QLabel" name="label_14">
-              <property name="font">
-               <font>
-                <family>微軟正黑體</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Larry Williams資金方法，
 係指第一口合約所需資金 = 初始保證金＋歷史回測中的MDD(最大策略虧損)*150%
@@ -489,12 +489,12 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label_7">
-          <property name="font">
-           <font>
-            <family>微軟正黑體</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
+         <property name="font">
+          <font>
+           <family>微軟正黑體</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>名稱：
 移動均線＋LarryWilliams
@@ -505,6 +505,19 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
        </item>
       </layout>
      </widget>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_2">
+      <property name="font">
+       <font>
+        <family>微軟正黑體</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     <property name="text">
+      <string>前往Multicharts主程式</string>
+     </property>
     </widget>
    </item>
   </layout>
