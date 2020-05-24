@@ -24,6 +24,7 @@ class Mainwin(QtWidgets.QMainWindow):
         super(Mainwin, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.stackedWidget.setCurrentIndex(0)
         self.ui.stack1 = QtWidgets.QWidget()
         self.ui.stack1 = LSTM()
         #self.ui.stack1.__init__()
@@ -92,6 +93,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionLSTM.triggered.connect(self.call_LSTMcontroll)
         self.ui.actionCCI_Original.triggered.connect(self.callCCI)
         self.ui.actionRF.triggered.connect(self.call_RFcontroll)
+        self.ui.menuHome.triggered.connect(self.BackHome)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)
@@ -174,6 +176,9 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def call_RFcontroll(self):
         self.ui.stackedWidget.setCurrentIndex(13)
+
+    def BackHome(self):
+        self.ui.stackedWidget.setCurrentIndex(0)
 
 
 if __name__ == '__main__':
