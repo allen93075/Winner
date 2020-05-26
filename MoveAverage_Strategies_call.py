@@ -1,7 +1,7 @@
 import MoveAverage_Strategies_UI, os, sys
 from  PyQt5 import QtWidgets
 
-class MoveAverage_Strategies(QtWidgets.QTableWidget):
+class MoveAverage_Strategies(QtWidgets.QWidget):
     def __init__(self):
         super(MoveAverage_Strategies, self).__init__()
         self.ui = MoveAverage_Strategies_UI.Ui_Form()

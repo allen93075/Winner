@@ -1,7 +1,7 @@
 import RangeBreak_Strategies_UI, os, sys
 from  PyQt5 import QtWidgets
 
-class RangeBreak_Strategies(QtWidgets.QTableWidget):
+class RangeBreak_Strategies(QtWidgets.QWidget):
     def __init__(self):
         super(RangeBreak_Strategies, self).__init__()
         self.ui = RangeBreak_Strategies_UI.Ui_Form()

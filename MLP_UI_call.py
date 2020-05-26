@@ -5,7 +5,7 @@ from  PyQt5 import QtWidgets
 import MLP_UI 
 from mlp_model import *
 
-class MLPUI(QtWidgets.QTableWidget):
+class MLPUI(QtWidgets.QWidget):
     def __init__(self):
         super(MLPUI, self).__init__()
         self.ui = MLP_UI.Ui_Form()

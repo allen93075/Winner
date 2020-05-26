@@ -56,7 +56,7 @@ class LSTM(QtWidgets.QWidget):
         self.ui.profit_factor_label.setText(ProfitFactor)
         self.ui.mdd_label.setText(text[2])
         self.ui.trade_count_label.setText(text[3])
-        self.ui.trade_cost_labeL.setText(TotalTradesCost)
+        self.ui.trade_cost_label.setText(TotalTradesCost)
 
 
 if __name__ == '__main__':

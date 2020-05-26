@@ -1,7 +1,7 @@
 import Turtle30k_Strategies_UI, os, sys
 from  PyQt5 import QtWidgets
 
-class Turtle30k_Strategies(QtWidgets.QTableWidget):
+class Turtle30k_Strategies(QtWidgets.QWidget):
     def __init__(self):
         super(Turtle30k_Strategies, self).__init__()
         self.ui = Turtle30k_Strategies_UI.Ui_Form()

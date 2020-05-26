@@ -6,7 +6,7 @@ from  PyQt5 import QtWidgets, QtGui
 from ada_model import *
 
 
-class AdaboostUI(QtWidgets.QTableWidget):
+class AdaboostUI(QtWidgets.QWidget):
     def __init__(self):
         super(AdaboostUI, self).__init__()
         self.ui = Adaboost_UI.Ui_Form()

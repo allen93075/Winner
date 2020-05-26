@@ -1,7 +1,7 @@
 import CCI_Strategies_UI, os, sys
 from  PyQt5 import QtWidgets
 
-class CCI_Strategies(QtWidgets.QTableWidget):
+class CCI_Strategies(QtWidgets.QWidget):
     def __init__(self):
         super(CCI_Strategies, self).__init__()
         self.ui = CCI_Strategies_UI.Ui_Form()

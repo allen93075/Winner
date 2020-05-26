@@ -1,7 +1,7 @@
 import BigBar_Strategies_UI, os, sys
 from  PyQt5 import QtWidgets
 
-class BigBar_Strategies(QtWidgets.QTableWidget):
+class BigBar_Strategies(QtWidgets.QWidget):
     def __init__(self):
         super(BigBar_Strategies, self).__init__()
         self.ui = BigBar_Strategies_UI.Ui_Form()
