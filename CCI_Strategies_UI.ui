@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1195</width>
-    <height>857</height>
+    <width>860</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,6 +17,52 @@
    <string notr="true">background-color: rgb(242, 242, 242);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" rowspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>CCI策略</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>前往PowerLanguage Editor</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>前往Multicharts主程式</string>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="tabShape">
@@ -69,7 +115,7 @@ CCI基本策略
             <x>0</x>
             <y>0</y>
             <width>969</width>
-            <height>641</height>
+            <height>407</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -480,48 +526,6 @@ CCI＋LarryWilliams
        </item>
       </layout>
      </widget>
-    </widget>
-   </item>
-   <item row="0" column="1">
-    <widget class="QPushButton" name="pushButton">
-     <property name="font">
-      <font>
-       <family>微軟正黑體</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>前往PowerLanguage Editor</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label_2">
-     <property name="font">
-      <font>
-       <family>微軟正黑體</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>CCI策略</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton_2">
-      <property name="font">
-       <font>
-        <family>微軟正黑體</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-     <property name="text">
-      <string>前往Multicharts主程式</string>
-     </property>
     </widget>
    </item>
   </layout>

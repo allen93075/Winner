@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1195</width>
-    <height>857</height>
+    <width>821</width>
+    <height>707</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,6 +17,26 @@
    <string notr="true">background-color: rgb(242, 242, 242);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" rowspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>海龜策略</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item row="0" column="1">
     <widget class="QPushButton" name="pushButton">
      <property name="font">
@@ -30,8 +50,8 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label_2">
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_2">
      <property name="font">
       <font>
        <family>微軟正黑體</family>
@@ -39,10 +59,7 @@
       </font>
      </property>
      <property name="text">
-      <string>海龜策略</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <string>前往Multicharts主程式</string>
      </property>
     </widget>
    </item>
@@ -68,25 +85,6 @@
        <string>原始策略</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label">
-         <property name="font">
-          <font>
-           <family>微軟正黑體</family>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>名稱：
-海龜基本策略
-
-解釋如下：</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-         </property>
-        </widget>
-       </item>
        <item row="2" column="0">
         <widget class="QScrollArea" name="scrollArea">
          <property name="widgetResizable">
@@ -97,8 +95,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>641</height>
+            <width>648</width>
+            <height>496</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -137,6 +135,25 @@
            </item>
           </layout>
          </widget>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>微軟正黑體</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>名稱：
+海龜基本策略
+
+解釋如下：</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
         </widget>
        </item>
       </layout>
@@ -178,8 +195,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>641</height>
+            <width>745</width>
+            <height>205</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -252,8 +269,8 @@ f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>641</height>
+            <width>626</width>
+            <height>342</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_10">
@@ -335,8 +352,8 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>641</height>
+            <width>631</width>
+            <height>122</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_11">
@@ -404,8 +421,8 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>641</height>
+            <width>552</width>
+            <height>190</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_12">
@@ -477,8 +494,8 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>641</height>
+            <width>462</width>
+            <height>122</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_13">
@@ -509,19 +526,6 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
        </item>
       </layout>
      </widget>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton_2">
-      <property name="font">
-       <font>
-        <family>微軟正黑體</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-     <property name="text">
-      <string>前往Multicharts主程式</string>
-     </property>
     </widget>
    </item>
   </layout>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1195</width>
-    <height>729</height>
+    <width>783</width>
+    <height>596</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,6 +17,26 @@
    <string notr="true">background-color: rgb(242, 242, 242);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" rowspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>移動均線策略</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item row="0" column="1">
     <widget class="QPushButton" name="pushButton">
      <property name="font">
@@ -30,8 +50,8 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label_2">
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_2">
      <property name="font">
       <font>
        <family>微軟正黑體</family>
@@ -39,10 +59,7 @@
       </font>
      </property>
      <property name="text">
-      <string>移動均線策略</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <string>前往Multicharts主程式</string>
      </property>
     </widget>
    </item>
@@ -97,8 +114,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>513</height>
+            <width>546</width>
+            <height>385</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -167,8 +184,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>515</height>
+            <width>745</width>
+            <height>239</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_9">
@@ -243,8 +260,8 @@ f=下注比例（f = p - q/b）, b=賠率, p=獲利機率, q=虧損機率
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>515</height>
+            <width>626</width>
+            <height>361</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_10">
@@ -327,8 +344,8 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>515</height>
+            <width>631</width>
+            <height>156</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_11">
@@ -382,8 +399,8 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>515</height>
+            <width>552</width>
+            <height>224</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_12">
@@ -457,8 +474,8 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>958</width>
-            <height>515</height>
+            <width>462</width>
+            <height>122</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_13">
@@ -505,19 +522,6 @@ if contractamount &gt; MaxSize then ContractAmt = Maxsize;
        </item>
       </layout>
      </widget>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton_2">
-      <property name="font">
-       <font>
-        <family>微軟正黑體</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-     <property name="text">
-      <string>前往Multicharts主程式</string>
-     </property>
     </widget>
    </item>
   </layout>
