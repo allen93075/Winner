@@ -43,7 +43,7 @@ class LSTM(QtWidgets.QWidget):
         t1 = (text[4] / text[5])
         EarningOdds = str(round(t1,3))  # back to str
         # ProfitFactor
-        t2 = (text[6] / text[7] - 1)
+        t2 = (text[6] / text[7]*-1)
         ProfitFactor = str(round(t2,3))
         # TotalTradesCost
         t3 = (1000 * text[3])
