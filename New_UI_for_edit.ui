@@ -27,8 +27,8 @@
    <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="1" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
        <number>0</number>
@@ -54,7 +54,7 @@
                <x>0</x>
                <y>0</y>
                <width>365</width>
-               <height>543</height>
+               <height>517</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
@@ -179,6 +179,23 @@
       </widget>
      </widget>
     </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="BackHome_button">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgba(255, 255, 255, 0);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -291,18 +308,11 @@
     <addaction name="actionAbout"/>
     <addaction name="actionAboutMC"/>
    </widget>
-   <widget class="QMenu" name="menuHome">
-    <property name="title">
-     <string>主頁</string>
-    </property>
-    <addaction name="actionHomepage"/>
-   </widget>
    <addaction name="menu_Strategy"/>
    <addaction name="menu_AI"/>
    <addaction name="menu_Reports"/>
    <addaction name="menuOpen"/>
    <addaction name="menu_About"/>
-   <addaction name="menuHome"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionRF_2">

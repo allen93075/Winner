@@ -93,7 +93,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionLSTM.triggered.connect(self.call_LSTMcontroll)
         self.ui.actionCCI_Original.triggered.connect(self.callCCI)
         self.ui.actionRF.triggered.connect(self.call_RFcontroll)
-        self.ui.actionHomepage.triggered.connect(self.BackHome)
+        self.ui.BackHome_button.clicked.connect(self.BackHome)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)
@@ -180,6 +180,13 @@ class Mainwin(QtWidgets.QMainWindow):
     def BackHome(self):
         self.ui.stackedWidget.setCurrentIndex(0)
 
+    def SetHomebutton(self):
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap('Homebtnicon.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.ui.BackHome_button.setIcon(icon)
+        self.ui.BackHome_button.setIconSize(QtCore.QSize(30, 30))
+        self.ui.BackHome_button.setAutoRepeatDelay(200)
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
@@ -187,5 +194,6 @@ if __name__ == '__main__':
     # app.setStyleSheet(dark_stylesheet)
     ui = Mainwin()
     ui.link(link(), webcrawler(),article())
+    ui.SetHomebutton()
     ui.show()
     sys.exit(app.exec_())
