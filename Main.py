@@ -94,6 +94,8 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionCCI_Original.triggered.connect(self.callCCI)
         self.ui.actionRF.triggered.connect(self.call_RFcontroll)
         self.ui.BackHome_button.clicked.connect(self.BackHome)
+        self.ui.MCcall_button.clicked.connect(self.callMC)
+        self.ui.PLcall_button.clicked.connect(self.OpenPLEditor)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)
@@ -138,7 +140,7 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def OpenPLEditor(self):
         self.call = os.system(
-            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
+            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/PowerLanguage Editor.app"')
 
     def callAboutMC(self):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")
@@ -187,6 +189,20 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.BackHome_button.setIconSize(QtCore.QSize(30, 30))
         self.ui.BackHome_button.setAutoRepeatDelay(200)
 
+    def SetMCbutton(self):
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap('multicharts_logo_small.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.ui.MCcall_button.setIcon(icon)
+        self.ui.MCcall_button.setIconSize(QtCore.QSize(30, 30))
+        # self.ui.MCcall_button.setAutoRepeatDelay(200)
+
+    def SetPLbutton(self):
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap('PLlogo.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.ui.PLcall_button.setIcon(icon)
+        self.ui.PLcall_button.setIconSize(QtCore.QSize(30, 30))
+        # self.ui.PLcall_button.setAutoRepeatDelay(200)
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
@@ -195,5 +211,7 @@ if __name__ == '__main__':
     ui = Mainwin()
     ui.link(link(), webcrawler(),article())
     ui.SetHomebutton()
+    ui.SetMCbutton()
+    ui.SetPLbutton()
     ui.show()
     sys.exit(app.exec_())
