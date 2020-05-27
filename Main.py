@@ -103,6 +103,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.title5.setOpenExternalLinks(True)
         #   MainWindow Title
         self.setWindowTitle('期貨贏家機器人')
+        self.statusBar().showMessage('歡迎使用期貨贏家機器人！')
 
     # def web(self, a=[]):
     #     self.ui.title1.setText(a[0])
@@ -137,41 +138,52 @@ class Mainwin(QtWidgets.QMainWindow):
     def callMC(self):
         self.call = os.system(
             'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
+        self.statusBar().showMessage('正在開起Multicharts主程式')
 
     def OpenPLEditor(self):
         self.call = os.system(
             'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/PowerLanguage Editor.app"')
+        self.statusBar().showMessage('正在開起PowerLanguage Editor')
 
     def callAboutMC(self):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")
+        self.statusBar().showMessage('正在開起網頁')
 
     def callAboutus(self):
         self.callAboutus = About_US()
         self.callAboutus.show()
+        self.statusBar().showMessage('開啟關於我們')
 
     def callTurtle30k(self):
         self.ui.stackedWidget.setCurrentIndex(5)
+        self.statusBar().showMessage('開啟海龜策略集')
 
     def callMA(self):
         self.ui.stackedWidget.setCurrentIndex(6)
+        self.statusBar().showMessage('開啟移動均線策略集')
 
     def callRangeBreak(self):
         self.ui.stackedWidget.setCurrentIndex(7)
+        self.statusBar().showMessage('開啟區間突破策略集')
 
     def callCCI(self):
         self.ui.stackedWidget.setCurrentIndex(12)
+        self.statusBar().showMessage('開啟CCI策略集')
 
     def callAdaboost(self):
         self.ui.stackedWidget.setCurrentIndex(4)
+
 
     def callMLP(self):
         self.ui.stackedWidget.setCurrentIndex(3)
 
     def callBigBar(self):
         self.ui.stackedWidget.setCurrentIndex(8)
+        self.statusBar().showMessage('開啟BigBar策略集')
 
     def callPerformance(self):
         self.ui.stackedWidget.setCurrentIndex(11)
+        self.statusBar().showMessage('開啟績效報告')
 
     def call_LSTMcontroll(self):
         self.ui.stackedWidget.setCurrentIndex(10)
@@ -181,6 +193,7 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def BackHome(self):
         self.ui.stackedWidget.setCurrentIndex(0)
+        self.statusBar().showMessage('返回主頁')
 
     def SetHomebutton(self):
         icon = QtGui.QIcon()
