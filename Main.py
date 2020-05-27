@@ -191,7 +191,7 @@ class Mainwin(QtWidgets.QMainWindow):
 
     def SetMCbutton(self):
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap('multicharts_logo_small.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap('multicharts_logo_big.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.ui.MCcall_button.setIcon(icon)
         self.ui.MCcall_button.setIconSize(QtCore.QSize(30, 30))
         # self.ui.MCcall_button.setAutoRepeatDelay(200)
