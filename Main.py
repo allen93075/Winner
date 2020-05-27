@@ -2,7 +2,8 @@ import sys, os, webbrowser
 import pandas as pd
 import qdarkstyle
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QIcon
+from PyQt5.QtWidgets import QAction
 from webcrawler import webcrawler, link , article
 from Menu import About_US
 from New_UI_for_edit import Ui_MainWindow
@@ -93,9 +94,6 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.actionLSTM.triggered.connect(self.call_LSTMcontroll)
         self.ui.actionCCI_Original.triggered.connect(self.callCCI)
         self.ui.actionRF.triggered.connect(self.call_RFcontroll)
-        self.ui.BackHome_button.clicked.connect(self.BackHome)
-        self.ui.MCcall_button.clicked.connect(self.callMC)
-        self.ui.PLcall_button.clicked.connect(self.OpenPLEditor)
         self.ui.title1.setOpenExternalLinks(True)
         self.ui.title2.setOpenExternalLinks(True)
         self.ui.title3.setOpenExternalLinks(True)
@@ -195,26 +193,47 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stackedWidget.setCurrentIndex(0)
         self.statusBar().showMessage('返回主頁')
 
-    def SetHomebutton(self):
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap('Homebtnicon.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.ui.BackHome_button.setIcon(icon)
-        self.ui.BackHome_button.setIconSize(QtCore.QSize(30, 30))
-        self.ui.BackHome_button.setAutoRepeatDelay(200)
+    # def SetHomebutton(self):
+    #     icon = QtGui.QIcon()
+    #     icon.addPixmap(QtGui.QPixmap('Homebtnicon.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+    #     self.ui.BackHome_button.setIcon(icon)
+    #     self.ui.BackHome_button.setIconSize(QtCore.QSize(30, 30))
+    #     self.ui.BackHome_button.setAutoRepeatDelay(200)
+    #
+    # def SetMCbutton(self):
+    #     icon = QtGui.QIcon()
+    #     icon.addPixmap(QtGui.QPixmap('multicharts_logo_big.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+    #     self.ui.MCcall_button.setIcon(icon)
+    #     self.ui.MCcall_button.setIconSize(QtCore.QSize(30, 30))
+    #     # self.ui.MCcall_button.setAutoRepeatDelay(200)
+    #
+    # def SetPLbutton(self):
+    #     icon = QtGui.QIcon()
+    #     icon.addPixmap(QtGui.QPixmap('PLlogo.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+    #     self.ui.PLcall_button.setIcon(icon)
+    #     self.ui.PLcall_button.setIconSize(QtCore.QSize(30, 30))
+    #     # self.ui.PLcall_button.setAutoRepeatDelay(200)
 
-    def SetMCbutton(self):
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap('multicharts_logo_big.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.ui.MCcall_button.setIcon(icon)
-        self.ui.MCcall_button.setIconSize(QtCore.QSize(30, 30))
-        # self.ui.MCcall_button.setAutoRepeatDelay(200)
+    def toolbar(self):
+        self.toolbar = self.addToolBar('Winner')
+        BackHome = QAction(QIcon('Homebtnicon.png'), '返回主頁', self)
+        BackHome.triggered.connect((self.BackHome))
+        self.toolbar.addAction(BackHome)
 
-    def SetPLbutton(self):
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap('PLlogo.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.ui.PLcall_button.setIcon(icon)
-        self.ui.PLcall_button.setIconSize(QtCore.QSize(30, 30))
-        # self.ui.PLcall_button.setAutoRepeatDelay(200)
+        OpenMC = QAction(QIcon('multicharts_logo_big.png'), '開啟Multicahrts', self)
+        OpenMC.triggered.connect((self.callMC))
+        self.toolbar.addAction(OpenMC)
+
+        OpenPL = QAction(QIcon('PLlogo.png'), '開啟PL Editor', self)
+        OpenPL.triggered.connect((self.OpenPLEditor))
+        self.toolbar.addAction(OpenPL)
+
+        self.toolbar.addSeparator()
+        exitAct = QAction(QIcon('exit.png'), '離開', self)
+        exitAct.setShortcut('Ctrl+Q')
+        exitAct.triggered.connect(self.close)
+        self.toolbar.addAction(exitAct)
+
 
 
 if __name__ == '__main__':
@@ -223,8 +242,6 @@ if __name__ == '__main__':
     # app.setStyleSheet(dark_stylesheet)
     ui = Mainwin()
     ui.link(link(), webcrawler(),article())
-    ui.SetHomebutton()
-    ui.SetMCbutton()
-    ui.SetPLbutton()
+    ui.toolbar()
     ui.show()
     sys.exit(app.exec_())
