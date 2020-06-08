@@ -3,6 +3,7 @@ import sys
 from PyQt5 import QtWidgets, QtGui
 from LSTM import Ui_Form
 from LSTM2 import *
+from autoscript import callMC2,callQM
 
 
 class LSTM(QtWidgets.QWidget):
@@ -11,7 +12,7 @@ class LSTM(QtWidgets.QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.testdata_toolButton.clicked.connect(self.slot_btn_chooseDir_2)
-        self.ui.sentout_button.clicked.connect(self.performance)
+        # self.ui.sentout_button.clicked.connect(self.performance)
         self.ui.sentout_button.clicked.connect(self.exec_lstm)
         self.resize(800, 600)
 
@@ -32,8 +33,10 @@ class LSTM(QtWidgets.QWidget):
     def exec_lstm(self):
         model = keras.models.load_model('LSTM_model')
         predict(model,60,test_data(self.ui.test_data_combobox.currentText()))
+        callQM()
+        callMC2()
 
-    def performance(self):
+    # def performance(self):
         f = open(r'test.txt')
         t = f.readline()
         text = t.split(",")

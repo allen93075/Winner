@@ -229,7 +229,7 @@ def predict(model, time_frame, df_test, df_train=train_data()):
                               'close': d,
                               'volume': e,
                               'predict': output2})
-    dataframe.to_csv('2.csv', index=False, sep=',')
+    dataframe.to_csv('Outputcsv/2.csv', index=False, sep=',')
 
 
 # model = keras.models.load_model('LSTM_model')

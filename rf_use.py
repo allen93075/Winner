@@ -53,7 +53,7 @@ def mainPred(data):
     df=pd.DataFrame({'date': data.index, 'open': data['open'], 'high': data['high'],
                      'low': data['low'], 'close': data['close'], 'volume': data['volume'],
                      'predict': predict_result})
-    df.to_csv("predOut.csv", index=False)   
+    df.to_csv("Outputcsv/predOut.csv", index=False)
     #print(predict_result)
     
-#mainPred(loadFile('TXF1ForPre.csv'))
+# mainPred(loadFile('TXF1ForPre.csv'))
