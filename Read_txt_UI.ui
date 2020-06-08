@@ -84,6 +84,13 @@
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QToolButton" name="toolButton_2">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -102,6 +109,13 @@
             </property>
             <property name="toolButtonStyle">
              <enum>Qt::ToolButtonTextOnly</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -128,6 +142,13 @@
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line_19">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QToolButton" name="toolButton_4">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -150,6 +171,13 @@
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line_28">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QToolButton" name="toolButton_5">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -168,6 +196,13 @@
             </property>
             <property name="toolButtonStyle">
              <enum>Qt::ToolButtonTextOnly</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_29">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -232,6 +267,13 @@
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLabel" name="strategy_2">
             <property name="font">
              <font>
@@ -248,45 +290,66 @@
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLabel" name="strategy_3">
-             <property name="font">
-              <font>
-               <family>微軟正黑體</family>
-               <pointsize>13</pointsize>
-              </font>
-             </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>N/A</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_20">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="strategy_4">
-             <property name="font">
-              <font>
-               <family>微軟正黑體</family>
-               <pointsize>13</pointsize>
-              </font>
-             </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>N/A</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_30">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="strategy_5">
-             <property name="font">
-              <font>
-               <family>微軟正黑體</family>
-               <pointsize>13</pointsize>
-              </font>
-             </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>N/A</string>
             </property>
@@ -296,13 +359,20 @@
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line_31">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLabel" name="strategy_6">
-             <property name="font">
-              <font>
-               <family>微軟正黑體</family>
-               <pointsize>13</pointsize>
-              </font>
-             </property>
+            <property name="font">
+             <font>
+              <family>微軟正黑體</family>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>N/A</string>
             </property>
@@ -319,12 +389,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
              <widget class="QLabel" name="label">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>淨利</string>
               </property>
@@ -335,76 +405,104 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_1">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st2_1">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st3_1">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_21">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st4_1">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_32">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st5_1">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -414,13 +512,20 @@
              </widget>
             </item>
             <item>
+             <widget class="Line" name="line_33">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLabel" name="st6_1">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -451,12 +556,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
              <widget class="QLabel" name="label_2">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>勝率</string>
               </property>
@@ -467,76 +572,104 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_2">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st2_2">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_13">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st3_2">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_22">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st4_2">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_34">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st5_2">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -546,13 +679,20 @@
              </widget>
             </item>
             <item>
+             <widget class="Line" name="line_35">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLabel" name="st6_2">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -583,12 +723,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_5">
             <item>
              <widget class="QLabel" name="label_3">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>賺賠比</string>
               </property>
@@ -599,76 +739,104 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_3">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st2_3">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_14">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st3_3">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_23">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st4_3">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_36">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st5_3">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -678,13 +846,20 @@
              </widget>
             </item>
             <item>
+             <widget class="Line" name="line_37">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLabel" name="st6_3">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -715,12 +890,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_6">
             <item>
              <widget class="QLabel" name="label_4">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>獲利因子</string>
               </property>
@@ -731,76 +906,104 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_4">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st2_4">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_15">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st3_4">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_24">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st4_4">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_38">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st5_4">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -810,13 +1013,20 @@
              </widget>
             </item>
             <item>
+             <widget class="Line" name="line_39">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLabel" name="st6_4">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -847,12 +1057,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_7">
             <item>
              <widget class="QLabel" name="label_5">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>最大策略虧損</string>
               </property>
@@ -863,76 +1073,104 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_5">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_7">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st2_5">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_16">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st3_5">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_25">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st4_5">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_40">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st5_5">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -942,13 +1180,20 @@
              </widget>
             </item>
             <item>
+             <widget class="Line" name="line_41">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLabel" name="st6_5">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -979,12 +1224,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_8">
             <item>
              <widget class="QLabel" name="label_6">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>總交易次數</string>
               </property>
@@ -995,76 +1240,104 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_6">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_8">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st2_6">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_17">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st3_6">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_26">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st4_6">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_42">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st5_6">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -1074,13 +1347,20 @@
              </widget>
             </item>
             <item>
+             <widget class="Line" name="line_43">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLabel" name="st6_6">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -1111,12 +1391,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_9">
             <item>
              <widget class="QLabel" name="label_7">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>交易成本</string>
               </property>
@@ -1127,76 +1407,104 @@
             </item>
             <item>
              <widget class="QLabel" name="st1_7">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_9">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st2_7">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_18">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st3_7">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_27">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st4_7">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_44">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="st5_7">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>
@@ -1206,13 +1514,20 @@
              </widget>
             </item>
             <item>
+             <widget class="Line" name="line_45">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QLabel" name="st6_7">
-               <property name="font">
-                <font>
-                 <family>微軟正黑體</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
+              <property name="font">
+               <font>
+                <family>微軟正黑體</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>n/a</string>
               </property>

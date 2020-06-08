@@ -12,7 +12,8 @@ class RF(QtWidgets.QWidget):
         self.ui.setupUi(self)
         self.setWindowTitle("隨機森林")
         self.ui.toolButton.clicked.connect(self.slot_btn_chooseDir)
-        self.ui.startTrainBtn.clicked.connect(self.exec_rf)        
+        self.ui.startTrainBtn.clicked.connect(self.exec_rf)
+        self.resize(800, 600)
             
     def slot_btn_chooseDir(self):
         self.cwd = os.getcwd()

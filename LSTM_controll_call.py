@@ -14,6 +14,7 @@ class LSTMcall(QtWidgets.QWidget):
         self.ui.train_toolButton.clicked.connect(self.slot_btn_chooseDir_2)
         self.ui.test_toolButton.clicked.connect(self.slot_btn_chooseDir)
         self.ui.sentout_pushButton.clicked.connect(self.exec_lstm)
+        self.resize(800, 600)
 
     def get_lookback(self):
 

@@ -2,7 +2,8 @@ import sys, os, webbrowser
 import pandas as pd
 import qdarkstyle
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QIcon
+from PyQt5.QtWidgets import QAction
 from webcrawler import webcrawler, link , article
 from Menu import About_US
 from New_UI_for_edit import Ui_MainWindow
@@ -17,7 +18,6 @@ from Turtle30k_Strategies_call import Turtle30k_Strategies
 from CCI_Strategies_call import CCI_Strategies
 from Read_txt_call import ReadTXT
 from LSTM_controll_call import LSTMcall
-from RangeBreak_Performance_call import RB_Performance
 from useRF_call import useRF
 
 class Mainwin(QtWidgets.QMainWindow):
@@ -25,6 +25,7 @@ class Mainwin(QtWidgets.QMainWindow):
         super(Mainwin, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.stackedWidget.setCurrentIndex(0)
         self.ui.stack1 = QtWidgets.QWidget()
         self.ui.stack1 = LSTM()
         #self.ui.stack1.__init__()
@@ -100,6 +101,7 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.title5.setOpenExternalLinks(True)
         #   MainWindow Title
         self.setWindowTitle('期貨贏家機器人')
+        self.statusBar().showMessage('歡迎使用期貨贏家機器人！')
 
     # def web(self, a=[]):
     #     self.ui.title1.setText(a[0])
@@ -132,50 +134,106 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stackedWidget.setCurrentIndex(9)
 
     def callMC(self):
-        # self.call = os.system(
-        #     'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
-        self.call = os.system('"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"')
+        self.call = os.system(
+            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
+        self.statusBar().showMessage('正在開起Multicharts主程式')
+
     def OpenPLEditor(self):
-        # self.call = os.system(
-        #     'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [4].app"')
-        self.call = os.system('"C:\Program Files\TS Support\MultiCharts64\PLEditor.exe"')
+        self.call = os.system(
+            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/PowerLanguage Editor.app"')
+        self.statusBar().showMessage('正在開起PowerLanguage Editor')
 
     def callAboutMC(self):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")
+        self.statusBar().showMessage('正在開起網頁')
 
     def callAboutus(self):
         self.callAboutus = About_US()
         self.callAboutus.show()
+        self.statusBar().showMessage('開啟關於我們')
 
     def callTurtle30k(self):
         self.ui.stackedWidget.setCurrentIndex(5)
+        self.statusBar().showMessage('開啟海龜策略集')
 
     def callMA(self):
         self.ui.stackedWidget.setCurrentIndex(6)
+        self.statusBar().showMessage('開啟移動均線策略集')
 
     def callRangeBreak(self):
         self.ui.stackedWidget.setCurrentIndex(7)
+        self.statusBar().showMessage('開啟區間突破策略集')
 
     def callCCI(self):
         self.ui.stackedWidget.setCurrentIndex(12)
+        self.statusBar().showMessage('開啟CCI策略集')
 
     def callAdaboost(self):
         self.ui.stackedWidget.setCurrentIndex(4)
+
 
     def callMLP(self):
         self.ui.stackedWidget.setCurrentIndex(3)
 
     def callBigBar(self):
         self.ui.stackedWidget.setCurrentIndex(8)
+        self.statusBar().showMessage('開啟BigBar策略集')
 
     def callPerformance(self):
         self.ui.stackedWidget.setCurrentIndex(11)
+        self.statusBar().showMessage('開啟績效報告')
 
     def call_LSTMcontroll(self):
         self.ui.stackedWidget.setCurrentIndex(10)
 
     def call_RFcontroll(self):
         self.ui.stackedWidget.setCurrentIndex(13)
+
+    def BackHome(self):
+        self.ui.stackedWidget.setCurrentIndex(0)
+        self.statusBar().showMessage('返回主頁')
+
+    # def SetHomebutton(self):
+    #     icon = QtGui.QIcon()
+    #     icon.addPixmap(QtGui.QPixmap('Homebtnicon.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+    #     self.ui.BackHome_button.setIcon(icon)
+    #     self.ui.BackHome_button.setIconSize(QtCore.QSize(30, 30))
+    #     self.ui.BackHome_button.setAutoRepeatDelay(200)
+    #
+    # def SetMCbutton(self):
+    #     icon = QtGui.QIcon()
+    #     icon.addPixmap(QtGui.QPixmap('multicharts_logo_big.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+    #     self.ui.MCcall_button.setIcon(icon)
+    #     self.ui.MCcall_button.setIconSize(QtCore.QSize(30, 30))
+    #     # self.ui.MCcall_button.setAutoRepeatDelay(200)
+    #
+    # def SetPLbutton(self):
+    #     icon = QtGui.QIcon()
+    #     icon.addPixmap(QtGui.QPixmap('PLlogo.png'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+    #     self.ui.PLcall_button.setIcon(icon)
+    #     self.ui.PLcall_button.setIconSize(QtCore.QSize(30, 30))
+    #     # self.ui.PLcall_button.setAutoRepeatDelay(200)
+
+    def toolbar(self):
+        self.toolbar = self.addToolBar('Winner')
+        BackHome = QAction(QIcon('Homebtnicon.png'), '返回主頁', self)
+        BackHome.triggered.connect((self.BackHome))
+        self.toolbar.addAction(BackHome)
+
+        OpenMC = QAction(QIcon('multicharts_logo_big.png'), '開啟Multicahrts', self)
+        OpenMC.triggered.connect((self.callMC))
+        self.toolbar.addAction(OpenMC)
+
+        OpenPL = QAction(QIcon('PLlogo.png'), '開啟PL Editor', self)
+        OpenPL.triggered.connect((self.OpenPLEditor))
+        self.toolbar.addAction(OpenPL)
+
+        self.toolbar.addSeparator()
+        exitAct = QAction(QIcon('exit.png'), '離開', self)
+        exitAct.setShortcut('Ctrl+Q')
+        exitAct.triggered.connect(self.close)
+        self.toolbar.addAction(exitAct)
+
 
 
 if __name__ == '__main__':
@@ -184,5 +242,6 @@ if __name__ == '__main__':
     # app.setStyleSheet(dark_stylesheet)
     ui = Mainwin()
     ui.link(link(), webcrawler(),article())
+    ui.toolbar()
     ui.show()
     sys.exit(app.exec_())
