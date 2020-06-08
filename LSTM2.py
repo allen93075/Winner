@@ -67,7 +67,7 @@ def data_helper(df_train, df_trade, time_frame):
         x_test.append(tmp[index: index + time_frame])
         y_test.append(tmp[index + time_frame][0])
     # 將資料組成變好看一點
-    x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 5))
+    x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 5)) # OAO
     x_test = np.array(x_test)
     y_test = np.array(y_test)
     return [x_train, y_train, x_test, y_test]
@@ -229,7 +229,7 @@ def predict(model, time_frame, df_test, df_train=train_data()):
                               'close': d,
                               'volume': e,
                               'predict': output2})
-    dataframe.to_csv('2.csv', index=False, sep=',')
+    dataframe.to_csv('Outputcsv/2.csv', index=False, sep=',')
 
 
 # model = keras.models.load_model('LSTM_model')

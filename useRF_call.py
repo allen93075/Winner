@@ -4,7 +4,7 @@ import sys
 from PyQt5 import QtWidgets
 from useRF import Ui_Form
 from rf_use import *
-
+from autoscript import callQM,callMC
 class useRF(QtWidgets.QWidget):
     def __init__(self):
         super(useRF,self).__init__()
@@ -13,14 +13,11 @@ class useRF(QtWidgets.QWidget):
         self.setWindowTitle("隨機森林")
         self.ui.choseDataBtn.clicked.connect(self.slot_btn_chooseDir)
         self.ui.startTrainBtn.clicked.connect(self.exec_userf)
-        self.ui.startTrainBtn.clicked.connect(self.performance)
-        self.resize(800, 600)
+        # self.ui.startTrainBtn.clicked.connect(self.performance)
         
 
         
-    def exec_userf(self):
-        #print("_______",self.ui.comboBox.currentText())
-        mainPred(loadFile(self.ui.comboBox.currentText()))
+
 
     def slot_btn_chooseDir(self):
         self.cwd = os.getcwd()
@@ -38,7 +35,12 @@ class useRF(QtWidgets.QWidget):
         print("\n你選擇的文件夾為:")
         print(dir_choose)
 
-    def performance(self):
+    def exec_userf(self):
+        #print("_______",self.ui.comboBox.currentText())
+        mainPred(loadFile(self.ui.comboBox.currentText()))
+        callQM()
+        callMC()
+    # def performance(self):
         f = open(r'rf_perf.txt')
         t = f.readline()
         text = t.split(",")
@@ -46,10 +48,10 @@ class useRF(QtWidgets.QWidget):
         text = [float(x) for x in text]
         # Earning odds
         t1 = (text[4] / text[5])
-        EarningOdds = str(round(t1,3))  # back to str
+        EarningOdds = str(t1)  # back to str
         # ProfitFactor
-        t2 = (text[6] / text[7]*-1)
-        ProfitFactor = str(round(t2,3))
+        t2 = (text[6] / text[7] - 1)
+        ProfitFactor = str(t2)
         # TotalTradesCost
         t3 = (1000 * text[3])
         TotalTradesCost = str(t3)

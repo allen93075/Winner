@@ -55,7 +55,7 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>364</width>
+                 <width>740</width>
                  <height>541</height>
                 </rect>
                </property>
@@ -135,23 +135,6 @@
                 </item>
                </layout>
               </widget>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QFrame" name="frame">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Sunken</enum>
-              </property>
-              <layout class="QGridLayout" name="gridLayout"/>
              </widget>
             </item>
            </layout>
