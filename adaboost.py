@@ -51,8 +51,8 @@ def ada_main(data):
     data['MOM20'] = talib.MOM(data['close'], timeperiod=20)
     data['MACD'], data['MACDSIGNAL'], data['MACDHIST'] = talib.MACD(data['close'], fastperiod=5, slowperiod=10,
                                                                     signalperiod=4)
-    data["upperband"], data["middleband"], data["lowerband"] = talib.BBANDS(data['close'], timeperiod=5, nbdevup=2,
-    nbdevdn=2,matype=0)
+    data["upperband"], data["middleband"], data["lowerband"] = talib.BBANDS(data['close'], timeperiod=5,
+                                                                            nbdevup=2, nbdevdn=2,matype=0)
     data['k'], data['d'] = talib.STOCH(data['high'], data['low'], data['close'])
     data['WILLR5'] = talib.WILLR(data['high'], data['low'], data['close'], timeperiod=5)
     data['WILLR10'] = talib.WILLR(data['high'], data['low'], data['close'], timeperiod=10)
@@ -119,7 +119,6 @@ def ada_main(data):
     for i in range(c):
         b.append(i)
         i += 1
-
     # 匯出時間和開高收低以及預測結果
     pdata = data.loc[:, ["open", "high", "low", "close", "volume"]]
     pdata = pdata.reset_index(drop=True)
@@ -128,10 +127,11 @@ def ada_main(data):
     pdata.insert(6, 'predicts', predicts)
     pdata.to_csv('adapredicts.csv', index=False, sep=',')
     '''
+
     # 保存模型
     # joblib.dump(adaboost_ai, "adaboost_train_model.pkl")
     # 儲存Model(注:save資料夾要預先建立，否則會報錯)
     with open('save/adaboost_train_model.pickle', 'wb') as f:
         pickle.dump(ada_ai, f)
 
-ada_main(loadFile())
+#ada_main(loadFile())
