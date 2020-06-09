@@ -91,7 +91,7 @@ def train_data(path="traindata.csv"):
     return df_train
 
 
-def test_data(path="C:/Users/Allen/Desktop/test_data.csv"):
+def test_data(path="test_data.csv"):
     df_test = pd.read_csv(path, index_col="Date", parse_dates=True)
     return df_test
 
