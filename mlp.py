@@ -21,7 +21,7 @@ import pickle
 
 # 載入資料
 def loadFile(path='E:\ProjectAI\TXF1 1 日 五年.csv'):
-    # path='E:\ProjectAI\TXF1 1 日 10年.csv''TXF1_日.csv'TXF1 1 日 五年.csv'
+    # path='E:\ProjectAI\TXF1 1 日 10年.csv''TXF1_日.csv'TXF1 1 日 五年.csv'TXF1 1 日一年.csv
     df = pd.read_csv(path, engine='python')
     data = df[[' <Open>', ' <High>', ' <Low>', ' <Close>', ' <Volume>']]
 
@@ -36,7 +36,6 @@ def mlp_main(data):
     data.rename(
         columns={" <Open>": "open", " <High>": "high", " <Low>": "low", " <Close>": "close", " <Volume>": "volume"},
         inplace=True)
-
 
     # 加入指標
     data['MA5'] = talib.MA(data['close'], timeperiod=5)
@@ -92,27 +91,25 @@ def mlp_main(data):
     # train = data.iloc[::].copy()
     # test = data.iloc[:-5,:].copy()
     # 將資料分成訓練資料和測試資料
-    count = int(round(len(data) * 0.4))
-    train, test = data[:count], data[count:]
-    X_train = train.drop(['s', 'day_trend'], axis=1)
-    y_train = train.day_trend
-    X_test = test.drop(['s', 'day_trend'], axis=1)
-    y_test = test.day_trend
+    # count = int(round(len(data) * 0.8))
+    # train, test = data[:count], data[count:]
+    X_train = data.drop(['s', 'day_trend'], axis=1)
+    y_train = data.day_trend
+    # X_test = test.drop(['s', 'day_trend'], axis=1)
+    # y_test = test.day_trend
 
     # 正規化資料
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
-    X_test = scaler.transform(X_test)
-
+    # X_test = scaler.transform(X_test)
 
     # 將資料切割成訓練資料與驗證資料
     X_train, X_test, y_train, y_test = train_test_split(X_train, y_train,
                                                         test_size=0.2, shuffle=False)
 
     # 設定模型
-    mlp_ai = MLPClassifier(hidden_layer_sizes=(1, 100), max_iter=7000, alpha=1e-4,
-                           solver='lbfgs', verbose=2, tol=1e-4, random_state=32,
-                           learning_rate_init=0.5)
+    mlp_ai = MLPClassifier(hidden_layer_sizes=(1, 1000, 10), solver='lbfgs', max_iter=7000,
+                           verbose=1, random_state=32, tol=0.00000001)
 
     # 模型加入資料
     mlp_ai.fit(X_train, y_train)
@@ -123,6 +120,8 @@ def mlp_main(data):
     accuracy = metrics.accuracy_score(y_test, predicts)
     print("acc:", accuracy)
     print("predicts:", predicts)
+    print(len(data))
+    print(len(predicts))
 
     '''
     #匯出時間和開高收低以及預測結果
@@ -145,4 +144,5 @@ def mlp_main(data):
     with open('save/mlp_train_model.pickle', 'wb') as f:
         pickle.dump(mlp_ai, f)
 
-#mlp_main(loadFile())
+
+mlp_main(loadFile())

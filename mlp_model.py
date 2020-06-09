@@ -20,7 +20,7 @@ import pickle
 
 
 # 載入資料
-def loadFile(path='E:\ProjectAI\TXF1_日.csv'):
+def loadFile(path='E:\ProjectAI\TXF1 1 日 202001-05.csv'):
     # path='E:\ProjectAI\TXF1 1 日 10年.csv''TXF1_日.csv'TXF1 1 日 五年.csv'
     df = pd.read_csv(path, engine='python')
     data = df[[' <Open>', ' <High>', ' <Low>', ' <Close>', ' <Volume>']]
@@ -91,17 +91,17 @@ def mlp_main(data):
     # train = data.iloc[::].copy()
     # test = data.iloc[:-5,:].copy()
     # 將資料分成訓練資料和測試資料
-    count = int(round(len(data) * 0.4))
-    train, test = data[:count], data[count:]
-    X_train = train.drop(['s', 'day_trend'], axis=1)
-    y_train = train.day_trend
-    X_test = test.drop(['s', 'day_trend'], axis=1)
-    y_test = test.day_trend
+    # count = int(round(len(data) * 0.8))
+    # train, test = data[:count], data[count:]
+    X_train = data.drop(['s', 'day_trend'], axis=1)
+    y_train = data.day_trend
+    # X_test = test.drop(['s', 'day_trend'], axis=1)
+    # y_test = test.day_trend
 
     # 正規化資料
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
-    X_test = scaler.transform(X_test)
+    # X_test = scaler.transform(X_test)
 
     # 將資料切割成訓練資料與驗證資料
     X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, shuffle=False)
@@ -129,4 +129,4 @@ def mlp_main(data):
     pdata.insert(6, 'predicts', predicts)
     pdata.to_csv('mlppredicts.csv', index=False, sep=',')
 
-#mlp_main(loadFile())
+mlp_main(loadFile())

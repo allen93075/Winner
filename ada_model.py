@@ -19,7 +19,7 @@ from datetime import datetime
 import pickle
 
 # 載入資料
-def loadFile(path='E:\ProjectAI\TXF1 1 日 10年.csv'):
+def loadFile(path='E:\ProjectAI\TXF1 1 日 202001-05.csv'):
     #    path='E:\ProjectAI\TXF1 1 日 10年.csv' 'TXF1_日.csv'TXF1 1 日 五年.csv'
     df = pd.read_csv(path, engine='python')
     data = df[[' <Open>', ' <High>', ' <Low>', ' <Close>', ' <Volume>']]
@@ -93,12 +93,12 @@ def ada_main(data):
     # train = data.iloc[::].copy()
     # test = data.iloc[:-5,:].copy()
     # 將資料分成訓練資料和測試資料
-    count = int(round(len(data) * 0.4))
-    train, test = data[:count], data[count:]
-    X_train = train.drop(['s', 'day_trend'], axis=1)
-    y_train = train.day_trend
-    X_test = test.drop(['s', 'day_trend'], axis=1)
-    y_test = test.day_trend
+    # count = int(round(len(data) * 0.4))
+    # train, test = data[:count], data[count:]
+    X_train = data.drop(['s', 'day_trend'], axis=1)
+    y_train = data.day_trend
+    # X_test = test.drop(['s', 'day_trend'], axis=1)
+    # y_test = test.day_trend
 
     # 將資料切割成訓練資料與驗證資料
     X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2)
@@ -112,6 +112,7 @@ def ada_main(data):
     accuracy = metrics.accuracy_score(y_test, predicts)
     print("acc:", accuracy)
     print("predicts:", predicts)
+    print(len(data))
 
     # 匯出時間和開高收低以及預測結果
     c = len(data) - len(predicts)
@@ -127,4 +128,4 @@ def ada_main(data):
     pdata.to_csv('adapredicts.csv', index=False, sep=',')
 
 
-#ada_main(loadFile())
+ada_main(loadFile())
