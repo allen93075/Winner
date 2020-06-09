@@ -93,26 +93,26 @@ def mlp_main(data):
     # 將資料分成訓練資料和測試資料
     # count = int(round(len(data) * 0.8))
     # train, test = data[:count], data[count:]
-    X_train = data.drop(['s', 'day_trend'], axis=1)
-    y_train = data.day_trend
+    X_data = data.drop(['s', 'day_trend'], axis=1)
+    y_data = data.day_trend
     # X_test = test.drop(['s', 'day_trend'], axis=1)
     # y_test = test.day_trend
 
     # 正規化資料
     scaler = StandardScaler()
-    X_train = scaler.fit_transform(X_train)
+    X_data = scaler.fit_transform(X_data)
     # X_test = scaler.transform(X_test)
 
     # 將資料切割成訓練資料與驗證資料
-    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, shuffle=False)
+    # X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, shuffle=False)
 
     # 讀取訓練好得模型
     # mlp_ai = joblib.load('mlp_train_model.pkl')
     with open('save/mlp_train_model.pickle', 'rb') as f:
         mlp_ai = pickle.load(f)
     # 測試讀取後的Model
-    predicts = mlp_ai.predict(X_test)
-    accuracy = metrics.accuracy_score(y_test, predicts)
+    predicts = mlp_ai.predict(X_data)
+    accuracy = metrics.accuracy_score(y_data, predicts)
     print("acc:", accuracy)
     print("predicts:", predicts)
 
@@ -129,4 +129,4 @@ def mlp_main(data):
     pdata.insert(6, 'predicts', predicts)
     pdata.to_csv('mlppredicts.csv', index=False, sep=',')
 
-mlp_main(loadFile())
+#mlp_main(loadFile())

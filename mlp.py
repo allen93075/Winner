@@ -120,8 +120,6 @@ def mlp_main(data):
     accuracy = metrics.accuracy_score(y_test, predicts)
     print("acc:", accuracy)
     print("predicts:", predicts)
-    print(len(data))
-    print(len(predicts))
 
     '''
     #匯出時間和開高收低以及預測結果
@@ -145,4 +143,4 @@ def mlp_main(data):
         pickle.dump(mlp_ai, f)
 
 
-mlp_main(loadFile())
+#mlp_main(loadFile())

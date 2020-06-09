@@ -95,24 +95,23 @@ def ada_main(data):
     # 將資料分成訓練資料和測試資料
     # count = int(round(len(data) * 0.4))
     # train, test = data[:count], data[count:]
-    X_train = data.drop(['s', 'day_trend'], axis=1)
-    y_train = data.day_trend
+    X_data = data.drop(['s', 'day_trend'], axis=1)
+    y_data = data.day_trend
     # X_test = test.drop(['s', 'day_trend'], axis=1)
     # y_test = test.day_trend
 
     # 將資料切割成訓練資料與驗證資料
-    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2)
+    # X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2)
 
     # 讀取訓練好得模型
     # ada_ai = joblib.load('adaboost_train_model.pkl')
     with open('save/adaboost_train_model.pickle', 'rb') as f:
         ada_ai = pickle.load(f)
     # 測試讀取後的Model
-    predicts = ada_ai.predict(X_test)
-    accuracy = metrics.accuracy_score(y_test, predicts)
+    predicts = ada_ai.predict(X_data)
+    accuracy = metrics.accuracy_score(y_data, predicts)
     print("acc:", accuracy)
     print("predicts:", predicts)
-    print(len(data))
 
     # 匯出時間和開高收低以及預測結果
     c = len(data) - len(predicts)
@@ -128,4 +127,4 @@ def ada_main(data):
     pdata.to_csv('adapredicts.csv', index=False, sep=',')
 
 
-ada_main(loadFile())
+#ada_main(loadFile())
