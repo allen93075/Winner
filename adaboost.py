@@ -19,7 +19,7 @@ import pickle
 
 
 # 載入資料
-def loadFile(path='E:\ProjectAI\TXF1 1 日 五年.csv'):
+def loadFile(path='E:\ProjectAI\TXF1 1 日一年.csv'):
     #    path='E:\ProjectAI\TXF1 1 日 10年.csv''TXF1_日.csv'TXF1 1 日 五年.csv'TXF1 1 小時10年.csv
     df = pd.read_csv(path, engine='python')
     data = df[[' <Open>', ' <High>', ' <Low>', ' <Close>', ' <Volume>']]
@@ -134,4 +134,4 @@ def ada_main(data):
     with open('save/adaboost_train_model.pickle', 'wb') as f:
         pickle.dump(ada_ai, f)
 
-#ada_main(loadFile())
+ada_main(loadFile())

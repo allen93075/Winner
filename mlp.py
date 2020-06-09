@@ -20,7 +20,7 @@ import pickle
 
 
 # 載入資料
-def loadFile(path='E:\ProjectAI\TXF1 1 日 五年.csv'):
+def loadFile(path='E:\ProjectAI\TXF1 1 日一年.csv'):
     # path='E:\ProjectAI\TXF1 1 日 10年.csv''TXF1_日.csv'TXF1 1 日 五年.csv'TXF1 1 日一年.csv
     df = pd.read_csv(path, engine='python')
     data = df[[' <Open>', ' <High>', ' <Low>', ' <Close>', ' <Volume>']]
@@ -108,7 +108,7 @@ def mlp_main(data):
                                                         test_size=0.2, shuffle=False)
 
     # 設定模型
-    mlp_ai = MLPClassifier(hidden_layer_sizes=(1, 1000, 10), solver='lbfgs', max_iter=7000,
+    mlp_ai = MLPClassifier(hidden_layer_sizes=(10, 1000, 10), solver='lbfgs', max_iter=7000,
                            verbose=1, random_state=32, tol=0.00000001)
 
     # 模型加入資料
@@ -143,4 +143,4 @@ def mlp_main(data):
         pickle.dump(mlp_ai, f)
 
 
-#mlp_main(loadFile())
+mlp_main(loadFile())
