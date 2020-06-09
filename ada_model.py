@@ -127,4 +127,4 @@ def ada_main(data):
     pdata.to_csv('adapredicts.csv', index=False, sep=',')
 
 
-ada_main(loadFile())
+#ada_main(loadFile())

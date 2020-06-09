@@ -129,4 +129,4 @@ def mlp_main(data):
     pdata.insert(6, 'predicts', predicts)
     pdata.to_csv('mlppredicts.csv', index=False, sep=',')
 
-mlp_main(loadFile())
+#mlp_main(loadFile())
