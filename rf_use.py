@@ -20,14 +20,15 @@ def mainPred(data):
     data = data.astype('float')
     
     data.rename(columns={" <Open>": "open", " <High>": "high", " <Low>":"low", " <Close>":"close", " <Volume>":"volume"} , inplace=True)
-    data['MA3'] = talib.MA(data['close'], timeperiod=3)  
-    data['MA5'] = talib.MA(data['close'], timeperiod=5)
-    data['RSI3'] = talib.RSI(data['close'], timeperiod=3)
+    data['MA5'] = talib.MA(data['close'], timeperiod=5)  
+    data['MA10'] = talib.MA(data['close'], timeperiod=10)
+    data['MA20'] = talib.MA(data['close'], timeperiod=20)
     data['RSI5'] = talib.RSI(data['close'], timeperiod=5)
-    data['MOM3'] = talib.MOM(data['close'], timeperiod=3)
-    data['MOM5'] = talib.MOM(data['close'], timeperiod=5)
-    data['MACD'],data['MACDSIGNAL'],data['MACDHIST'] = talib.MACD(data['close'], fastperiod=3, slowperiod=6, signalperiod=4)
+    data['RSI10'] = talib.RSI(data['close'], timeperiod=10)  
+    data['RSI20'] = talib.RSI(data['close'], timeperiod=20)
+    data['MACD'],data['MACDSIGNAL'],data['MACDHIST'] = talib.MACD(data['close'], fastperiod=5, slowperiod=10, signalperiod=4)
     data['k'], data['d'] = talib.STOCH(data['high'], data['low'], data['close'])
+    data['OBV']= talib.OBV(data['close'], data['volume'])
     
     a = pd.read_csv('index_pred.csv')
     a = a.dropna()
@@ -53,7 +54,7 @@ def mainPred(data):
     df=pd.DataFrame({'date': data.index, 'open': data['open'], 'high': data['high'],
                      'low': data['low'], 'close': data['close'], 'volume': data['volume'],
                      'predict': predict_result})
-    df.to_csv("Outputcsv/predOut.csv", index=False)
+    df.to_csv("Outputcsv/predOut.csv", index=False)   
     #print(predict_result)
     
-# mainPred(loadFile('TXF1ForPre.csv'))
+#mainPred(loadFile('TXF1_JanToMay.csv'))
