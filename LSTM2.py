@@ -207,7 +207,7 @@ def predict(model, time_frame, df_test, df_train=train_data()):
     # print("預測結果", predic_price_mark)
     # print("預測筆數", len(predic_price_mark))
     output2 = np.squeeze(np.asarray(predic_price_mark))
-    predict_index = predict_index[3:]
+    predict_index = predict_index[2:-1]
     #寫入CSV
     a = df_test["Open"].values
     a = a[3:]

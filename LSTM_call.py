@@ -20,7 +20,7 @@ class LSTM(QtWidgets.QWidget):
         self.cwd = os.getcwd()
         dir_choose = QtWidgets.QFileDialog.getOpenFileName(self,
                                                            "選取檔案",
-                                                           self.cwd)  # 起始路径
+                                                           self.cwd,"excel(*.csv)")  # 起始路径
 
         if dir_choose == "":
             print("\n取消選擇")
@@ -32,6 +32,7 @@ class LSTM(QtWidgets.QWidget):
 
     def exec_lstm(self):
         model = keras.models.load_model('LSTM_model')
+        print(self.ui.test_data_combobox.currentText())
         predict(model,60,test_data(self.ui.test_data_combobox.currentText()))
         callQM()
         callMC2()
