@@ -17,9 +17,9 @@ from talib import abstract
 #載入資料
 def loadFile(path):
     df = pd.read_csv(path)
-    data = df[[' <Open>', ' <High>', ' <Low>', ' <Close>', ' <Volume>']]
+    data = df[['Open', 'High', 'Low', 'Close', 'TotalVolume']]
 
-    dataDate = pd.to_datetime(df['<Date>'])
+    dataDate = pd.to_datetime(df['Date'])
     dataDate.to_csv('index_copy.csv', index=False, header=True)
     return data
 # In[2]
@@ -50,7 +50,7 @@ def rf_main(data):
     # 技術面資料
     # 改成 TA-Lib 可以辨識的欄位名稱
     
-    data.rename(columns={" <Open>": "open", " <High>": "high", " <Low>":"low", " <Close>":"close", " <Volume>":"volume"} , inplace=True)
+    data.rename(columns={"Open": "open", "High": "high", "Low":"low", "Close":"close", "TotalVolume":"volume"} , inplace=True)
     # 短期設3、5日
     data['MA5'] = talib.MA(data['close'], timeperiod=5)  
     data['MA10'] = talib.MA(data['close'], timeperiod=10)
@@ -66,12 +66,12 @@ def rf_main(data):
     
     a = pd.read_csv('index_copy.csv')
     a = a.dropna()
-    a['Datetime'] = pd.to_datetime(a['<Date>'])
+    a['Datetime'] = pd.to_datetime(a['Date'])
     
     data = data.merge(a, left_index=True, right_index=True)
     data = data.set_index(['Datetime'])
     
-    del data['<Date>']
+    del data['Date']
     data.index.rename('date', inplace=True)
     
 # In[5]
@@ -145,4 +145,4 @@ def rf_main(data):
     df=pd.DataFrame({'date': a6, 'open': a10, 'high': a11, 'low': a12, 'close': a13, 'volume': a14, 'predict': a5})
     df.to_csv("ouo.csv", index=False)
     '''
-#rf_main(loadFile('TXF1_日.csv'))
+#rf_main(loadFile('TXF1-日-成交價.csv'))

@@ -19,12 +19,12 @@ from datetime import datetime
 import pickle
 
 # 載入資料
-def loadFile(path='E:\ProjectAI\TXF1 1 日 202001-05.csv'):
+def loadFile(path='E:\ProjectAI\TXF1 1 日 10年.csv'):
     #    path='E:\ProjectAI\TXF1 1 日 10年.csv' 'TXF1_日.csv'TXF1 1 日 五年.csv'
     df = pd.read_csv(path, engine='python')
-    data = df[[' <Open>', ' <High>', ' <Low>', ' <Close>', ' <Volume>']]
+    data = df[['Open', 'High', 'Low', 'Close', 'TotalVolume']]
 
-    dataDate = pd.to_datetime(df['<Date>'])
+    dataDate = pd.to_datetime(df['Date'])
     dataDate.to_csv('index_date.csv', index=False, header=True)
     return data
 
@@ -33,7 +33,7 @@ def loadFile(path='E:\ProjectAI\TXF1 1 日 202001-05.csv'):
 def ada_main(data):
     data = data.astype('float')
     data.rename(
-        columns={" <Open>": "open", " <High>": "high", " <Low>": "low", " <Close>": "close", " <Volume>": "volume"},
+        columns={"Open": "open", "High": "high", "Low": "low", "Close": "close", "TotalVolume": "volume"},
         inplace=True)
 
     # 加入指標
@@ -60,12 +60,12 @@ def ada_main(data):
 
     a = pd.read_csv('index_date.csv')
     a = a.dropna()
-    a['Datetime'] = pd.to_datetime(a['<Date>'])
+    a['Datetime'] = pd.to_datetime(a['Date'])
 
     data = data.merge(a, left_index=True, right_index=True)
     data = data.set_index(['Datetime'])
 
-    del data['<Date>']
+    del data['Date']
     data.index.rename('date', inplace=True)
 
     # 判斷漲跌1 -1 0      #.shift是將資料數據往下移
@@ -124,7 +124,7 @@ def ada_main(data):
     pdata.insert(0, 'date', a['Datetime'])
     pdata = pdata.drop(b)
     pdata.insert(6, 'predicts', predicts)
-    pdata.to_csv('adapredicts.csv', index=False, sep=',')
+    pdata.to_csv('Outputcsv/2.csv', index=False, sep=',')
 
 
-#ada_main(loadFile())
+#ada_main(loadFile('TXF1-日-成交價.csv'))

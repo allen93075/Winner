@@ -10,16 +10,16 @@ import talib
 
 def loadFile(path):
     df = pd.read_csv(path)
-    data = df[[' <Open>', ' <High>', ' <Low>', ' <Close>', ' <Volume>']]
+    data = df[['Open', 'High', 'Low', 'Close', 'TotalVolume']]
 
-    dataDate = pd.to_datetime(df['<Date>'])
+    dataDate = pd.to_datetime(df['Date'])
     dataDate.to_csv('index_pred.csv', index=False, header=True)
     return data
 # In[]
 def mainPred(data):
     data = data.astype('float')
     
-    data.rename(columns={" <Open>": "open", " <High>": "high", " <Low>":"low", " <Close>":"close", " <Volume>":"volume"} , inplace=True)
+    data.rename(columns={"Open": "open", "High": "high", "Low":"low", "Close":"close", "TotalVolume":"volume"} , inplace=True)
     data['MA5'] = talib.MA(data['close'], timeperiod=5)  
     data['MA10'] = talib.MA(data['close'], timeperiod=10)
     data['MA20'] = talib.MA(data['close'], timeperiod=20)
@@ -32,12 +32,12 @@ def mainPred(data):
     
     a = pd.read_csv('index_pred.csv')
     a = a.dropna()
-    a['Datetime'] = pd.to_datetime(a['<Date>'])
+    a['Datetime'] = pd.to_datetime(a['Date'])
     
     data = data.merge(a, left_index=True, right_index=True)
     data = data.set_index(['Datetime'])
     
-    del data['<Date>']
+    del data['Date']
     data.index.rename('date', inplace=True)
     data.isnull().sum()
     data = data.dropna()
@@ -57,4 +57,4 @@ def mainPred(data):
     df.to_csv("Outputcsv/predOut.csv", index=False)   
     #print(predict_result)
     
-#mainPred(loadFile('TXF1_JanToMay.csv'))
+#mainPred(loadFile("C:/Users/Allen/Desktop/TXF1_JanToMay.csv"))

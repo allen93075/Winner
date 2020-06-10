@@ -69,6 +69,12 @@ def callMC(): #RF
     time.sleep(1)
     pyautogui.press('r')
     time.sleep(1)
+    pyautogui.press('down')
+    time.sleep(1)
+    pyautogui.press('down')
+    time.sleep(1)
+    pyautogui.press('down')
+    time.sleep(1)
     pyautogui.press('enter')
     time.sleep(1)
     pyautogui.press('enter')
@@ -89,11 +95,36 @@ def callMC(): #RF
 
     print("等待結束")
 
-def callMC3():
+def callMC3(): #ada
     commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-    # shell = win32com.client.Dispatch("WScript.Shell")
+    print(p.pid)
     wait()
+    # p.communicate(input='\n')
+    pyautogui.hotkey('alt', 'f')
+    time.sleep(1)
+    pyautogui.press("enter")
+    time.sleep(1)
+    pyautogui.press("enter")
+    time.sleep(1)
+    for i in range(4):
+        pyautogui.press('tab')
+        time.sleep(0.5)
+    pyautogui.press("enter")
+    time.sleep(2)
+    pyautogui.hotkey('alt','i')
+    time.sleep(2)
+    pyautogui.press('l')
+    time.sleep(2)
+    pyautogui.press('r')
+    time.sleep(2)
+    pyautogui.press('down')
+    time.sleep(1)
+    pyautogui.press('enter')
+    time.sleep(2)
+    pyautogui.press('enter')
+    time.sleep(3)
+    p.kill()
 
 def callQM():
     commend = '"C:\Program Files\TS Support\MultiCharts64\QuoteManager.exe"'
@@ -109,6 +140,40 @@ def callQM():
     pyautogui.press('enter')
     time.sleep(0.5)
     p.kill()
+
+def callMC4(): #mlp
+    commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+    p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    print(p.pid)
+    wait()
+    # p.communicate(input='\n')
+    pyautogui.hotkey('alt', 'f')
+    time.sleep(1)
+    pyautogui.press("enter")
+    time.sleep(1)
+    pyautogui.press("enter")
+    time.sleep(1)
+    for i in range(4):
+        pyautogui.press('tab')
+        time.sleep(0.5)
+    pyautogui.press("enter")
+    time.sleep(2)
+    pyautogui.hotkey('alt','i')
+    time.sleep(2)
+    pyautogui.press('l')
+    time.sleep(2)
+    pyautogui.press('r')
+    time.sleep(2)
+    pyautogui.press('down')
+    time.sleep(1)
+    pyautogui.press('down')
+    time.sleep(1)
+    pyautogui.press('enter')
+    time.sleep(2)
+    pyautogui.press('enter')
+    time.sleep(3)
+    p.kill()
+
 
 
 

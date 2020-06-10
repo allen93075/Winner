@@ -4,6 +4,7 @@ import sys
 import Adaboost_UI
 from  PyQt5 import QtWidgets, QtGui
 from ada_model import *
+from autoscript import callQM,callMC3
 
 
 class AdaboostUI(QtWidgets.QWidget):
@@ -15,12 +16,9 @@ class AdaboostUI(QtWidgets.QWidget):
         self.setWindowTitle('自適應增強')
         self.ui.choseDataBtn.clicked.connect(self.slot_btn_chooseDir)
         self.ui.startTrainBtn.clicked.connect(self.exec_ada)
-        self.ui.startTrainBtn.clicked.connect(self.performance)
+        # self.ui.startTrainBtn.clicked.connect(self.performance)
         self.resize(800, 600)
-        
-    def exec_ada(self):
-        print("_______",self.ui.comboBox.currentText())
-        ada_main(loadFile(self.ui.comboBox.currentText()))
+
 
     def slot_btn_chooseDir(self):
         self.cwd = os.getcwd()
@@ -38,8 +36,13 @@ class AdaboostUI(QtWidgets.QWidget):
         print("\n你選擇的文件夾為:")
         print(dir_choose)
 
-    def performance(self):
-        f = open(r'test.txt')
+    def exec_ada(self):
+        print("_______", self.ui.comboBox.currentText())
+        ada_main(loadFile(self.ui.comboBox.currentText()))
+    # def performance(self):
+        callQM()
+        callMC3()
+        f = open(r'Performance/adaresult.txt')
         t = f.readline()
         text = t.split(",")
         text = list(map(str, text))

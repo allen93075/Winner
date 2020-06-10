@@ -4,6 +4,7 @@ import sys
 from  PyQt5 import QtWidgets
 import MLP_UI 
 from mlp_model import *
+from autoscript import callMC4,callQM
 
 class MLPUI(QtWidgets.QWidget):
     def __init__(self):
@@ -14,12 +15,9 @@ class MLPUI(QtWidgets.QWidget):
         self.setWindowTitle('多層感知器')
         self.ui.choseDataBtn.clicked.connect(self.slot_btn_chooseDir)
         self.ui.startTrainBtn.clicked.connect(self.exec_mlp)
-        self.ui.startTrainBtn.clicked.connect(self.performance)
+        # self.ui.startTrainBtn.clicked.connect(self.performance)
         self.resize(800, 600)
-        
-    def exec_mlp(self):
-        print("_______",self.ui.comboBox.currentText())
-        mlp_main(loadFile(self.ui.comboBox.currentText()))
+
 
     def slot_btn_chooseDir(self):
         self.cwd = os.getcwd()
@@ -37,8 +35,13 @@ class MLPUI(QtWidgets.QWidget):
         print("\n你選擇的文件夾為:")
         print(dir_choose)
 
-    def performance(self):
-        f = open(r'test.txt')
+    def exec_mlp(self):
+        print("_______", self.ui.comboBox.currentText())
+        mlp_main(loadFile(self.ui.comboBox.currentText()))
+    # def performance(self):
+        callQM()
+        callMC4()
+        f = open(r'Performance/mlpresult.txt')
         t = f.readline()
         text = t.split(",")
         text = list(map(str, text))

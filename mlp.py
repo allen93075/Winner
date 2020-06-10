@@ -20,10 +20,10 @@ import pickle
 
 
 # 載入資料
-def loadFile(path='E:\ProjectAI\TXF1 1 日一年.csv'):
+def loadFile(path='E:\ProjectAI\TXF1 1 日 10年.csv'):
     # path='E:\ProjectAI\TXF1 1 日 10年.csv''TXF1_日.csv'TXF1 1 日 五年.csv'TXF1 1 日一年.csv
     df = pd.read_csv(path, engine='python')
-    data = df[[' <Open>', ' <High>', ' <Low>', ' <Close>', ' <Volume>']]
+    data = df[['Open', 'High', 'Low', 'Close', 'Volume']]
 
     dataDate = pd.to_datetime(df['<Date>'])
     dataDate.to_csv('index_date.csv', index=False, header=True)
@@ -34,7 +34,7 @@ def loadFile(path='E:\ProjectAI\TXF1 1 日一年.csv'):
 def mlp_main(data):
     data = data.astype('float')
     data.rename(
-        columns={" <Open>": "open", " <High>": "high", " <Low>": "low", " <Close>": "close", " <Volume>": "volume"},
+        columns={"Open": "open", "High": "high", "Low": "low", "Close": "close", "Volume": "volume"},
         inplace=True)
 
     # 加入指標

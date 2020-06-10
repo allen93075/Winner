@@ -41,7 +41,7 @@ class useRF(QtWidgets.QWidget):
         callQM()
         callMC()
     # def performance(self):
-        f = open(r'rf_perf.txt')
+        f = open(r'Performance/rfreasult.txt')
         t = f.readline()
         text = t.split(",")
         text = list(map(str, text))
