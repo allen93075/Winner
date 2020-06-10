@@ -92,7 +92,7 @@ def callMC(): #RF
 def callMC3():
     commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-    shell = win32com.client.Dispatch("WScript.Shell")
+    # shell = win32com.client.Dispatch("WScript.Shell")
     wait()
 
 def callQM():

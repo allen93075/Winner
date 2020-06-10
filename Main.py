@@ -1,3 +1,4 @@
+import subprocess
 import sys, os, webbrowser
 import pandas as pd
 import qdarkstyle
@@ -134,14 +135,19 @@ class Mainwin(QtWidgets.QMainWindow):
         self.ui.stackedWidget.setCurrentIndex(9)
 
     def callMC(self):
-        self.call = os.system(
-            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
-        self.statusBar().showMessage('正在開起Multicharts主程式')
+        # self.call = os.system(
+        #     'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"')
+        # self.statusBar().showMessage('正在開起Multicharts主程式')
+        commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+        p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 
     def OpenPLEditor(self):
-        self.call = os.system(
-            'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/PowerLanguage Editor.app"')
-        self.statusBar().showMessage('正在開起PowerLanguage Editor')
+        # self.call = os.system(
+        #     'open -a "/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/PowerLanguage Editor.app"')
+        # self.statusBar().showMessage('正在開起PowerLanguage Editor')
+        commend = '"C:\Program Files\TS Support\MultiCharts64\PLEditor.exe"'
+        p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+
 
     def callAboutMC(self):
         webbrowser.open("https://www.multicharts.com.tw/characteristic.aspx")
