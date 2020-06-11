@@ -57,4 +57,4 @@ def mainPred(data):
     df.to_csv("Outputcsv/predOut.csv", index=False)   
     #print(predict_result)
     
-#mainPred(loadFile("C:/Users/Allen/Desktop/TXF1_JanToMay.csv"))
+mainPred(loadFile("C:/Users/Allen/Desktop/TXF1_JanToMay.csv"))

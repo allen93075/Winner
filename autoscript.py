@@ -11,7 +11,7 @@ import win32gui
 
 
 def wait():
-    time.sleep(50.0)
+    time.sleep(20.0)
     print("這是等待函數")
 
 
@@ -27,10 +27,15 @@ def callMC2(): #LSTM
     time.sleep(1)
     pyautogui.press("enter")
     time.sleep(1)
-    for i in range(4):
+    pyautogui.press('a')
+    for i in range(2):
         pyautogui.press('tab')
         time.sleep(0.5)
-    pyautogui.press("enter")
+    pyautogui.press("2")
+    for i in range(2):
+        pyautogui.press('tab')
+        time.sleep(0.5)
+    pyautogui.press('enter')
     time.sleep(2)
     pyautogui.hotkey('alt','i')
     time.sleep(2)
@@ -56,6 +61,8 @@ def callMC(): #RF
     time.sleep(1)
     pyautogui.press("enter")
     time.sleep(1)
+    pyautogui.press('a')
+    time.sleep(1)
     for i in range(2):
         pyautogui.press('tab')
         time.sleep(0.5)
@@ -78,7 +85,7 @@ def callMC(): #RF
     pyautogui.press('enter')
     time.sleep(1)
     pyautogui.press('enter')
-    time.sleep(3)
+    time.sleep(4)
     p.kill()
 
 
@@ -107,7 +114,12 @@ def callMC3(): #ada
     time.sleep(1)
     pyautogui.press("enter")
     time.sleep(1)
-    for i in range(4):
+    pyautogui.press('a')
+    for i in range(2):
+        pyautogui.press('tab')
+        time.sleep(0.5)
+    pyautogui.press('2')
+    for i in range(2):
         pyautogui.press('tab')
         time.sleep(0.5)
     pyautogui.press("enter")
@@ -134,11 +146,11 @@ def callQM():
     time.sleep(2)
     for i in range(6):
         pyautogui.press('tab')
-        time.sleep(0.5)
+        time.sleep(1)
     pyautogui.press('enter')
     time.sleep(3)
     pyautogui.press('enter')
-    time.sleep(0.5)
+    time.sleep(1)
     p.kill()
 
 def callMC4(): #mlp
@@ -153,7 +165,12 @@ def callMC4(): #mlp
     time.sleep(1)
     pyautogui.press("enter")
     time.sleep(1)
-    for i in range(4):
+    pyautogui.press('a')
+    for i in range(2):
+        pyautogui.press('tab')
+        time.sleep(0.5)
+    pyautogui.press('2')
+    for i in range(2):
         pyautogui.press('tab')
         time.sleep(0.5)
     pyautogui.press("enter")
@@ -182,7 +199,7 @@ def callMC4(): #mlp
 
 
 # callQM()
-# callMC()
+callMC()
 # subprocess.Popen(["start", "notepad.exe"], shell=True)
 # callMC3()
 # pyautogui.hotkey('a   lt', 'f')
