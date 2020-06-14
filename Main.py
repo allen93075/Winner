@@ -230,6 +230,7 @@ class Mainwin(QtWidgets.QMainWindow):
         OpenMC.triggered.connect((self.callMC))
         self.toolbar.addAction(OpenMC)
 
+
         OpenPL = QAction(QIcon('fx-sign.png'), '開啟PL Editor', self)
         OpenPL.triggered.connect((self.OpenPLEditor))
         self.toolbar.addAction(OpenPL)

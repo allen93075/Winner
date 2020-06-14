@@ -11,7 +11,7 @@ import win32gui
 
 
 def wait():
-    time.sleep(20.0)
+    time.sleep(50.0)
     print("這是等待函數")
 
 
@@ -199,7 +199,7 @@ def callMC4(): #mlp
 
 
 # callQM()
-callMC()
+# callMC()
 # subprocess.Popen(["start", "notepad.exe"], shell=True)
 # callMC3()
 # pyautogui.hotkey('a   lt', 'f')
