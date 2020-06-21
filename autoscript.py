@@ -4,10 +4,10 @@ import subprocess
 import pyautogui
 import pynput
 from threading import Thread
-import win32com.client
-import win32api
-import win32con
-import win32gui
+# import win32com.client
+# import win32api
+# import win32con
+# import win32gui
 
 
 def wait():
@@ -16,7 +16,8 @@ def wait():
 
 
 def callMC2(): #LSTM
-    commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+    # commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"'
     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     print(p.pid)
     wait()
@@ -50,7 +51,8 @@ def callMC2(): #LSTM
     p.kill()
 
 def callMC(): #RF
-    commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+    # commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"'
     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     print(p.pid)
     wait()
@@ -103,7 +105,8 @@ def callMC(): #RF
     print("等待結束")
 
 def callMC3(): #ada
-    commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+    # commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"'
     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     print(p.pid)
     wait()
@@ -139,7 +142,8 @@ def callMC3(): #ada
     p.kill()
 
 def callQM():
-    commend = '"C:\Program Files\TS Support\MultiCharts64\QuoteManager.exe"'
+    # commend = '"C:\Program Files\TS Support\MultiCharts64\QuoteManager.exe"'
+    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/QuoteManager.app"'
     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     time.sleep(7)
     pyautogui.hotkey('ctrl','m')
@@ -154,7 +158,8 @@ def callQM():
     p.kill()
 
 def callMC4(): #mlp
-    commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+    # commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
+    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"'
     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     print(p.pid)
     wait()
