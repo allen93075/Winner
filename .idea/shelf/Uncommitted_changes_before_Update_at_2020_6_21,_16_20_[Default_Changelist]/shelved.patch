@@ -1,0 +1,226 @@
+Index: autoscript.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import os\nimport time\nimport subprocess\nimport pyautogui\nimport pynput\nfrom threading import Thread\nimport win32com.client\nimport win32api\nimport win32con\nimport win32gui\n\n\ndef wait():\n    time.sleep(20.0)\n    print(\"這是等待函數\")\n\n\ndef callMC2(): #LSTM\n    commend = '\"C:\\Program Files\\TS Support\\MultiCharts64\\MultiCharts64.exe\"'\n    p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)\n    print(p.pid)\n    wait()\n    # p.communicate(input='\\n')\n    pyautogui.hotkey('alt', 'f')\n    time.sleep(1)\n    pyautogui.press(\"enter\")\n    time.sleep(1)\n    pyautogui.press(\"enter\")\n    time.sleep(1)\n    pyautogui.press('a')\n    for i in range(2):\n        pyautogui.press('tab')\n        time.sleep(0.5)\n    pyautogui.press(\"2\")\n    for i in range(2):\n        pyautogui.press('tab')\n        time.sleep(0.5)\n    pyautogui.press('enter')\n    time.sleep(2)\n    pyautogui.hotkey('alt','i')\n    time.sleep(2)\n    pyautogui.press('l')\n    time.sleep(2)\n    pyautogui.press('r')\n    time.sleep(2)\n    pyautogui.press('enter')\n    time.sleep(2)\n    pyautogui.press('enter')\n    time.sleep(3)\n    p.kill()\n\ndef callMC(): #RF\n    commend = '\"C:\\Program Files\\TS Support\\MultiCharts64\\MultiCharts64.exe\"'\n    p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)\n    print(p.pid)\n    wait()\n    # p.communicate(input='\\n')\n    pyautogui.hotkey('alt', 'f')\n    time.sleep(1)\n    pyautogui.press(\"enter\")\n    time.sleep(1)\n    pyautogui.press(\"enter\")\n    time.sleep(1)\n    pyautogui.press('a')\n    time.sleep(1)\n    for i in range(2):\n        pyautogui.press('tab')\n        time.sleep(0.5)\n    pyautogui.press('p')\n    time.sleep(1)\n    pyautogui.press(\"enter\")\n    time.sleep(1)\n    pyautogui.hotkey('alt','i')\n    time.sleep(1)\n    pyautogui.press('l')\n    time.sleep(1)\n    pyautogui.press('r')\n    time.sleep(1)\n    pyautogui.press('down')\n    time.sleep(1)\n    pyautogui.press('down')\n    time.sleep(1)\n    pyautogui.press('down')\n    time.sleep(1)\n    pyautogui.press('enter')\n    time.sleep(1)\n    pyautogui.press('enter')\n    time.sleep(4)\n    p.kill()\n\n\n\n\n\n\n\n    # p.communicate(pyautogui.hotkey('alt', 'f'))\n    # # pyautogui.hotkey('alt', 'f')\n    # p.communicate(time.sleep(1))\n    # p.communicate(pyautogui.press(\"tab\"))\n    # p.communicate(pyautogui.press(\"enter\"))\n\n    print(\"等待結束\")\n\ndef callMC3(): #ada\n    commend = '\"C:\\Program Files\\TS Support\\MultiCharts64\\MultiCharts64.exe\"'\n    p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)\n    print(p.pid)\n    wait()\n    # p.communicate(input='\\n')\n    pyautogui.hotkey('alt', 'f')\n    time.sleep(1)\n    pyautogui.press(\"enter\")\n    time.sleep(1)\n    pyautogui.press(\"enter\")\n    time.sleep(1)\n    pyautogui.press('a')\n    for i in range(2):\n        pyautogui.press('tab')\n        time.sleep(0.5)\n    pyautogui.press('2')\n    for i in range(2):\n        pyautogui.press('tab')\n        time.sleep(0.5)\n    pyautogui.press(\"enter\")\n    time.sleep(2)\n    pyautogui.hotkey('alt','i')\n    time.sleep(2)\n    pyautogui.press('l')\n    time.sleep(2)\n    pyautogui.press('r')\n    time.sleep(2)\n    pyautogui.press('down')\n    time.sleep(1)\n    pyautogui.press('enter')\n    time.sleep(2)\n    pyautogui.press('enter')\n    time.sleep(3)\n    p.kill()\n\ndef callQM():\n    commend = '\"C:\\Program Files\\TS Support\\MultiCharts64\\QuoteManager.exe\"'\n    p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)\n    time.sleep(7)\n    pyautogui.hotkey('ctrl','m')\n    time.sleep(2)\n    for i in range(6):\n        pyautogui.press('tab')\n        time.sleep(1)\n    pyautogui.press('enter')\n    time.sleep(3)\n    pyautogui.press('enter')\n    time.sleep(1)\n    p.kill()\n\ndef callMC4(): #mlp\n    commend = '\"C:\\Program Files\\TS Support\\MultiCharts64\\MultiCharts64.exe\"'\n    p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)\n    print(p.pid)\n    wait()\n    # p.communicate(input='\\n')\n    pyautogui.hotkey('alt', 'f')\n    time.sleep(1)\n    pyautogui.press(\"enter\")\n    time.sleep(1)\n    pyautogui.press(\"enter\")\n    time.sleep(1)\n    pyautogui.press('a')\n    for i in range(2):\n        pyautogui.press('tab')\n        time.sleep(0.5)\n    pyautogui.press('2')\n    for i in range(2):\n        pyautogui.press('tab')\n        time.sleep(0.5)\n    pyautogui.press(\"enter\")\n    time.sleep(2)\n    pyautogui.hotkey('alt','i')\n    time.sleep(2)\n    pyautogui.press('l')\n    time.sleep(2)\n    pyautogui.press('r')\n    time.sleep(2)\n    pyautogui.press('down')\n    time.sleep(1)\n    pyautogui.press('down')\n    time.sleep(1)\n    pyautogui.press('enter')\n    time.sleep(2)\n    pyautogui.press('enter')\n    time.sleep(3)\n    p.kill()\n\n\n\n\n\n\n\n\n# callQM()\ncallMC()\n# subprocess.Popen([\"start\", \"notepad.exe\"], shell=True)\n# callMC3()\n# pyautogui.hotkey('a   lt', 'f')\n#\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- autoscript.py	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ autoscript.py	(date 1591868705315)
+@@ -4,10 +4,10 @@
+ import pyautogui
+ import pynput
+ from threading import Thread
+-import win32com.client
+-import win32api
+-import win32con
+-import win32gui
++# import win32com.client
++# import win32api
++# import win32con
++# import win32gui
+ 
+ 
+ def wait():
+@@ -16,7 +16,8 @@
+ 
+ 
+ def callMC2(): #LSTM
+-    commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
++    # commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
++    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"'
+     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+     print(p.pid)
+     wait()
+@@ -50,7 +51,8 @@
+     p.kill()
+ 
+ def callMC(): #RF
+-    commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
++    # commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
++    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"'
+     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+     print(p.pid)
+     wait()
+@@ -103,7 +105,8 @@
+     print("等待結束")
+ 
+ def callMC3(): #ada
+-    commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
++    # commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
++    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"'
+     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+     print(p.pid)
+     wait()
+@@ -139,7 +142,8 @@
+     p.kill()
+ 
+ def callQM():
+-    commend = '"C:\Program Files\TS Support\MultiCharts64\QuoteManager.exe"'
++    # commend = '"C:\Program Files\TS Support\MultiCharts64\QuoteManager.exe"'
++    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/QuoteManager.app"'
+     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+     time.sleep(7)
+     pyautogui.hotkey('ctrl','m')
+@@ -154,7 +158,8 @@
+     p.kill()
+ 
+ def callMC4(): #mlp
+-    commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
++    # commend = '"C:\Program Files\TS Support\MultiCharts64\MultiCharts64.exe"'
++    commend = '"/Users/tienyou/Applications (Parallels)/{a385b35d-69a7-4fa5-9d2b-3a0d2c95954e} Applications.localized/MultiCharts64 [2].app"'
+     p = subprocess.Popen(commend, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+     print(p.pid)
+     wait()
+@@ -199,7 +204,7 @@
+ 
+ 
+ # callQM()
+-callMC()
++# callMC()
+ # subprocess.Popen(["start", "notepad.exe"], shell=True)
+ # callMC3()
+ # pyautogui.hotkey('a   lt', 'f')
+Index: Performance/海龜.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>1762000.00,  47.64,-745400.00,2202.00,1049.00,1149.00,21730000.00,-19968000.00\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Performance/海龜.txt	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ Performance/海龜.txt	(date 1591868141509)
+@@ -1,1 +1,1 @@
+-1762000.00,  47.64,-745400.00,2202.00,1049.00,1149.00,21730000.00,-19968000.00
++360400.00,  54.01,-208800.00, 137.00,  74.00,  63.00,1775000.00,-1414600.00
+Index: Performance/移動均線+LarryWilliams.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>-993800.00,  33.91,-1247000.00, 808.00, 274.00, 528.00,6776800.00,-7770600.00\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Performance/移動均線+LarryWilliams.txt	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ Performance/移動均線+LarryWilliams.txt	(date 1591868141513)
+@@ -1,1 +1,1 @@
+--993800.00,  33.91,-1247000.00, 808.00, 274.00, 528.00,6776800.00,-7770600.00
++795000.00,  43.32,-737000.00, 494.00, 214.00, 278.00,5886200.00,-5091200.00
+Index: Performance/移動均線.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>-280800.00,  35.46,-1407200.00, 361.00, 128.00, 232.00,6910800.00,-7191600.00\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Performance/移動均線.txt	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ Performance/移動均線.txt	(date 1591868141517)
+@@ -1,1 +1,1 @@
+--280800.00,  35.46,-1407200.00, 361.00, 128.00, 232.00,6910800.00,-7191600.00
++353400.00,  33.33,-271200.00,  48.00,  16.00,  32.00,921600.00,-568200.00
+Index: Performance/區間突破.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>307800.00,  33.94,-269800.00, 277.00,  94.00, 183.00,1373800.00,-1066000.00\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Performance/區間突破.txt	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ Performance/區間突破.txt	(date 1591868141522)
+@@ -1,1 +1,1 @@
+-307800.00,  33.94,-269800.00, 277.00,  94.00, 183.00,1373800.00,-1066000.00
++98600.00,  31.42,-269800.00, 261.00,  82.00, 179.00,1035200.00,-936600.00
+Index: Performance/區間突破+凱利.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>1029600.00,  25.07,-808800.00, 343.00,  86.00, 257.00,4382400.00,-3352800.00\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Performance/區間突破+凱利.txt	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ Performance/區間突破+凱利.txt	(date 1591868141526)
+@@ -1,1 +1,1 @@
+-1029600.00,  25.07,-808800.00, 343.00,  86.00, 257.00,4382400.00,-3352800.00
++52200.00,  33.33,-38300.00,   3.00,   1.00,   2.00,61000.00,-8800.00
+Index: Performance/移動均線+固定比率.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>-2808000.00,  35.46,-14072000.00, 361.00, 128.00, 232.00,69108000.00,-71916000.00\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Performance/移動均線+固定比率.txt	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ Performance/移動均線+固定比率.txt	(date 1591868141530)
+@@ -1,1 +1,1 @@
+--2808000.00,  35.46,-14072000.00, 361.00, 128.00, 232.00,69108000.00,-71916000.00
++10524000.00,  43.32,-3948000.00, 494.00, 214.00, 278.00,46552000.00,-36028000.00
+Index: .idea/Winner.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"PYTHON_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\" />\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.7 (Winner)\" jdkType=\"Python SDK\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n  <component name=\"PyDocumentationSettings\">\n    <option name=\"renderExternalDocumentation\" value=\"true\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/Winner.iml	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ .idea/Winner.iml	(date 1591868141535)
+@@ -2,7 +2,7 @@
+ <module type="PYTHON_MODULE" version="4">
+   <component name="NewModuleRootManager">
+     <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="jdk" jdkName="Python 3.7 (Winner)" jdkType="Python SDK" />
++    <orderEntry type="jdk" jdkName="Python 3.7 (PycharmProjects)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+   <component name="PyDocumentationSettings">
+Index: Performance/移動均線+凱利.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>-1934200.00,  32.61,-2672700.00,3379.00,1102.00,2258.00,24385200.00,-26319400.00\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Performance/移動均線+凱利.txt	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ Performance/移動均線+凱利.txt	(date 1591868141540)
+@@ -1,1 +1,1 @@
+--1934200.00,  32.61,-2672700.00,3379.00,1102.00,2258.00,24385200.00,-26319400.00
++7128400.00,  43.32,-3948000.00, 494.00, 214.00, 278.00,37778600.00,-30650200.00
+Index: Performance/移動均線+最佳F值.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>-3842600.00,  32.61,-3998300.00,3379.00,1102.00,2258.00,20135400.00,-23978000.00\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Performance/移動均線+最佳F值.txt	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ Performance/移動均線+最佳F值.txt	(date 1591868141544)
+@@ -1,1 +1,1 @@
+--3842600.00,  32.61,-3998300.00,3379.00,1102.00,2258.00,20135400.00,-23978000.00
++880000.00,  43.32,-862600.00, 494.00, 214.00, 278.00,7691400.00,-6811400.00
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.7 (Winner)\" project-jdk-type=\"Python SDK\" />\n  <component name=\"PyCharmProfessionalAdvertiser\">\n    <option name=\"shown\" value=\"true\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ .idea/misc.xml	(date 1591868141548)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (Winner)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (PycharmProjects)" project-jdk-type="Python SDK" />
+   <component name="PyCharmProfessionalAdvertiser">
+     <option name="shown" value="true" />
+   </component>
+Index: Performance/移動均線+固定分數.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>-12437400.00,  32.61,-13527300.00,3379.00,1102.00,2258.00,130153200.00,-142590600.00\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Performance/移動均線+固定分數.txt	(revision f9620955e8424c1ecfadd13b98347ffab2254358)
++++ Performance/移動均線+固定分數.txt	(date 1591868141552)
+@@ -1,1 +1,1 @@
+--12437400.00,  32.61,-13527300.00,3379.00,1102.00,2258.00,130153200.00,-142590600.00
++10524000.00,  43.32,-3948000.00, 494.00, 214.00, 278.00,46552000.00,-36028000.00
